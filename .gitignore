@@ -60,3 +60,4 @@ typings/
 # Hexo
 db.json
 package-lock.json
+_dist/
