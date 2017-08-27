@@ -1,0 +1,13 @@
+---
+layout: single
+title: Welcome
+date: '2010-05-30 13:46:11'
+---
+
+Welcome into my new blog. Maybe you're thinking what about is this blog but, hey no problem, i'm here to explain to you :)
+
+Because i'm a Developer (maybe like you) i like to share my knowledge with you, by sharing code snippets i find or i create. This because i see that, the more we share these things the more we will learn and will improve our scripts. Yeah, just like Google, i also think that this is the best thing to do.
+
+So here, i'll post all the types of scripts that i'll find useful, like Javascripts code, HTML code, CSS code, PHP code, ASPX code or VB.NET code and much more. And because i'm a Web Designer and a Web Developer i think that just other guys like me need some help with things so i hope that my posts will be useful to you and maybe to your neighboor :)
+
+So, don't forget to follow this blog and i hope you will like it.
