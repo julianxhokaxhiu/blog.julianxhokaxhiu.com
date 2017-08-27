@@ -179,7 +179,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -335,8 +335,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: adevelopersblog
   count: true
 
 # Hypercomments
@@ -348,8 +348,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
@@ -388,10 +388,10 @@ valine:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: CV7NWabg4dHSTzScrRzKFAAh0V3TST4qMlcoW7Y_Z3s
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-13006157-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
