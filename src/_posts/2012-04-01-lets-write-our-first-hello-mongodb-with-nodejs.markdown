@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Let's write our first "Hello MongoDB" with NodeJS
+title: Let's write our first 'Hello MongoDB' with NodeJS
 date: '2012-04-01 20:57:55'
 tags:
 - javascript

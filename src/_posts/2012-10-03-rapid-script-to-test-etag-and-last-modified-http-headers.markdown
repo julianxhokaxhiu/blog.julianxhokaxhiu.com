@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Rapid script to test "Etag" and "Last-Modified" HTTP Headers
+title: Rapid script to test 'Etag' and 'Last-Modified' HTTP Headers
 date: '2012-10-03 22:03:50'
 tags:
 - php
