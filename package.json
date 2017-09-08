@@ -6,7 +6,7 @@
     "version": "3.3.9"
   },
   "scripts": {
-    "serve": "hexo server",
+    "serve": "NODE_ENV=development hexo server",
     "deploy": "hexo generate && hexo deploy"
   },
   "dependencies": {
