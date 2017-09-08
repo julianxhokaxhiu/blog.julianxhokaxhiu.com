@@ -86,3 +86,45 @@ deploy:
   type: git
   repo: git@github.com:julianxhokaxhiu/blog.julianxhokaxhiu.com.git
   branch: gh-pages
+
+# Aliases
+alias:
+  welcome.html: en/welcome/
+  lets-make-google-chrome-live.html: en/lets-make-google-chrome-live/
+  lets-make-google-chrome-live-part-2.html: en/lets-make-google-chrome-live-part-2/
+  how-to-fix-baloon-height-with-images-in-google-maps-api-v2.html: en/how-to-fix-baloon-height-with-images-in-google-maps-api-v2/
+  autocomplete-extended.html: en/autocomplete-extended/
+  jquery-storyline.html: en/jquery-storyline/
+  contentflow-shadowbox-plugin.html: en/contentflow-shadowbox-plugin/
+  grooveshark-mediakeys-reloaded.html: en/grooveshark-mediakeys-reloaded/
+  little-christmas-surprise-for-you-nwm.html: en/little-christmas-surprise-for-you-nwm/
+  how-to-fix-npm-path-of-nwm.html: en/how-to-fix-npm-path-of-nwm/
+  jondesigns-smoothgallery-shadowbox-plugin.html: en/jondesigns-smoothgallery-shadowbox-plugin/
+  lets-write-our-first-hello-mongodb-with-nodejs.html: en/lets-write-our-first-hello-mongodb-with-nodejs/
+  samsung-galaxy-s-ii-which-is-the-best-rom.html: en/samsung-galaxy-s-ii-which-is-the-best-rom/
+  backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04.html: en/backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04/
+  best-kernel-for-samsung-galaxy-s2.html: en/best-kernel-for-samsung-galaxy-s2/
+  rapid-script-to-test-etag-and-last-modified-http-headers.html: en/rapid-script-to-test-etag-and-last-modified-http-headers/
+  jquery-youtube-live-feed.html: en/jquery-youtube-live-feed/
+  install-ajenti-over-wd-mybook-world-edition-ii-with-debian.html: en/install-ajenti-over-wd-mybook-world-edition-ii-with-debian/
+  fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion.html: en/fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/
+  contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk.html: en/contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/
+  jquery-itunes-store-search.html: en/jquery-itunes-store-search/
+  expand-your-storage-on-cyanogenmod-with-simple2ext.html: en/expand-your-storage-on-cyanogenmod-with-simple2ext/
+  center-the-new-youtube-layout-with-yt-native-center-layout.html: en/center-the-new-youtube-layout-with-yt-native-center-layout/
+  how-to-run-whatsapp-on-your-pcmac-using-bluestacks.html: en/how-to-run-whatsapp-on-your-pcmac-using-bluestacks/
+  best-setup-for-samsung-galaxy-s2.html: en/best-setup-for-samsung-galaxy-s2/
+  projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your.html: en/projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/
+  pushing-wordpress-performance-to-the-limits.html: en/pushing-wordpress-performance-to-the-limits/
+  when-wordpress-meets-twig.html: en/when-wordpress-meets-twig/
+  twigpress-a-boilerplate-twig-engine-theme-for-wordpress.html: en/twigpress-a-boilerplate-twig-engine-theme-for-wordpress/
+  expand-your-storage-on-cyanogenmod-with-mounts2sd.html: en/expand-your-storage-on-cyanogenmod-with-mounts2sd/
+  daapjs-daap-resolver-for-tomahawk-player.html: en/daapjs-daap-resolver-for-tomahawk-player/
+  how-to-setup-an-ssh-server-on-zyxel-nsa320.html: en/how-to-setup-an-ssh-server-on-zyxel-nsa320/
+  install-debian-wheezy-zyxel-nsa320.html: en/install-debian-wheezy-zyxel-nsa320/
+  how-to-install-bolt-cms-on-namecheap-shared-hosting.html: en/how-to-install-bolt-cms-on-namecheap-shared-hosting/
+  how-to-install-supersu-on-hamlet-zelig-pad-210g.html: en/how-to-install-supersu-on-hamlet-zelig-pad-210g/
+  extract-your-spotify-playlist-from-google-chrome.html: en/extract-your-spotify-playlist-from-google-chrome/
+  how-the-cm-ota-server-works-and-how-to-implement-and-use-ours.html: en/how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/
+  grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update.html: en/grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/
+  frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy.html: en/frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy/
