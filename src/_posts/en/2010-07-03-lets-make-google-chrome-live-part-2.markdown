@@ -23,7 +23,7 @@ Easy huh? If you're curious to know much about the code, read the comments (if y
 
 Thanks for reading, see you in the next post.
 
-EDIT: I've attached a simple project with all of this combined, so just download, unzip and compile. To do so, you need Microsoft Visual C++ 2010 Express Edition (otherwise you can copy and paste the code). [Download it now!](/uploads/MyCDLoader.zip)
+EDIT: I've attached a simple project with all of this combined, so just download, unzip and compile. To do so, you need Microsoft Visual C++ 2010 Express Edition (otherwise you can copy and paste the code). {% asset_link "MyCDLoader.zip" "Download it now!" %}
 
 **Main.cpp**
 

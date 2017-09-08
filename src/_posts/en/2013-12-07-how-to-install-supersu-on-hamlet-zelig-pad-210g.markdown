@@ -15,13 +15,13 @@ So, back to business, those are the simple steps you have to folllow.
 ## Prerequisites
 
 1.  You need to have enabled Debug USB option under "Development Settings" into Settings.
-2.  Install the proper drivers when asked (you can download them from [here](/uploads/hamlet-210g/ADB-drivers.zip)).
+2.  Install the proper drivers when asked (you can download them from {% asset_link "ADB-drivers.zip" "here" %}).
     <span class="text-muted">If you're having signature errors while installing, disable the signature check for your current windows setup (64-bit only).</span>
-3.  A working ADB on your PC (Windows/Mac/Linux). To get it working just place this [adb_usb.ini](/uploads/hamlet-210g/adb_usb.ini) file into `~/.android` folder.
+3.  A working ADB on your PC (Windows/Mac/Linux). To get it working just place this {% asset_link "adb_usb.ini" "adb_usb.ini" %} file into `~/.android` folder.
 
 ## Installing SuperSu
 
-Just download [this](/uploads/hamlet-210g/supersu.zip) file, extract it to your internal memory (**NOT** SD!) and make sure that you're having the supersu folder into the root of your internal memory.
+Just download {% asset_link "supersu.zip" "this" %} file, extract it to your internal memory (**NOT** SD!) and make sure that you're having the supersu folder into the root of your internal memory.
 
 Then just run this simple lines:
 
