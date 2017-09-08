@@ -44,32 +44,24 @@ index_with_subtitle: false
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  #categories: /categories/
-  #about: /about/
-  #archives: /archives/
-  #tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404/
+  home: / || home
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
+  #archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
-  home: home
-  about: user
-  categories: th
-  schedule: calendar
-  tags: tags
-  archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
 
 
 # ---------------------------------------------------------------
@@ -87,22 +79,24 @@ scheme: Gemini
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Social Links
+# Social Links.
+# Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  WebSite: https://julianxhokaxhiu.com
-  KeyBase: https://keybase.io/julianxhokaxhiu
-  GitHub: https://github.com/julianxhokaxhiu
-  Twitter: https://twitter.com/JulianXhokaxhiu
-  Facebook: https://www.facebook.com/julianxhokaxhiu
-  GooglePlus: https://plus.google.com/+JulianXhokaxhiu
-  Linkedin: https://www.linkedin.com/in/julianxhokaxhiu
-  Xing: https://www.xing.com/profile/Julian_Xhokaxhiu
-  BitBucket: https://bitbucket.org/JulianXhokaxhiu
-  StackOverflow: https://www.stackoverflow.com/users/1518095/julian-xhokaxhiu
-  Steam: https://steamcommunity.com/id/julianxhokaxhiu
-  SoundCloud: https://soundcloud.com/julian-xhokaxhiu
+  WebSite: https://julianxhokaxhiu.com || globe
+  KeyBase: https://keybase.io/julianxhokaxhiu || key
+  GitHub: https://github.com/julianxhokaxhiu || github
+  Twitter: https://twitter.com/JulianXhokaxhiu || twitter
+  Facebook: https://www.facebook.com/julianxhokaxhiu || facebook
+  GooglePlus: https://plus.google.com/+JulianXhokaxhiu || google-plus
+  Linkedin: https://www.linkedin.com/in/julianxhokaxhiu || linkedin
+  Xing: https://www.xing.com/profile/Julian_Xhokaxhiu || xing
+  BitBucket: https://bitbucket.org/JulianXhokaxhiu || bitbucket
+  StackOverflow: https://www.stackoverflow.com/users/1518095/julian-xhokaxhiu || stack-overflow
+  Steam: https://steamcommunity.com/id/julianxhokaxhiu || steam-square
+  SoundCloud: https://soundcloud.com/julian-xhokaxhiu || soundcloud
 
 # Social Links Icons
 # Icon Mapping:
@@ -113,20 +107,6 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  WebSite: globe
-  KeyBase: key
-  GitHub: github
-  GooglePlus: google-plus
-  Twitter: twitter
-  Facebook: facebook
-  Linkedin: linkedin
-  Xing: xing
-  BitBucket: bitbucket
-  StackOverflow: stack-overflow
-  Steam: steam-square
-  SoundCloud: soundcloud
 
 # Blog rolls
 #links_title: Links
@@ -136,8 +116,8 @@ social_icons:
   #Title: http://example.com/
 
 # Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
+# in theme directory(source/images): /images/avatar.gif
+# in site  directory(source/uploads): /uploads/avatar.gif
 avatar: /uploads/8bitme.png
 
 # Table Of Contents in the Sidebar
@@ -179,7 +159,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-
+  
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -348,8 +328,8 @@ changyan:
   appid:
   appkey:
 
-
-# Valine.
+    
+# Valine. 
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
