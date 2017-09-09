@@ -58,7 +58,7 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  English: /en || globe
+  English: / || globe
   Italiano: /it || globe
 
 # Enable/Disable menu icons.
