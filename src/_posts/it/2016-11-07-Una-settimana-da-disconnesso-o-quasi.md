@@ -1,11 +1,11 @@
 ---
 layout: single
-title: Una settimana da…disconnesso ( o quasi )
+title: Una settimana da...disconnesso ( o quasi )
 subtitle: Come l’utilizzo di Internet ti cambia la giornata
 date: 2016-11-07 22:56:18
 ---
 
-{% asset_img "cover.jpg" "photo courtesy [Philip Greenspun](http://philip.greenspun.com/)" %}
+{% asset_img "cover.jpg" "photo courtesy: Philip Greenspun (http://philip.greenspun.com/)" %}
 
 Capita a tutti, ed è capitato anche a me. Per quasi una settimana ho avuto un disservizio a casa che mi ha negato la possibilità di connettermi a Internet da casa. Ovviamente non ero del tutto disconnesso, in quanto l’Internet mobile era lì a mia disposizione, pur avendo una limitazione di 1,5GB di dati mensili, il più delle volte mi basta e avanza, anche quando lo uso abbondantemente.
 
