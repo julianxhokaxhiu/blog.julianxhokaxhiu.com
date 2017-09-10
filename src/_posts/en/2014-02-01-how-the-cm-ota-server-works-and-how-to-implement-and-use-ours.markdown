@@ -53,8 +53,8 @@ For generic lists the ROM is using  `http://download.cyanogenmod.org/api` while
 
 If you would like to point to your own server you have two ways doing so:
 
-*   Declare `cm.updater.uri` on your own `build.prop` file with the value of you own server URL where you have deployed it
-*   Replace the string `conf_update_server_url_def` value inside `values.xml` of the [OTA source code](https://github.com/lineageos/android_packages_apps_CMUpdater/blob/cm-11.0/res/values/config.xml)
+*   Declare [`cm.updater.uri`](https://github.com/LineageOS/android_packages_apps_CMUpdater/blob/cm-14.1/src/com/cyanogenmod/updater/service/UpdateCheckService.java#L203) on your own `build.prop` file with the value of you own server URL where you have deployed it
+*   Replace the string `conf_update_server_url_def` value inside `values.xml` of the [OTA source code](https://github.com/lineageos/android_packages_apps_CMUpdater/blob/cm-14.1/res/values/config.xml)
 
 And that's it! Possible good points on using your own server would be to provide an OTA update also to all the custom builds based on CM without having to hassle users on going everyday into the topic and reading if it was released something. Also, you can use it to centralize updates on your own Corp if people are using massively LineageOS as their ROMs on their phones.
 
