@@ -263,7 +263,7 @@ font:
     # family: the font family
     family: Lato
     # size: the font size. Use `px` as unit
-    size:
+    size: 18
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
