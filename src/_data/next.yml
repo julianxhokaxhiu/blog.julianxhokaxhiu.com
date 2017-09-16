@@ -270,13 +270,13 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Montserrat
 
   # Font settings for posts
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    family: Domine
 
   # Font settings for Logo
   # Fallback to `global` font settings.
