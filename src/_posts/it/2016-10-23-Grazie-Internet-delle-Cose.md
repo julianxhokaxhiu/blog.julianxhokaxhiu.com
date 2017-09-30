@@ -10,7 +10,7 @@ Sono passate circa due settimane dall'ultima volta in cui scrissi [cosa ne penso
 
 Eppure, nemmeno a farlo apposta la situazione si è rivelata [sempre meno rosea](https://www.engadget.com/2016/10/21/mirai-botnet-hacked-cameras-routers-internet-outage/) di quello che pensavo.
 
-### Facciamo il punto della situazione
+## Facciamo il punto della situazione
 
 In poco più di 10 giorni ho continuato a leggere di notizie ed eventi, che in un certo senso, hanno toccato anche me personalmente.
 
@@ -20,7 +20,7 @@ Ma da dove arriva tutto ciò?
 
 Apparentemente da tutta quella serie di dispositivi che vengono prodotti senza la consapevolezza dell’aggiornamento, dopo che verranno deprecati dal produttore.
 
-### Tutto inizia da qui
+## Tutto inizia da qui
 
 Sicuramente mi verrà molto difficile spiegare in parole semplici cos'è una Botnet, perciò mi limiterò a spiegarlo in questo modo:
 
@@ -30,7 +30,7 @@ Bello eh? Forse l’ho pure un po’ sdrammatizzata la questione, ma più o meno
 
 Apparentemente un gruppo di persone che ha in mente qualcosa di ben più grosso, ha utilizzato questa tecnica per verificare la portata di questo vettore di attacco. Per [chi fosse curioso](https://krebsonsecurity.com/2016/10/source-code-for-iot-botnet-mirai-released/), è possibile visionare [il codice sorgente](https://github.com/jgamblin/Mirai-Source-Code) del software che ha paralizzato per quasi metà giornata l’Internet mondiale.
 
-### Cosa fare per proteggersi e proteggere
+## Cosa fare per proteggersi e proteggere
 
 Il mio consiglio più caloroso è quello di tenere **sempre aggiornati** i vostri dispositivi. Siano essi un semplice PC, uno Smartphone o il vostro NAS di casa. Quando il vostro produttore rilascia un aggiornamento, il più delle volte lo fa per rendere il vostro dispositivo più sicuro.
 
@@ -40,7 +40,7 @@ Purtroppo non c’è molta soluzione se non comprare un dispositivo nuovo, oppur
 
 Tutti i dispositivi che comprate oggi nel mercato, nel 99% dei casi, hanno Linux ( o BSD ) nelle loro fondamenta, che sono entrambi prodotti Open Source. Se per assurdo il vostro dispositivo non viene aggiornato, è solo perché il produttore non vuole più spendere tempo, e denaro, nel produrre e testare file di aggiornamento.
 
-### La mia proposta
+## La mia proposta
 
 Se vogliamo veramente un mondo più sicuro in ambito tecnologico, dove innalzare le fondamenta per un più roseo Internet delle Cose, dovremmo concentrarci su almeno due punti:
 

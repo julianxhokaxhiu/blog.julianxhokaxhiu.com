@@ -17,7 +17,7 @@ La tua voglia di comunicare e condividere cresce, quindi decidi di installare Fa
 
 Inizi quindi a scaricare pure qualche gioco: di corse, punta e clicca ( o meglio dire “fissa e tappa”? ), di lotta, Jump and Run. Aggiungi pure che sei un nostalgico e sicuramente vuoi pure giocare a qualche gioco di vecchia data che ti ricorda la tua infanzia. Così decidi di installare pure qualche emulatore di NES, SNES o Game Boy.
 
-### Ma poi succede che…
+## Ma poi succede che…
 
 Ti svegli una mattina e ti chiedi: cosa sta succedendo al mio Smartphone? Improvvisamente inizia ad andare lento e nessuna app sembra andare così fluida come prima. Il tuo Smartphone nuovo fiammante è passato da top di gamma a flop di gamma, in meno di poche settimane. Eppure non l’hai pagato poco, sicuramente ci hai lasciato metà del tuo stipendio per comprarlo.
 
@@ -31,7 +31,7 @@ Passano mesi, ed il tuo smartphone inizia a percepire colpi. La batteria oramai 
 
 Ti fai una scrollata su Facebook ed uno dei tuoi amici condivide la notizia “Non installare questa applicazione: scoperto virus nascosto dentro di essa”. Apri l’articolo e scopri che il primo consiglio è tenere sempre aggiornato il Sistema. Così ritiri fuori la notifica che avevi nascosto e prontamente aggiorni il Sistema.
 
-### Ora va più lento di prima
+## Ora va più lento di prima
 
 Stanco della situazione, esasperato, non sai più cosa fare. Il tuo top di gamma, in un qualche anno passa come catorcio di serie A. Eppure qualche anno prima ne andavi fiero. La tecnologia si evolve e con essa anche le esigenze giusto?
 
@@ -39,11 +39,11 @@ Stanco della situazione, esasperato, non sai più cosa fare. Il tuo top di gamma
 
 Ti accorgi che forse nella lista di applicazioni che avevi scaricato nel tempo, che avrai aperto forse una volta a settimana se andava bene, qualcuna di quelle era iniziata a diventare un po’ troppo esigente rispetto alle altre.
 
-### Decidi di fare piazza pulita
+## Decidi di fare piazza pulita
 
 Capisci che è arrivata l’ora di fare la cosa giusta: togliere ciò di cui non si ha seriamente più bisogno: un tipo di applicazione per ogni tipologia di comunicazione. Solo quella che offre veramente quello di cui hai bisogno, che possibilmente non appesantisce il consumo delle risorse del tuo Smartphone, inclusa la Batteria.
 
-### Le mie scelte
+## Le mie scelte
 
 Ho deciso ultimamente di usare un criterio molto semplice per capire se ho bisogno di un'applicazione nel mio Smartphone oppure no ( indipendentemente dalle risorse che usa ):
 

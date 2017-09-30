@@ -13,7 +13,7 @@ Ebbene, vi confesserò una cosa che nel 2017 in Germania, pare avere dell’assu
 
 Così, forte di questo mese, ho pensato di scrivere qualche pensiero sulla situazione corrente, e sulla situazione dell’infrastruttura di connessione ad Internet.
 
-### Internet è sempre con noi
+## Internet è sempre con noi
 
 Se c’è una cosa che mi ha davvero sorpreso in tutto questo periodo è come ho sempre dato per sopravvalutato il concetto di avere Internet sempre con noi.
 
@@ -23,7 +23,7 @@ Ma non è stato così questo mese. Ho sfiorato il tetto ed ho provato l’ebrezz
 
 > Mi chiedo cosa serva alle compagnie telefoniche per rendere illimitata la navigazione normale, veloce, come a casa.
 
-### Perché scaricare se posso vederlo in Streaming?
+## Perché scaricare se posso vederlo in Streaming?
 
 Grazie Netflix o Amazon Prime, per aver cambiato le nostre abitudini. Seriamente, è comodissimo aprire il vostro servizio, premere il tasto Play e godersi la visione.
 
@@ -31,7 +31,7 @@ Ma cosa accade se un bel giorno la mia connessione di casa magicamente “fa puf
 
 > Siamo abituati a pensare che abbiamo tutto sempre a portata di mano, ma è un attimo che ti ritrovi senza. Per volere tuo, loro oppure per cause di forza maggiori.
 
-### Ma ora tanto abbiamo l’LTE
+## Ma ora tanto abbiamo l’LTE
 
 Ebbene sì, quando abbiamo chiamato il nostro operatore, per quanto sono stati gentili, cordiali ed educati nel aiutarci nel disguido seguendoci praticamente attraverso ogni canale di comunicazione ( Telefono, Social, Applicazione mobile, Forum ), l’unica opzione che ci hanno potuto offrire per una connessione di emergenza è una connessione tramite “pennino USB”.
 
@@ -39,7 +39,7 @@ Meglio che niente penserete voi, ed è quello che pensavo pure io mentre ci mand
 
 {% asset_img "cli.gif" "Viva la latenza. Decisamente instabile per una chiamata o video-chiamata." %}
 
-### Meno male che esistono le Applicazioni Mobile
+## Meno male che esistono le Applicazioni Mobile
 
 Navigare un sito oggi è un incubo. Specialmente tramite rete mobile, dove la latenza è davvero alta ( conosciuta ai più anche come Throttling ). L’unico sito che era confortevole da usare era Google. Il più delle volte navigavo l’Internet utilizzando la copia cache. Non vi nego che mi è sembrato tutto ad un tratto di essere nel 2001.
 
@@ -49,7 +49,7 @@ In poche parole: cercavo di usare ogni byte in modo essenziale. Se c’era del t
 
 > Non avendo molto traffico al mese, ho dovuto imparare a razionare.
 
-### Si torna a socializzare
+## Si torna a socializzare
 
 Magari a voi farà sorridere questo punto, ma per me è stato un punto di riflessione serio. Sono tornato a socializzare di più. Non che mi sono sempre chiuso nella mia tana e non sono uscito di li.
 
@@ -57,7 +57,7 @@ Ma uscire per il piacere di farlo, stare fuori in compagnia di amici e bersi una
 
 > Forse quando dicono che Internet è la nuova droga, non hanno tutti i torti.
 
-### Rimanere senza Internet è un attimo
+## Rimanere senza Internet è un attimo
 
 Viviamo in una parte del mondo dove molte volte diamo per scontato che Internet è sempre li, presente, ed accessibile a tutti. Un bene comune che va gestito, per cui anche la politica di cosa passa sui cavi e quale priorità ha, è un aspetto importante.
 

@@ -10,7 +10,7 @@ date: 2016-10-10 20:51:49
 
 Voglio iniziare così questa mia riflessione sull'ultimo Gadget presentato al MadeByGoogle, che c’è stato una settimana, del quale probabilmente solo io, [e qualcun’altro](http://motherboard.vice.com/read/we-need-to-save-the-internet-from-the-internet-of-things), ci saremo accorti di quanto sarà invasivo. Ma partiamo con ordine.
 
-### Google Home
+## Google Home
 
 Probabilmente non tutti avranno presente di cosa sto parlando, perciò preferisco [lasciarvi un link](https://madeby.google.com/home/) in cui ve lo potrete studiare con molta calma ( caldamente consigliato prima di procedere con la lettura di questa mia recens-opinione ).
 
@@ -18,7 +18,7 @@ Riassumendo in poche parole: **un dispositivo elettronico** dotato di Luci, Micr
 
 Tutto molto bello direte voi ma…
 
-### Internet Of Things ( aka Internet delle Cose )
+## Internet Of Things ( aka Internet delle Cose )
 
 Come ben saprete, questo nome alieno viene sempre più spesso usato da tutti. Dai giornalisti che parlano di queste cose manco stessero descrivendo un viaggio interplanetario tra Terra e Marte, a quelli che con queste cose già hanno avuto alcune esperienze ( utilizzatori di [Nest](https://nest.com/), sto parlando di voi ).
 
@@ -34,7 +34,7 @@ In effetti, se pensato così in modo genuino e senza male intenzioni, effettivam
 
 Tuttavia, c’è un punto che personalmente mi blocca ancora dall'urlare di gioia al solo pensiero. E stiamo parlando di…
 
-### Sorveglianza di Massa
+## Sorveglianza di Massa
 
 Mi capita sempre più spesso di stare parlando di un determinato argomento con amici o colleghi, che pur non avendo mai visitato nulla di quel determinato argomento o prodotto su internet, me **lo ritrovo puntualmente tra gli ad di Facebook** mentre scrollo la mia timeline. [Paranoia o realtà?](https://news.ycombinator.com/item?id=10360761)
 
@@ -44,7 +44,7 @@ Ancora possiamo menzionare come [l’NSA utilizzava i dati incrociati di Faceboo
 
 Tutto questo per dirvi solamente una cosa: con l’introduzione di Internet of Things, **sarà ancora più semplice ottenere informazioni su di voi.**Interessi, tono di voce, stato emotivo e molto altro. Come ogni nuova tecnologia che si rispetti, **bisogna sempre imparare ad usarla con Moderazione**.
 
-### Riassumendo
+## Riassumendo
 
 Nonostante vedo l’introduzione di Internet of Things come un capitolo sicuramente evolutivo nei confronti di noi amanti della tecnologia, dall'altra parte temo che nel mondo in cui viviamo in questo periodo, non sia forse propriamente la cosa di cui abbiamo più bisogno ( e forse la cosa che più ci può mettere a rischio ).
 

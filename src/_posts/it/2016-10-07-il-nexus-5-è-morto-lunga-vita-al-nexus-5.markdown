@@ -12,7 +12,7 @@ Con il senno di poi però, forte della mia abitudine di contare fino a 10 prima 
 
 ------
 
-### **Caratteristiche Hardware**
+## **Caratteristiche Hardware**
 
 Non c’è bisogno che vi scriva la lista delle caratteristiche Hardware del Nexus 5: credo che ognuno di voi le conosca molto bene, se bazzicate nel settore Tecnologico.
 
@@ -22,7 +22,7 @@ A giudicare dalla [pagina relativa di XDA](http://forum.xda-developers.com/googl
 
 Secondo me questo è un segnale positivo che dimostra come la community non l’abbia ancora abbandonato, e che crede come questo Smartphone possa dare ancora molto, più di quanto ci abbiano creduto i produttori originali.
 
-### Caratteristiche Software
+## Caratteristiche Software
 
 Sicuramente non ha nulla di cui rimpiangere dai suoi fratelli maggiori, persino di altri produttori: il parco software di Android gira ancora benissimo, dalle Applicazioni generiche ai Giochi. Niente lag, o crash inaspettati. Tutte le funzionalità di Android supportate, meno quelle che richiedono un Hardware particolare, ad esempio il Fingerprint Sensor.
 
@@ -32,13 +32,13 @@ La Batteria purtroppo inizia a sentire i suoi anni di fatica, anche se comunque 
 
 Divento io vecchio, anno dopo anno, vuoi che non lo diventi la mia Batteria?
 
-### Tutto molto bello, ma non arriva così di serie
+## Tutto molto bello, ma non arriva così di serie
 
 Avete ragione, purtroppo è uno dei talloni di Achille di ogni Nexus a mio modesto parere.
 
 Tuttavia, sono convinto che ognuno di voi abbia almeno un amico “smanettone” a cui piace fare cose un po’ meno alla portata di tutti.
 
-### Riassumendo
+## Riassumendo
 
 Personalmente sono convinto che **il modding di Android sia uno dei suoi punti forti**, al contrario di come molte persone pensano che il Software stock deve arrivare **ultra-ottimizzato, bug-free** e possibilmente che vi accrediti 50€ ogni mese sul conto.
 
