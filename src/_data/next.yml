@@ -273,7 +273,7 @@ font:
     # family: the font family
     family: Montserrat
     # size: the font size. Use `px` as unit
-    size:
+    size: 30
 
   # Font settings for posts
   # Fallback to `global` font settings.
