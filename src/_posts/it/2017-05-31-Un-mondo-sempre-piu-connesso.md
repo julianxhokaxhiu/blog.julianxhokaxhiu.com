@@ -5,7 +5,7 @@ subtitle: …o sospeso ad un filo?
 date: 2017-05-31 20:12:39
 ---
 
-{% asset_img "cover.jpg" "Fonte: Wikipedia (https://commons.wikimedia.org/wiki/File:Broken_ethernet_cable.jpg)" %}
+{% asset_img "cover.jpg" "Fonte: Wikipedia" %}
 
 Vi starete sicuramente chiedendo che fine ho fatto. Ultimamente non sono più iperattivo sui Social, scrivo poco, non posto quasi più nulla se non una condivisione molto casuale nella mia timeline su Facebook.
 
