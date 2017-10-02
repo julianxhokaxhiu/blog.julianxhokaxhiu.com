@@ -281,7 +281,7 @@ font:
     # external: true will load this font family from host.
     external: true
     # family: the font family
-    family: Domine
+    family: Droid Serif
 
   # Font settings for Logo
   # Fallback to `global` font settings.
@@ -300,7 +300,7 @@ font:
     # family: the font family
     family:
     # size: the font size. Use `px` as unit
-    size:
+    size: 16
 
 
 # ---------------------------------------------------------------
