@@ -87,6 +87,17 @@ deploy:
   repo: git@github.com:julianxhokaxhiu/blog.julianxhokaxhiu.com.git
   branch: gh-pages
 
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
 # Aliases
 alias:
   welcome/index.html: en/welcome/
