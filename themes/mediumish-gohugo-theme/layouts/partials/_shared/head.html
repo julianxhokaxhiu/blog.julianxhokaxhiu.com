@@ -16,7 +16,7 @@
 		<meta property="og:title" content="{{ .Page.Title }}">
 		<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
 	{{ end }}
-	<meta property="og:description" content="Julian Xhokaxhiu - Solution Architect/Engineer - Open Source Enthusiast - My personal motto? 'Impossible Is Nothing'">
+	<meta property="og:description" content="{{ .Site.Params.Description }}">
   {{ hugo.Generator }}
 	{{ with .Site.Params.logo }}
 	<link rel="icon" href="{{ . | urlize | relURL }}">
