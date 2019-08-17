@@ -18,7 +18,7 @@ if [ ! -d ${HUGO_PATH} ]; then
   mkdir -p ${HUGO_PATH}
 
   # Download and Extract Hugo
-  curl -q -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_${HUGO_RELEASE}_Linux-64bit.tar.gz | tar xz -C ${HUGO_PATH}
+  curl -s -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_${HUGO_RELEASE}_Linux-64bit.tar.gz | tar xz -C ${HUGO_PATH}
 
   # Ensure it's executable
   chmod +x ${HUGO_PATH}/hugo
