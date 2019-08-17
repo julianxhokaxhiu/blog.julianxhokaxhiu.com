@@ -2,7 +2,22 @@
 	<meta charset="utf-8">
 	<meta name="google-site-verification" content="CV7NWabg4dHSTzScrRzKFAAh0V3TST4qMlcoW7Y_Z3s" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {{ hugo.Generator }}
+	{{ if .IsHome }}
+		<meta property="og:url" content="{{ .Site.BaseURL }}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ .Site.Title }}">
+		<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
+	{{ else }}
+		<meta property="og:url" content="{{ .Page.Permalink }}">
+		<meta property="og:type" content="article">
+		<meta property="article:published_time" content="{{ .Page.PublishDate }}">
+		<meta property="article:modified_time" content="{{ .Page.Lastmod }}">
+		<meta property="article:author" content="https://julianxhokaxhiu.com">
+		<meta property="og:title" content="{{ .Page.Title }}">
+		<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
+	{{ end }}
+	<meta property="og:description" content="Julian Xhokaxhiu - Solution Architect/Engineer - Open Source Enthusiast - My personal motto? 'Impossible Is Nothing'">
+  {{ hugo.Generator }}
 	{{ with .Site.Params.logo }}
 	<link rel="icon" href="{{ . | urlize | relURL }}">
 	{{ end }}
