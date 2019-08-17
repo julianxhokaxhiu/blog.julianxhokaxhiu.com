@@ -4,6 +4,7 @@ title: Center the new Youtube layout with YT Native Center Layout
 date: '2012-12-09 23:17:43'
 tags:
 - extensions
+aliases: [/center-the-new-youtube-layout-with-yt-native-center-layout/index.html]
 ---
 
 Hi guys,

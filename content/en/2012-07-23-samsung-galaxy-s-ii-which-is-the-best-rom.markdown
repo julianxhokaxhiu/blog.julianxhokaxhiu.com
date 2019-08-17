@@ -6,6 +6,7 @@ tags:
 - modding
 - rom
 - kernel
+aliases: [/samsung-galaxy-s-ii-which-is-the-best-rom/index.html]
 ---
 
 Hi all,

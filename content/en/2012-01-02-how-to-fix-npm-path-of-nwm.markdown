@@ -6,6 +6,7 @@ tags:
 - javascript
 - mongodb
 - nodejs
+aliases: [/how-to-fix-npm-path-of-nwm/index.html]
 ---
 
 Hello everyone again,

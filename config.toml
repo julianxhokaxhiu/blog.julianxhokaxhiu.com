@@ -1,0 +1,37 @@
+baseURL = "https://blog.julianxhokaxhiu.com"
+languageCode = "en-us"
+title = "Julian Xhokaxhiu's Blog"
+theme = "mediumish-gohugo-theme"
+summaryLength = 25
+enableEmoji = true
+publishDir = ".dist"
+pygmentsCodeFences = true
+disqusShortname = "adevelopersblog"
+googleAnalytics = "UA-13006157-1"
+
+DefaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    weight = 1
+  [languages.it]
+    contentDir = "content/it"
+    weight = 2
+
+[params.author]
+  name = "Julian Xhokaxhiu"
+  thumbnail = "/images/author.png"
+  description = "Solution Architect/Engineer - Open Source Enthusiast"
+
+## Main Menu
+[[menu.main]]
+    name = "English"
+    weight = 100
+    identifier = "en"
+    url = "/en"
+[[menu.main]]
+    name = "Italiano"
+    identifier = "it"
+    weight = 200
+    url = "/it"

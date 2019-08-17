@@ -4,6 +4,7 @@ title: How to install Debian Wheezy over ZyXEL NSA320
 date: '2013-10-05 23:18:00'
 tags:
 - modding
+aliases: [/install-debian-wheezy-zyxel-nsa320/index.html]
 ---
 
 Hi guys,

@@ -5,6 +5,7 @@ date: '2012-11-28 18:27:18'
 tags:
 - ntfs-3g
 - osx
+aliases: [/fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/index.html]
 ---
 
 Hi,

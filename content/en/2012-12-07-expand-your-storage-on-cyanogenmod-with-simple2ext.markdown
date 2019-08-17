@@ -4,9 +4,10 @@ title: Expand your Storage on CyanogenMod with Simple2Ext
 date: '2012-12-07 22:52:19'
 tags:
 - modding
+aliases: [/expand-your-storage-on-cyanogenmod-with-simple2ext/index.html]
 ---
 
-**UPDATE:** See [this one](http://blog.julianxhokaxhiu.com/2013/05/12/expand-your-storage-on-cyanogenmod-with-mounts2sd/ "Expand your Storage on CyanogenMod with Mounts2SD"), if you're using Android 4.2 (CM10.x) :)
+**UPDATE:** See [this one](/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/ "Expand your Storage on CyanogenMod with Mounts2SD"), if you're using Android 4.2 (CM10.x) :)
 
 Hi there,
 

@@ -5,6 +5,7 @@ date: '2011-03-11 01:54:43'
 tags:
 - extensions
 - javascript
+aliases: [/grooveshark-mediakeys-reloaded/index.html]
 ---
 
 Hi there,

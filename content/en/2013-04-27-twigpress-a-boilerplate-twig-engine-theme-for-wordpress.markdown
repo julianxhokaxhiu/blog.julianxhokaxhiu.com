@@ -6,11 +6,12 @@ tags:
 - php
 - twig
 - template
+aliases: [/twigpress-a-boilerplate-twig-engine-theme-for-wordpress/index.html]
 ---
 
 Good evening guys,
 
-today I would like to show you the evolution of my last discussion about [Twig for Wordpres](http://blog.julianxhokaxhiu.com/2013/04/21/when-wordpress-meets-twig/ "When WordPress meets Twig"). Since I've studied all the source code and I found more [good techniques](http://inchoo.net/wordpress/twig-wordpress-part2/ "TWIG with wordpress part2") to implement Wordpress API calls, I've decided to create a brand new engine rather than refactoring [the old one](http://jarednova.github.io/timber/ "Because WordPress is awesome, but the_loop isn't."). So, from this [TwigPress](https://github.com/julianxhokaxhiu/TwigPress "A boilerplate Twig Theme Engine for Wordpress") have been borned.
+today I would like to show you the evolution of my last discussion about [Twig for Wordpres](/2013-04-21-when-wordpress-meets-twig/ "When WordPress meets Twig"). Since I've studied all the source code and I found more [good techniques](http://inchoo.net/wordpress/twig-wordpress-part2/ "TWIG with wordpress part2") to implement Wordpress API calls, I've decided to create a brand new engine rather than refactoring [the old one](http://jarednova.github.io/timber/ "Because WordPress is awesome, but the_loop isn't."). So, from this [TwigPress](https://github.com/julianxhokaxhiu/TwigPress "A boilerplate Twig Theme Engine for Wordpress") have been borned.
 
 You can found more details on the GitHub repo itself on how it works, why have been borned and so on.
 

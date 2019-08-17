@@ -6,6 +6,7 @@ tags:
 - javascript
 - osx
 - ios
+aliases: [/jquery-itunes-store-search/index.html]
 ---
 
 Hi,

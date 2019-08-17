@@ -2,6 +2,7 @@
 layout: single
 title: Welcome
 date: '2010-05-30 13:46:11'
+aliases: [/welcome/index.html]
 ---
 
 Welcome into my new blog. Maybe you're thinking what about is this blog but, hey no problem, i'm here to explain to you :)

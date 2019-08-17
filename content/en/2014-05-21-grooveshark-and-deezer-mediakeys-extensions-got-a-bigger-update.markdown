@@ -4,6 +4,7 @@ title: Grooveshark and Deezer MediaKeys Extensions got a bigger update!
 date: '2014-05-21 20:39:37'
 tags:
 - extensions
+aliases: [/grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/index.html]
 ---
 
 Hi guys,

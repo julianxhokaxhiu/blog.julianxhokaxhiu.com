@@ -2,6 +2,7 @@
 layout: single
 title: Back/Forward Mouse Button for Logitech LS1 on Ubuntu 12.04
 date: '2012-09-22 18:10:51'
+aliases: [/backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04/index.html]
 ---
 
 Have you ever wondered how to make it work? Well, follow these simple steps and you're done :)

@@ -5,9 +5,10 @@ date: '2012-09-22 18:43:50'
 tags:
 - modding
 - kernel
+aliases: [/best-kernel-for-samsung-galaxy-s2/index.html]
 ---
 
-**Update:** Since this article is months old, I've made a [new one](http://blog.julianxhokaxhiu.com/2013/01/05/best-setup-for-samsung-galaxy-s2/ "Best Setup for Samsung Galaxy S2") you would probably find more interesting :)
+**Update:** Since this article is months old, I've made a [new one](/2013-01-05-best-setup-for-samsung-galaxy-s2/ "Best Setup for Samsung Galaxy S2") you would probably find more interesting :)
 
 Do you remember that i wrote a post regarding the modding of Samsung's Galaxy S2? Well, some time have passed and i got keeping modding it, trying all the kernels available in XDA forums.
 

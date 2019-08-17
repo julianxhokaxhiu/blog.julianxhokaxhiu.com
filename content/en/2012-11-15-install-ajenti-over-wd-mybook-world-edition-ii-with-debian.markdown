@@ -2,6 +2,7 @@
 layout: single
 title: Install Ajenti over WD MyBook World Edition II with Debian Squeeze
 date: '2012-11-15 17:18:37'
+aliases: [/install-ajenti-over-wd-mybook-world-edition-ii-with-debian/index.html]
 ---
 
 Hi guys,

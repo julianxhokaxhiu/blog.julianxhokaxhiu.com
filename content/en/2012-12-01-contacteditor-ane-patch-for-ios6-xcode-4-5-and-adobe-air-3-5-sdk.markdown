@@ -6,6 +6,7 @@ tags:
 - ios
 - air
 - xcode
+aliases: [/contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/index.html]
 ---
 
 Hi guys,

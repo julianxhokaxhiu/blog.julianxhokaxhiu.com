@@ -4,6 +4,7 @@ title: Expand your Storage on CyanogenMod with Mounts2SD
 date: '2013-05-12 20:46:11'
 tags:
 - modding
+aliases: [/expand-your-storage-on-cyanogenmod-with-mounts2sd/index.html]
 ---
 
 Hello again,
@@ -16,7 +17,7 @@ I discovered this one those days because of Android 4.2.x and its partition mana
 
 ## How
 
-It's pretty simple and straightforward to install and use. You have to partition and format you SD card just like I've said in [my previous article](http://blog.julianxhokaxhiu.com/2012/12/07/expand-your-storage-on-cyanogenmod-with-simple2ext/ "Expand your Storage on CyanogenMod with Simple2Ext"). Then you have to download and install Mounts2SD directly from the Play Store. With your MicroSD inserted in your device, open Mounts2SD and configure Busybox and Init.d scripts. After that just simply reboot, and after it finishes to power on (your device will vibrate 3 times) reboot again (just to be sure). **Don't worry:** your device on you first power on will boot a little longer, because it's moving all the Android framework on your EXT4 partition.
+It's pretty simple and straightforward to install and use. You have to partition and format you SD card just like I've said in [my previous article](/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/ "Expand your Storage on CyanogenMod with Simple2Ext"). Then you have to download and install Mounts2SD directly from the Play Store. With your MicroSD inserted in your device, open Mounts2SD and configure Busybox and Init.d scripts. After that just simply reboot, and after it finishes to power on (your device will vibrate 3 times) reboot again (just to be sure). **Don't worry:** your device on you first power on will boot a little longer, because it's moving all the Android framework on your EXT4 partition.
 
 ## Already done?
 

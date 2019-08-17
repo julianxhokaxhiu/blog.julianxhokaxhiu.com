@@ -4,6 +4,7 @@ title: DAAPjs - DAAP Resolver for Tomahawk Player
 date: '2013-06-22 23:12:26'
 tags:
 - tomahawk
+aliases: [/daapjs-daap-resolver-for-tomahawk-player/index.html]
 ---
 
 Hi guys,

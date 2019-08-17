@@ -4,6 +4,7 @@ title: ContentFlow Shadowbox plugin
 date: '2011-01-12 22:30:30'
 tags:
 - javascript
+aliases: [/contentflow-shadowbox-plugin/index.html]
 ---
 
 Hi there,

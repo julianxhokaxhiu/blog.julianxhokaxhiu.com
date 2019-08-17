@@ -4,6 +4,7 @@ title: "[UPDATED] JonDesign's SmoothGallery Shadowbox plugin"
 date: '2012-02-03 16:39:12'
 tags:
 - javascript
+aliases: [/jondesigns-smoothgallery-shadowbox-plugin/index.html]
 ---
 
 Hi there,

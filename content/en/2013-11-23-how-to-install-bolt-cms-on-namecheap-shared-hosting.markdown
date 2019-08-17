@@ -6,6 +6,7 @@ tags:
 - php
 - twig
 - template
+aliases: [/how-to-install-bolt-cms-on-namecheap-shared-hosting/index.html]
 ---
 
 Hi guys,

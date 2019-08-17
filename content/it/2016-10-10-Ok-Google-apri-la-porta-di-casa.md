@@ -4,7 +4,7 @@ title: 'Ok Google, apri la porta di casa'
 date: 2016-10-10 20:51:49
 ---
 
-{% asset_img "cover.jpg" %}
+{{< asset_img "cover.jpg" >}}
 
 > Non potrai entrare a casa se non hai internet, perché Telecom fa manutenzione, ed il tuo nuovo Pixel fiammante non si connette alla tua Google Door [ cit. [Claudio Ludovico Panetta](https://medium.com/@Ludo237) ]
 
@@ -30,7 +30,7 @@ WOW! Già vedo molti di voi dire “che bello, potrò accendere/spegnere le luci
 
 In effetti, se pensato così in modo genuino e senza male intenzioni, effettivamente **è una possibilità bellissima che aprirà come al solito due correnti di pensiero**: le persone che da lazy diventeranno ancora più lazy, o quelle persone che sfrutteranno quel tempo per fare qualcos'altro di produttivo. Ma questa è un’altra storia.
 
-{% twitter https://twitter.com/internetofshit/status/762681635926056960 %}
+https://twitter.com/internetofshit/status/762681635926056960
 
 Tuttavia, c’è un punto che personalmente mi blocca ancora dall'urlare di gioia al solo pensiero. E stiamo parlando di…
 

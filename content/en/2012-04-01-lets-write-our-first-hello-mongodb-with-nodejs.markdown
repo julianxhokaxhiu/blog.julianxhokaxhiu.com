@@ -6,6 +6,7 @@ tags:
 - javascript
 - mongodb
 - nodejs
+aliases: [/lets-write-our-first-hello-mongodb-with-nodejs/index.html]
 ---
 
 As you have seen recently, i'm not writing so much here, because i'm working on new technologies like [NodeJS](http://nodejs.org/ "NodeJS") and [MongoDB](http://www.mongodb.org/ "MongoDB"). Fascinated by this next-gen "AMP", i'm trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our "table" (i'll explain you later why i'm writing it like this).

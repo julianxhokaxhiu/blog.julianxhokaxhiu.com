@@ -4,6 +4,7 @@ title: jQuery Storyline
 date: '2011-01-09 01:33:40'
 tags:
 - javascript
+aliases: [/jquery-storyline/index.html]
 ---
 
 Hi all, once again :)

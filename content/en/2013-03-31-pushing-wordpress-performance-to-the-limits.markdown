@@ -4,6 +4,7 @@ title: Pushing Wordpress performance to the limits!
 date: '2013-03-31 00:21:37'
 tags:
 - php
+aliases: [/pushing-wordpress-performance-to-the-limits/index.html]
 ---
 
 Hi guys,

@@ -6,6 +6,7 @@ date: '2014-02-01 18:51:23'
 tags:
 - modding
 - rest
+aliases: [/how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/index.html]
 ---
 
 **EDIT:** I took the time to develop the first release of the REST API server, you can find it [on my Github](https://github.com/julianxhokaxhiu/LineageOTA) as always as an OpenSource project.

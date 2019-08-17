@@ -4,6 +4,7 @@ title: Rapid script to test 'Etag' and 'Last-Modified' HTTP Headers
 date: '2012-10-03 22:03:50'
 tags:
 - php
+aliases: [/rapid-script-to-test-etag-and-last-modified-http-headers/index.html]
 ---
 
 Are you searching for a rapid PHP script to test "**Etag**" or "**Last-Modified**" HTTP Headers in your project? Here we go, made in PHP.

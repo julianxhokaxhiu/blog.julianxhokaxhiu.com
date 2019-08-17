@@ -5,6 +5,7 @@ date: '2013-12-21 19:34:51'
 tags:
 - extensions
 - spotify
+aliases: [/extract-your-spotify-playlist-from-google-chrome/index.html]
 ---
 
 Hi guys,

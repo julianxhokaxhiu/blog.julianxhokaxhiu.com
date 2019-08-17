@@ -4,6 +4,7 @@ title: How to setup an SSH server on ZyXEL NSA320
 date: '2013-06-29 16:45:03'
 tags:
 - modding
+aliases: [/how-to-setup-an-ssh-server-on-zyxel-nsa320/index.html]
 ---
 
 Hi there,

@@ -5,6 +5,7 @@ date: '2013-01-19 18:57:57'
 tags:
 - python
 - sublimetext2
+aliases: [/projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/index.html]
 ---
 
 Hi there,

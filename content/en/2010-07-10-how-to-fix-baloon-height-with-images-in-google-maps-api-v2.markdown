@@ -4,6 +4,7 @@ title: How to fix baloon height with images in Google Maps API v2
 date: '2010-07-10 11:24:41'
 tags:
 - javascript
+aliases: [/how-to-fix-baloon-height-with-images-in-google-maps-api-v2/index.html]
 ---
 
 Hi,

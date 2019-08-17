@@ -5,11 +5,12 @@ date: '2013-01-05 18:05:40'
 tags:
 - modding
 - kernel
+aliases: [/best-setup-for-samsung-galaxy-s2/index.html]
 ---
 
 Hi again,
 
-since the [last post](http://blog.julianxhokaxhiu.com/2012/09/22/best-kernel-for-samsung-galaxy-s2/ "Best Kernel for Samsung Galaxy S2 (Sep 2012)") I've made got some movement in the blog and some people refer to it as a "reference" post I thought it would be right to update this argument (like a "what's app regarding the scene of S2") with what happened recently.
+since the [last post](/2012-09-22-best-kernel-for-samsung-galaxy-s2/ "Best Kernel for Samsung Galaxy S2 (Sep 2012)") I've made got some movement in the blog and some people refer to it as a "reference" post I thought it would be right to update this argument (like a "what's app regarding the scene of S2") with what happened recently.
 
 As you have already read I made a post regarding my personal experience with my Samsung Galaxy S2, and also if it was not so very much enthusiastic, of that phone, i thought it would be right to share my knowledge with you talking about kernels. But the scene had evolved this months and some good stuff became more good than before and not only in the Kernel scene.
 

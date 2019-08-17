@@ -5,6 +5,7 @@ date: '2010-06-05 00:07:06'
 tags:
 - c
 - batch
+aliases: [/lets-make-google-chrome-live/index.html]
 ---
 
 Hi there,

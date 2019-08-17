@@ -4,6 +4,7 @@ title: AutoComplete Extended
 date: '2010-12-30 02:44:09'
 tags:
 - javascript
+aliases: [/autocomplete-extended/index.html]
 ---
 
 Hi there,

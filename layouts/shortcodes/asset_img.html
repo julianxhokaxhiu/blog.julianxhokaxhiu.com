@@ -1,0 +1,8 @@
+<figure>
+  <img src="{{ .Get 0 }}" />
+  {{ if .Get 1 }}
+  <figcaption>
+    <h4>{{ .Get 1 }}</h4>
+  </figcaption>
+  {{ end }}
+</figure>

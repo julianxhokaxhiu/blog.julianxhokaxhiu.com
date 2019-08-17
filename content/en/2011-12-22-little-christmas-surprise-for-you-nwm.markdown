@@ -7,6 +7,7 @@ tags:
 - javascript
 - mongodb
 - nodejs
+aliases: [/little-christmas-surprise-for-you-nwm/index.html]
 ---
 
 Long time no see duh? Well, i didn't forget you, neither i didn't stop developing cool new things. In fact you can notice that right of this post, you can find some new links about me, followed by my new GitHub channel. But today i'm not going to talk to you abuot this, but about my latest work, which is called [NWM](http://nwm.julianxhokaxhiu.com).

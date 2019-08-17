@@ -4,6 +4,7 @@ title: jQuery Youtube Live Feed
 date: '2012-10-06 01:11:05'
 tags:
 - javascript
+aliases: [/jquery-youtube-live-feed/index.html]
 ---
 
 Hi all again,
