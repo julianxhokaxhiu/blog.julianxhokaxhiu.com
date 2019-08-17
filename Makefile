@@ -1,10 +1,13 @@
 HOSTNAME=$(shell hostname)
 
-default:
-	@hugo serve . --bind 0.0.0.0 --baseURL $(HOSTNAME)
+.fix_permissions:
+	@chmod +x .env.sh
 
-build:
-	@hugo
+default: .fix_permissions
+	@./.env.sh serve . --bind 0.0.0.0 --baseURL $(HOSTNAME)
 
-clean:
-	@rm -rf .dist/
+build: .fix_permissions
+	@./.env.sh
+
+clean: .fix_permissions
+	@./.env.sh clean
