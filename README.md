@@ -1,6 +1,6 @@
-# A Developer's Blog
+# Julian Xhokaxhiu's Blog
 
-Powered by [Hexo](https://hexo.io/) + [NexT Theme](https://github.com/iissnan/hexo-theme-next)
+Powered by [Hugo](https://gohugo.io/) + [Hugo mediumish theme](https://github.com/lgaida/mediumish-gohugo-theme)
 
 ## License
 
