@@ -11,6 +11,11 @@ googleAnalytics = "UA-13006157-1"
 
 DefaultContentLanguage = "en"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [languages]
   [languages.en]
     contentDir = "content/en"
