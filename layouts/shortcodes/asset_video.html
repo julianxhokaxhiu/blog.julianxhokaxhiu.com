@@ -1,0 +1,8 @@
+<figure>
+  <video controls src="{{ .Get 0 }}"></video>
+  {{ if .Get 1 }}
+  <figcaption>
+    <small>{{ .Get 1 }}</small>
+  </figcaption>
+  {{ end }}
+</figure>
