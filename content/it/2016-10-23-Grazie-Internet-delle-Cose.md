@@ -4,7 +4,7 @@ title: 'Grazie, Internet delle Cose'
 date: 2016-10-23 14:06:59
 ---
 
-{% asset_img "cover.png" %}
+{{< asset_img "cover.png" >}}
 
 Sono passate circa due settimane dall'ultima volta in cui scrissi [cosa ne penso dell’Internet delle Cose](https://tecnoscimmie.xyz/ok-google-apri-la-porta-di-casa-b65a594406b0).
 

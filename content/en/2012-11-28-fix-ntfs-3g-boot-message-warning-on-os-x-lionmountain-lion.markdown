@@ -12,7 +12,7 @@ Hi,
 
 today i'm sharing with you a little know-how i got by myself regarding an annoying error that maybe you faced yourself when you tryed to install [NTFS-3G over Mac OS X](http://macntfs-3g.blogspot.it/ "NTFS-3G for Mac OS X") Lion 10.7 or Mac OS X Mountain Lion 10.8\. An example of this annoying message is like this one.  
 
-{% asset_img "ntfs-3g-osx.png" %}
+{{< asset_img "ntfs-3g-osx.png" >}}
 
 If you're facing the same problem, you can fix it within a click of your mouse (or something like...) by just installing [this](https://github.com/downloads/bfleischer/fuse_wait/fuse_wait-1.1.pkg "fuse_wait Installer for OS X 10.7 and later versions of Mac OS X") package. Simple as is!
 

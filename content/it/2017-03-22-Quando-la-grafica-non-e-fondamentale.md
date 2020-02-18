@@ -5,7 +5,7 @@ subtitle: A volte l’immaginazione vuole la sua parte
 date: 2017-03-22 21:40:34
 ---
 
-{% asset_img "cover.jpg" %}
+{{< asset_img "cover.jpg" >}}
 
 Sì, avete capito di cosa andrò a parlare. Del tanto amato e odiato **Mass Effect: Andromeda**.
 
