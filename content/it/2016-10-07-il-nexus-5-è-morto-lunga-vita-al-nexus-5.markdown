@@ -4,7 +4,7 @@ title: Il Nexus 5 è morto. Lunga vita al Nexus 5.
 date: '2016-10-07 17:36:48'
 ---
 
-{{< asset_img "nexus5.jpg" "Nexus 5" >}}
+{{< asset_img "/images/posts/nexus5.jpg" "Nexus 5" >}}
 
 Ogni anno è sempre la stessa storia: escono nuovi Smartphone, sulla carta con valori alle stelle, e ogni volta ci casco sempre nella convinzione: **quest’anno è quello giusto per cambiare Smartphone.**
 

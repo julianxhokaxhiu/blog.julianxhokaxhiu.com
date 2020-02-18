@@ -5,7 +5,7 @@ subtitle: Basta poco per essere portatori sani
 date: 2016-12-17 17:53:54
 ---
 
-{{< asset_img "cover.jpg" >}}
+{{< asset_img "/images/posts/mac.jpg" >}}
 
 [Leggendo i vari articoli riguardo quello che sta accadendo in rete](http://www.forbes.com/sites/thomasbrewster/2016/12/14/yahoo-admits-another-billion-user-accounts-were-leaked-in-2013/#44fa87021754), non so voi ma ultimamente mi riecheggiano in testa solo queste parole:
 

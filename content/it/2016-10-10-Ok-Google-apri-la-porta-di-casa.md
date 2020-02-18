@@ -4,7 +4,7 @@ title: 'Ok Google, apri la porta di casa'
 date: 2016-10-10 20:51:49
 ---
 
-{{< asset_img "cover.jpg" >}}
+{{< asset_img "/images/posts/smart-speakers.jpg" >}}
 
 > Non potrai entrare a casa se non hai internet, perché Telecom fa manutenzione, ed il tuo nuovo Pixel fiammante non si connette alla tua Google Door [ cit. [Claudio Ludovico Panetta](https://medium.com/@Ludo237) ]
 

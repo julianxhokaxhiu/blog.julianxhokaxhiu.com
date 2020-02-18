@@ -5,7 +5,7 @@ subtitle: O forse no.
 date: 2017-02-27 22:04:42
 ---
 
-{{< asset_img "cover.jpg" >}}
+{{< asset_img "/images/posts/android-apps.jpg" >}}
 
 Quante volte vi è capitata quella sensazione di comprare uno Smartphone nuovo fiammante: la sensazione di averlo in mano per la prima volta, veloce, scattante, performante. Ti sembra tutto perfetto.
 

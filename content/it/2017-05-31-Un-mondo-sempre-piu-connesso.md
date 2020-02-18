@@ -5,7 +5,7 @@ subtitle: …o sospeso ad un filo?
 date: 2017-05-31 20:12:39
 ---
 
-{{< asset_img "cover.jpg" "Fonte: Wikipedia" >}}
+{{< asset_img "/images/posts/wire-cable.jpg" "Fonte: Wikipedia" >}}
 
 Vi starete sicuramente chiedendo che fine ho fatto. Ultimamente non sono più iperattivo sui Social, scrivo poco, non posto quasi più nulla se non una condivisione molto casuale nella mia timeline su Facebook.
 
@@ -37,7 +37,7 @@ Ebbene sì, quando abbiamo chiamato il nostro operatore, per quanto sono stati g
 
 Meglio che niente penserete voi, ed è quello che pensavo pure io mentre ci mandano il necessario comodamente per posta. Peccato che una volta [attaccato al Router](http://www.tp-link.de/products/details/Archer-VR200v.html) ( sì, il mio permette di agganciare un Modem USB mobile ed usarlo come connessione di Backup nel caso la VDSL è offline ) l’esperienza è stata più o meno questa, riassunta in una GIF.
 
-{{< asset_img "cli.gif" "Viva la latenza. Decisamente instabile per una chiamata o video-chiamata." >}}
+{{< asset_img "/images/posts/cli.gif" "Viva la latenza. Decisamente instabile per una chiamata o video-chiamata." >}}
 
 ## Meno male che esistono le Applicazioni Mobile
 

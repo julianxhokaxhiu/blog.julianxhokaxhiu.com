@@ -5,7 +5,7 @@ subtitle: Impara per guadagnare
 date: 2017-02-22 22:10:59
 ---
 
-{{< asset_img "cover.jpg" >}}
+{{< asset_img "/images/posts/thinking.jpg" >}}
 
 Molte volte, o forse troppe, ho visto persone iniziare la propria carriera già con la mentalità del “eccomi, sono qui, a salvare la madre patria” quando in verità esattamente in quel momento **sono nient’altro che perfetti sconosciuti** appena entrati in una realtà, che paragonarla alla caoticità di una famiglia è dire poco.
 

@@ -15,7 +15,7 @@ So, again: how can I find a way to inject my code inside of it, by just replacin
 
 Googling a little bit, I found this [awesome Chrome extension](https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii) which is just one, in a plethora of choices. But I liked the approach to have a custom local-hosted Option page, and I went for it.
 
-{{< asset_img "resource-override.png" >}}
+{{< asset_img "/images/posts/resource-override.png" >}}
 
 ## Preconditions
 
@@ -73,11 +73,11 @@ For this special usecase, we decided to tackle this simple JS file: http://thene
 
 As you may see from the file, the `window.noBlocker` property is set to `true` in my case. Well, let's try to fool it by setting it to `false`.
 
-{{< asset_img "website-to-tackle.png" >}}
+{{< asset_img "/images/posts/website-to-tackle.png" >}}
 
 To map the URLs on the page you want to tackle, first load it on a generic tab, after you've installed the extension, then press `F12`. This will open Developer Tools, where inside you can find the `Overrides` tab.
 
-{{< asset_img "website-f12.png" >}}
+{{< asset_img "/images/posts/website-f12.png" >}}
 
 Afterwards, type the URL you want to replace, with the URL where you are hosting your current Javascript ( in my case, http://dev/advertisement.js ). Inside this file what I pasted inside was just this:
 
@@ -87,11 +87,11 @@ window['noBlocker'] = false; // Nice try :)
 
 Now, it's time to refresh our page and to test if it worked. We can actually see that it worked straightforward :D
 
-{{< asset_img "website-tackled.png" >}}
+{{< asset_img "/images/posts/website-tackled.png" >}}
 
 How this was reached technically behind the scenes? Simple: the extension is forcing redirection of URLs, as you can see.
 
-{{< asset_img "behind-the-scenes.png" >}}
+{{< asset_img "/images/posts/behind-the-scenes.png" >}}
 
 ## Conclusions
 
