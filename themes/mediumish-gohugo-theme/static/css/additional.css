@@ -2,10 +2,10 @@
     margin-top: 4rem;
 }
 .article-post figure {
-    margin: 4rem 0;
+    margin: 0 0 4rem;
 }
 .article-post blockquote {
-    margin: 2rem 0 4rem;
+    margin: 2rem 0;
 }
 .mainheading h1.posttitle {
     margin-bottom: 3rem;
