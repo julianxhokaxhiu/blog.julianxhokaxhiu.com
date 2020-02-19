@@ -82,9 +82,7 @@
         </div>
         <!-- End Article
         ================================================== -->
-        {{ if .Params.comments }}
-            {{- partial "single-partials/comments.html" . -}}
-        {{ end }}
+        {{- partial "single-partials/comments.html" . -}}
     </div>
     {{- partial "_shared/alertbar.html" . -}}
 {{ end }}
