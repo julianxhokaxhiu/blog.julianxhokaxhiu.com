@@ -4,7 +4,7 @@ HOSTNAME=$(shell hostname)
 	@chmod +x .env.sh
 
 default: .fix_permissions
-	@./.env.sh serve . --bind 0.0.0.0 --baseURL $(HOSTNAME)
+	@./.env.sh -F serve . --bind 0.0.0.0 --baseURL $(HOSTNAME)
 
 build: .fix_permissions
 	@./.env.sh
