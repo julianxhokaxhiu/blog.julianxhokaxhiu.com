@@ -6,7 +6,14 @@
 		<meta property="og:url" content="{{ .Site.BaseURL }}">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="{{ .Site.Title }}">
+		<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
+		<meta property="og:description" content="{{ .Site.Params.Description }}">
 	{{ else }}
+		{{ if isset .Page.Params "cover" }}
+		<meta property="og:image" content="{{ .Page.Params.cover }}">
+		{{ else }}
+		<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
+		{{ end }}
 		<meta property="og:url" content="{{ .Page.Permalink }}">
 		<meta property="og:type" content="article">
 		<meta property="og:title" content="{{ .Page.Title }}">
@@ -14,8 +21,6 @@
 		<meta property="article:modified_time" content="{{ .Page.Lastmod }}">
 		<meta property="article:author" content="https://julianxhokaxhiu.com">
 	{{ end }}
-	<meta property="og:image" content="{{ .Site.BaseURL }}/images/social/cover.png">
-	<meta property="og:description" content="{{ .Site.Params.Description }}">
   {{ hugo.Generator }}
 	{{ with .Site.Params.logo }}
 	<link rel="icon" href="{{ . | urlize | relURL }}">
