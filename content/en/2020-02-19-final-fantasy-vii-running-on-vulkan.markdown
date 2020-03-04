@@ -8,7 +8,7 @@ cover: /images/posts/FF7-New-Game.png
 
 {{< asset_img "/images/posts/FF7-New-Game.png" "FFNx on Vulkan - New Game screen" >}}
 
-> **TL-DR:** This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan. If you're eager to try it yourself, feel free to installation instructions on the [official repository](https://github.com/julianxhokaxhiu/FFNx). For screenshots and videos, feel free to scroll here down below.
+> **TL-DR:** This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan. If you're eager to try it yourself, feel free to follow installation instructions on the [official repository](https://github.com/julianxhokaxhiu/FFNx).
 
 When Final Fantasy VII Remake [was announced](https://www.gamespot.com/articles/final-fantasy-7-remake-announced-by-sony-at-e3-201/1100-6428174/) unlike most of the fans my first idea was to re-play again the game. The last time I finished the game was long time ago, and I don't honestly remember every bit of the story anymore.
 
