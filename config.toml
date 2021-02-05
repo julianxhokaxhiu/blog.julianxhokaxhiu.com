@@ -6,7 +6,6 @@ summaryLength = 25
 enableEmoji = true
 publishDir = ".dist"
 pygmentsCodeFences = true
-disqusShortname = "adevelopersblog"
 
 DefaultContentLanguage = "en"
 
