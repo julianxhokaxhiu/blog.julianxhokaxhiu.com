@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/javascript/</link>
+    <description>Recent content in javascript on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Dec 2012 18:59:07 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jQuery iTunes Store Search</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-12-02-jquery-itunes-store-search/</link>
+      <pubDate>Sun, 02 Dec 2012 18:59:07 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-02-jquery-itunes-store-search/</guid>
+      <description>Hi,
+today i would like you to present this little plugin i&amp;rsquo;ve made for you, and I&amp;rsquo;m of course talking about jQuery iTunes Store Search Plugin.</description>
+    </item>
+    
+    <item>
+      <title>jQuery Youtube Live Feed</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/</link>
+      <pubDate>Sat, 06 Oct 2012 01:11:05 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/</guid>
+      <description>Hi all again,
+those days are pretty much active for me. I&amp;rsquo;ve got really no time of doing nothing, but today i&amp;rsquo;ve got a special gift for you :) I&amp;rsquo;m proud of this and i&amp;rsquo;m talking about Youtube Live Feed jQuery Plugin!</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</link>
+      <pubDate>Sun, 01 Apr 2012 20:57:55 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</guid>
+      <description>As you have seen recently, i&amp;rsquo;m not writing so much here, because i&amp;rsquo;m working on new technologies like NodeJS and MongoDB. Fascinated by this next-gen &amp;ldquo;AMP&amp;rdquo;, i&amp;rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &amp;ldquo;table&amp;rdquo; (i&amp;rsquo;ll explain you later why i&amp;rsquo;m writing it like this).</description>
+    </item>
+    
+    <item>
+      <title>[UPDATED] JonDesign&#39;s SmoothGallery Shadowbox plugin</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/</link>
+      <pubDate>Fri, 03 Feb 2012 16:39:12 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/</guid>
+      <description>Hi there,
+very little and fast post about this plugin. Today i had to make SmoothGallery to work with Shadowbox plugin (rather than Lightbox) and within an extreme surprise i didn&amp;rsquo;t found nothing on the web.</description>
+    </item>
+    
+    <item>
+      <title>[UPDATED] How to fix npm PATH of NWM</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</link>
+      <pubDate>Mon, 02 Jan 2012 22:36:10 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</guid>
+      <description>Hello everyone again,
+just in a hurry, i&amp;rsquo;m here to tell how to fix npm PATH of NWM 0.1b, i knew that something was missing (didn&amp;rsquo;t notice why that final b?</description>
+    </item>
+    
+    <item>
+      <title>Little christmas surprise for you: NWM!</title>
+      <link>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</link>
+      <pubDate>Thu, 22 Dec 2011 19:01:31 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</guid>
+      <description>Long time no see duh? Well, i didn&amp;rsquo;t forget you, neither i didn&amp;rsquo;t stop developing cool new things. In fact you can notice that right of this post, you can find some new links about me, followed by my new GitHub channel.</description>
+    </item>
+    
+    <item>
+      <title>Grooveshark Mediakeys Reloaded</title>
+      <link>https://blog.julianxhokaxhiu.com/2011-03-11-grooveshark-mediakeys-reloaded/</link>
+      <pubDate>Fri, 11 Mar 2011 01:54:43 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-03-11-grooveshark-mediakeys-reloaded/</guid>
+      <description>Hi there,
+just want to share with you my new work that i have made. I&amp;rsquo;m talking about a Google Chrome extensions that is called Grooveshark Mediakeys Reloaded.</description>
+    </item>
+    
+    <item>
+      <title>ContentFlow Shadowbox plugin</title>
+      <link>https://blog.julianxhokaxhiu.com/2011-01-12-contentflow-shadowbox-plugin/</link>
+      <pubDate>Wed, 12 Jan 2011 22:30:30 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-01-12-contentflow-shadowbox-plugin/</guid>
+      <description>Hi there,
+for all you guys who knows already what ContentFlow is and what ShadowBox is, this is for you! (but this is also for you, if you don&amp;rsquo;t know what they are, just visit their respective websites).</description>
+    </item>
+    
+    <item>
+      <title>jQuery Storyline</title>
+      <link>https://blog.julianxhokaxhiu.com/2011-01-09-jquery-storyline/</link>
+      <pubDate>Sun, 09 Jan 2011 01:33:40 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-01-09-jquery-storyline/</guid>
+      <description>Hi all, once again :)
+No much time has passed duh? Well in fact i was working on a nice plugin there (once again) which i would like to share with you, which is called jQuery Storyline.</description>
+    </item>
+    
+    <item>
+      <title>AutoComplete Extended</title>
+      <link>https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/</link>
+      <pubDate>Thu, 30 Dec 2010 02:44:09 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/</guid>
+      <description>Hi there,
+so much time have been passed since the last time, didn&amp;rsquo;t it? Well, you may think that this blog is already dead and nothing is going on, but in fact i&amp;rsquo;ve been so much busy in this time that you cannot mind it :) But this isn&amp;rsquo;t the topic of this post so maybe, i&amp;rsquo;ll talk about this the next one (maybe, i want to focus only on ready-to-use scripts).</description>
+    </item>
+    
+    <item>
+      <title>How to fix baloon height with images in Google Maps API v2</title>
+      <link>https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/</link>
+      <pubDate>Sat, 10 Jul 2010 11:24:41 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/</guid>
+      <description>Hi,
+today i&amp;rsquo;m going to talk about how to fix the (annoying?) baloon height when it has images in itself, on Google Maps API v2. Of course, i&amp;rsquo;ve had so much headache with this problem, i&amp;rsquo;ve searched all around the web to find how to fix it and of course i found two ways that tell&amp;rsquo;s how to fix it.</description>
+    </item>
+    
+  </channel>
+</rss>

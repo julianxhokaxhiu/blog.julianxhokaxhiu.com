@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2017-05-31-un-mondo-sempre-piu-connesso/</loc>
+    <lastmod>2017-05-31T20:12:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2017-03-22-quando-la-grafica-non-e-fondamentale/</loc>
+    <lastmod>2017-03-22T21:40:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2017-02-27-ho-bisogno-di-un-nuovo-smartphone/</loc>
+    <lastmod>2017-02-27T22:04:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2017-02-22-learn-to-earn/</loc>
+    <lastmod>2017-02-22T22:10:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2016-12-17-oggi-non-mi-va-aggiorno-domani/</loc>
+    <lastmod>2016-12-17T17:53:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2016-11-07-una-settimana-da-disconnesso-o-quasi/</loc>
+    <lastmod>2016-11-07T22:56:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2016-10-23-grazie-internet-delle-cose/</loc>
+    <lastmod>2016-10-23T14:06:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2016-10-10-ok-google-apri-la-porta-di-casa/</loc>
+    <lastmod>2016-10-10T20:51:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/2016-10-07-il-nexus-5-%C3%A8-morto-lunga-vita-al-nexus-5/</loc>
+    <lastmod>2016-10-07T17:36:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/it/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/tags/"
+                />
+  </url>
+  
+</urlset>

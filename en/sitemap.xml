@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2020-03-06-final-fantasy-viii-running-on-vulkan/</loc>
+    <lastmod>2020-03-06T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/</loc>
+    <lastmod>2020-02-19T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2016-10-13-frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy/</loc>
+    <lastmod>2016-10-13T19:18:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/extensions/</loc>
+    <lastmod>2014-05-21T20:39:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2014-05-21-grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/</loc>
+    <lastmod>2014-05-21T20:39:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/</loc>
+    <lastmod>2014-05-21T20:39:37+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/</loc>
+    <lastmod>2014-05-21T20:39:37+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/</loc>
+    <lastmod>2014-02-01T18:51:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/modding/</loc>
+    <lastmod>2014-02-01T18:51:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/rest/</loc>
+    <lastmod>2014-02-01T18:51:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-12-21-extract-your-spotify-playlist-from-google-chrome/</loc>
+    <lastmod>2013-12-21T19:34:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/spotify/</loc>
+    <lastmod>2013-12-21T19:34:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-12-07-how-to-install-supersu-on-hamlet-zelig-pad-210g/</loc>
+    <lastmod>2013-12-07T14:53:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</loc>
+    <lastmod>2013-11-23T17:07:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/php/</loc>
+    <lastmod>2013-11-23T17:07:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/template/</loc>
+    <lastmod>2013-11-23T17:07:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/twig/</loc>
+    <lastmod>2013-11-23T17:07:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/</loc>
+    <lastmod>2013-10-05T23:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/</loc>
+    <lastmod>2013-06-29T16:45:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/</loc>
+    <lastmod>2013-06-22T23:12:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/tomahawk/</loc>
+    <lastmod>2013-06-22T23:12:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/</loc>
+    <lastmod>2013-05-12T20:46:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</loc>
+    <lastmod>2013-04-27T01:58:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/</loc>
+    <lastmod>2013-04-21T18:02:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/</loc>
+    <lastmod>2013-03-31T00:21:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-01-19-projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/</loc>
+    <lastmod>2013-01-19T18:57:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/python/</loc>
+    <lastmod>2013-01-19T18:57:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/sublimetext2/</loc>
+    <lastmod>2013-01-19T18:57:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2013-01-05-best-setup-for-samsung-galaxy-s2/</loc>
+    <lastmod>2013-01-05T18:05:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/kernel/</loc>
+    <lastmod>2013-01-05T18:05:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-12-26-how-to-run-whatsapp-on-your-pcmac-using-bluestacks/</loc>
+    <lastmod>2012-12-26T02:04:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-12-09-center-the-new-youtube-layout-with-yt-native-center-layout/</loc>
+    <lastmod>2012-12-09T23:17:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/</loc>
+    <lastmod>2012-12-07T22:52:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/ios/</loc>
+    <lastmod>2012-12-02T18:59:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/javascript/</loc>
+    <lastmod>2012-12-02T18:59:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-12-02-jquery-itunes-store-search/</loc>
+    <lastmod>2012-12-02T18:59:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/osx/</loc>
+    <lastmod>2012-12-02T18:59:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/air/</loc>
+    <lastmod>2012-12-01T19:20:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-12-01-contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/</loc>
+    <lastmod>2012-12-01T19:20:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/xcode/</loc>
+    <lastmod>2012-12-01T19:20:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-11-28-fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/</loc>
+    <lastmod>2012-11-28T18:27:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/ntfs-3g/</loc>
+    <lastmod>2012-11-28T18:27:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-11-15-install-ajenti-over-wd-mybook-world-edition-ii-with-debian/</loc>
+    <lastmod>2012-11-15T17:18:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/</loc>
+    <lastmod>2012-10-06T01:11:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/</loc>
+    <lastmod>2012-10-03T22:03:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/</loc>
+    <lastmod>2012-09-22T18:43:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-09-22-backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04/</loc>
+    <lastmod>2012-09-22T18:10:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/rom/</loc>
+    <lastmod>2012-07-23T01:13:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/</loc>
+    <lastmod>2012-07-23T01:13:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</loc>
+    <lastmod>2012-04-01T20:57:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/mongodb/</loc>
+    <lastmod>2012-04-01T20:57:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/nodejs/</loc>
+    <lastmod>2012-04-01T20:57:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/</loc>
+    <lastmod>2012-02-03T16:39:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</loc>
+    <lastmod>2012-01-02T22:36:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/batch/</loc>
+    <lastmod>2011-12-22T19:01:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</loc>
+    <lastmod>2011-12-22T19:01:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2011-03-11-grooveshark-mediakeys-reloaded/</loc>
+    <lastmod>2011-03-11T01:54:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2011-01-12-contentflow-shadowbox-plugin/</loc>
+    <lastmod>2011-01-12T22:30:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2011-01-09-jquery-storyline/</loc>
+    <lastmod>2011-01-09T01:33:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/</loc>
+    <lastmod>2010-12-30T02:44:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/</loc>
+    <lastmod>2010-07-10T11:24:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/c/</loc>
+    <lastmod>2010-07-03T12:09:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2010-07-03-lets-make-google-chrome-live-part-2/</loc>
+    <lastmod>2010-07-03T12:09:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/tags/win32/</loc>
+    <lastmod>2010-07-03T12:09:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2010-06-05-lets-make-google-chrome-live/</loc>
+    <lastmod>2010-06-05T00:07:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/2010-05-30-welcome/</loc>
+    <lastmod>2010-05-30T13:46:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.julianxhokaxhiu.com/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://blog.julianxhokaxhiu.com/it/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.julianxhokaxhiu.com/categories/"
+                />
+  </url>
+  
+</urlset>

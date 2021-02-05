@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>Final Fantasy VIII running on Vulkan, Steam compatibility and much more! | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Final Fantasy VIII running on Vulkan, Steam compatibility and much more!"/>
+<meta name="twitter:description" content="FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VIII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan."/>
+
+	<meta property="og:title" content="Final Fantasy VIII running on Vulkan, Steam compatibility and much more!" />
+<meta property="og:description" content="FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VIII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2020-03-06-final-fantasy-viii-running-on-vulkan/" />
+<meta property="article:published_time" content="2020-03-06T10:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-06T10:00:00+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=Final%20Fantasy%20VIII%20running%20on%20Vulkan%2c%20Steam%20compatibility%20and%20much%20more%21&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f&title=Final%20Fantasy%20VIII%20running%20on%20Vulkan%2c%20Steam%20compatibility%20and%20much%20more%21"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f&t=Final%20Fantasy%20VIII%20running%20on%20Vulkan%2c%20Steam%20compatibility%20and%20much%20more%21"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-03-06-final-fantasy-viii-running-on-vulkan%2f&title=Final%20Fantasy%20VIII%20running%20on%20Vulkan%2c%20Steam%20compatibility%20and%20much%20more%21"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Mar 6, 2020
+                                    <i class="far fa-clock clock"></i>
+                                    6 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Final Fantasy VIII running on Vulkan, Steam compatibility and much more!</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <figure>
+  <a href="/images/posts/FF8-New-Game.png">
+    <img src="/images/posts/FF8-New-Game.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - New Game screen</small>
+  </figcaption>
+  
+</figure>
+
+<blockquote>
+<p><strong>TL-DR:</strong> This is the story about a new driver for Final Fantasy VIII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan. If you&rsquo;re eager to try it yourself, feel free to follow installation instructions on the <a href="https://github.com/julianxhokaxhiu/FFNx">official repository</a>.</p>
+</blockquote>
+<p>Here we go again with another post, closer to one month later, with another great set of announcements. This time we will talk about <a href="https://en.wikipedia.org/wiki/Final_Fantasy_VIII">Final Fantasy VIII</a> running on Vulkanm and some other achievements done through this month.</p>
+<p>Although the tech stack didn&rsquo;t change, its internals did a lot. Aside of various improvements that happened graphically now we do also have <strong>FULL</strong> support for Final Fantasy VIII. This will finally allow you to play the game upscaled the way it deserves.</p>
+<p>For the sake of demonstration I decided to take a few screenshots and videos showing you how the game will look like on its stages using the Vulkan renderer and DirectX 11. But the game is fully playable also on OpenGL and DirectX 12.</p>
+<p>Although I personally suggest to keep using OpenGL as a safe default, and the rest as experimental there&rsquo;s nothing that blocks you in trying them all. Just be aware that as like in Final Fantasy VII, also here Vulkan and DirectX 12 are having low FPS. This is because of technical limitations coming straight out of the engine.</p>
+<p>In the future I ( or someone else ) may be able to figure out how to unlock this situation, but until then we get what we can :)</p>
+<h2 id="directx-9-is-now-deprecated">DirectX 9 is now deprecated</h2>
+<p>You may be wondering, why I forgot to mention the DirectX 9 backend. Well, unfortunately for us this one didn&rsquo;t pass the quality test and the number of issues were growing. As this renderer did not show up to be as mature as the others, I had to pull the trigger and decided to remove it from the available ones.</p>
+<p>It may come back later if the backend will become more mature on <a href="https://github.com/bkaradzic/bgfx">bgfx</a>. Until then, this has to be considered deprecated.</p>
+<h2 id="final-fantasy-viii-2000-edition">Final Fantasy VIII 2000 edition</h2>
+<p>As FFNx is based upon the great work that <a href="http://forums.qhimm.com/index.php?topic=8306.0">Aali started</a>, we did inherit also some engine logics that were required to allow FF8 render as well. Although it may not be perfect, it&rsquo;s great enough to allow you to play the full game.</p>
+<figure>
+  <a href="/images/posts/FF8-In-Game.png">
+    <img src="/images/posts/FF8-In-Game.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Field screen</small>
+  </figcaption>
+  
+</figure>
+
+<p>Aside of minor glitches you may find ( for example at end of the battle swirl animation ) the driver handles very well Battle scenes too.</p>
+<figure>
+  <video controls src="/images/posts/FF8-Battle.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - Battle mode</small>
+  </figcaption>
+  
+</figure>
+<p>What about Party menus? Nailed that :)</p>
+<blockquote>
+<p>Please do note that the slowdown effect happens <strong>only</strong> on DirectX 12 and Vulkan! The Party menu will work fine at FULL FPS on OpenGL/DirectX 11.</p>
+<p>The following video is just a pure demonstration that Vulkan works inside of the game engine too.</p>
+</blockquote>
+<figure>
+  <video controls src="/images/posts/FF8-Party-Menu.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Party Menu</small>
+  </figcaption>
+  
+</figure>
+<p>This is just a taste of what this driver will allow you to enjoy. So please feel free to download the <a href="https://github.com/julianxhokaxhiu/FFNx/releases/latest">latest version</a> available and let me know how it goes!</p>
+<h2 id="a-new-era-for-final-fantasy-viii---welcome-modding">A new era for Final Fantasy VIII - Welcome modding!</h2>
+<p>Like Final Fantasy VII, it&rsquo;s time to make the 8th chapter a first class citizen too! Thanks to FFNx this will be more true than ever.</p>
+<p>Below you can already see some examples of how HD Textures will allow you to upgrade in-game content. Expect therefore some new tools like <a href="http://forums.qhimm.com/index.php?topic=19533.0">7h</a> to be available for Final Fantasy VIII as time goes by, which will allow full Hext patching, model replacement, texture replacement and much more!</p>
+<figure>
+  <a href="/images/posts/FF8-New-Game-Modded.png">
+    <img src="/images/posts/FF8-New-Game-Modded.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - New Game screen with HD Textures</small>
+  </figcaption>
+  
+</figure>
+
+<figure>
+  <a href="/images/posts/FF8-Load-Savegame-Modded.png">
+    <img src="/images/posts/FF8-Load-Savegame-Modded.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - Load Savegame screen with HD Textures</small>
+  </figcaption>
+  
+</figure>
+
+<figure>
+  <a href="/images/posts/FF8-Party-Menu-Modded.png">
+    <img src="/images/posts/FF8-Party-Menu-Modded.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - Party Menu with HD Textures</small>
+  </figcaption>
+  
+</figure>
+
+<p>You may notice some minor glitches being present in the last screenshot. Do not be afraid: the community and myself are already at full work on fixing those last minor bugs :)</p>
+<p>Remember to check for new releases from time to time.</p>
+<h2 id="full-steam-edition-compatibility">Full Steam edition compatibility</h2>
+<p>Aside of the previous achievements, another great one is <strong>FULL Steam compatibility</strong> out of the box on both <a href="https://github.com/julianxhokaxhiu/FFNx#steam-official-release">Final Fantasy VII</a> and <a href="https://github.com/julianxhokaxhiu/FFNx#steam-official-release-1">Final Fantasy VIII</a>.</p>
+<p>This support means that you can just swap one file and you will be able to enjoy another session of your favorite game ( including save game support, and keyboard/gamepad controls like you&rsquo;re used to ) without the need to take any further action ( like move files around and such ) in your game directory.</p>
+<p>The only downside unfortunately, is that Game Archivements are not supported. This may, or may not come into FFNx as it will require massive reverse engineering in order to find how and when those archivements are triggered, based on which condition.</p>
+<figure>
+  <video controls src="/images/posts/FF7-Steam.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Final Fantasy VII Steam Edition</small>
+  </figcaption>
+  
+</figure>
+<figure>
+  <video controls src="/images/posts/FF8-Steam.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Final Fantasy VIII Steam Edition</small>
+  </figcaption>
+  
+</figure>
+<p>If you&rsquo;re curious to try, feel free to check the <a href="https://github.com/julianxhokaxhiu/FFNx#how-to-install">installation instructions</a>.</p>
+<h2 id="multilanguage-support">Multilanguage support!</h2>
+<p>Not being enough already of cool new announcements here you can find another one!</p>
+<p>Before only English editions were supported, but now also various other languages for <a href="https://github.com/julianxhokaxhiu/FFNx#final-fantasy-vii">Final Fantasy VII</a> and <a href="https://github.com/julianxhokaxhiu/FFNx#final-fantasy-viii">Final Fantasy VIII</a> are now supported.</p>
+<p>Feel free to try and let me know how it goes.</p>
+<h2 id="final-fantasy-vii-battle-swirls-like-they-should">Final Fantasy VII Battle swirls, like they should</h2>
+<p>In the <a href="https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/">previous post</a> I talked about Battle swirls and Framebuffer implementation, thinking that I managed to nail them.</p>
+<p>Well, I was not 100% correct during that phase of the implementation. I actually forgot to set the right properties ( flags ) during texture binding. Once that was fixed, the Battle swirls started to swirl like they should. Uiiiiiiiiiii!</p>
+<figure>
+  <video controls src="/images/posts/FF7-Battle-Swirl-Fixed.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - Final Fantasy VII Battle Swirl fixed</small>
+  </figcaption>
+  
+</figure>
+<h2 id="user-configuration-reorganized">User configuration reorganized</h2>
+<p>As the driver will now officially support two games, it&rsquo;s time for the user to know which option may impact both, and which one are available only for one specific chapter of the game.</p>
+<p>In order to enable that scenario, the new version will come with a brand new polished configuration file. Feel free <a href="https://github.com/julianxhokaxhiu/FFNx/blob/master/misc/FFNx.cfg">to check it out</a>!</p>
+<h2 id="ffnx-is-free-and-open-source">FFNx is Free and Open Source</h2>
+<p><a href="https://github.com/julianxhokaxhiu/FFNx">FFNx</a> is fully hosted on Github, you can see its source code and you can fork it if you want. Contributions are welcome.</p>
+<p>If you want to use it, remember to check <a href="https://github.com/julianxhokaxhiu/FFNx#final-fantasy-vii">installation instructions</a> on the official repository page.</p>
+<p>In case you find an issue, feel free to let me know by creating <a href="https://github.com/julianxhokaxhiu/FFNx/issues">one here</a>.</p>
+<p>I hope you will enjoy this, as much as I did while developing it.</p>
+<h2 id="a-special-thank-you-goes-to">A Special thank you goes to&hellip;</h2>
+<p>Before closing this post, there is a list of people I&rsquo;d like to thank for their support while I was working on this, which are:</p>
+<ul>
+<li>My family, without them this project would not even exist</li>
+<li><a href="https://github.com/Sebanisu">Robert Russell</a> for continously testing the driver and support on inner details on FF8</li>
+<li><a href="https://github.com/MaKiPL">Marcin Gomulak</a> for continously testing the driver and support on inner details on FF8</li>
+<li><a href="http://forums.qhimm.com/index.php?action=profile;u=14276">Kaldarasha</a> for the help in testing the driver, especially Steam compatibility</li>
+<li><a href="http://forums.qhimm.com/index.php">Qhimm community</a> for a fantastic and enthusiastic FF7 Modding Scene and the <a href="https://github.com/julianxhokaxhiu/FFNx#join-us-on-discord">official chat room</a> creation!</li>
+</ul>
+<p>If you want to get in touch with me, feel free to reach out on <a href="https://julianxhokaxhiu.com/">any social channel you prefer</a>.</p>
+<p>Last but not least, if you want to support, feel free to sponsor me on Github at this link: <a href="https://github.com/sponsors/julianxhokaxhiu">https://github.com/sponsors/julianxhokaxhiu</a></p>
+<p>Enjoy!</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/">Final Fantasy VII running on Vulkan &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

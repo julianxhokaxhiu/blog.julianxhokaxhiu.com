@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>When Wordpress meets Twig | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="When Wordpress meets Twig"/>
+<meta name="twitter:description" content="Good evening guys,
+what I&rsquo;ve done those days? Well, today I would like to share with you something cool I&rsquo;ve found.
+What happens when you love Wordpress but you don&rsquo;t like its templating system?"/>
+
+	<meta property="og:title" content="When Wordpress meets Twig" />
+<meta property="og:description" content="Good evening guys,
+what I&rsquo;ve done those days? Well, today I would like to share with you something cool I&rsquo;ve found.
+What happens when you love Wordpress but you don&rsquo;t like its templating system?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/" />
+<meta property="article:published_time" content="2013-04-21T18:02:50+00:00" />
+<meta property="article:modified_time" content="2013-04-21T18:02:50+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=When%20Wordpress%20meets%20Twig&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f&title=When%20Wordpress%20meets%20Twig"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f&t=When%20Wordpress%20meets%20Twig"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-04-21-when-wordpress-meets-twig%2f&title=When%20Wordpress%20meets%20Twig"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Apr 21, 2013
+                                    <i class="far fa-clock clock"></i>
+                                    2 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">When Wordpress meets Twig</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>Good evening guys,</p>
+<p>what I&rsquo;ve done those days? Well, today I would like to share with you something cool I&rsquo;ve found.</p>
+<p>What happens when you love Wordpress but you don&rsquo;t like its templating system? There&rsquo;s where the magic happens. You introduce a templating language, more powerful and easy to maintain. And the one I&rsquo;ve chosen is called <a href="http://twig.sensiolabs.org/" title="Twig: The flexible, fast, and secure template engine for PHP">Twig from SensioLabs</a>. I&rsquo;ve already managed to use it at work where I do my full job. That&rsquo;s why using it I asked myself &ldquo;why Wordpress team never implemented this?&rdquo; so I began searching in the net if someone has already started this project.</p>
+<p>In fact, with so much surprise, someone has begun this project and is called <a href="http://jarednova.github.io/timber/" title="Because WordPress is awesome, but the_loop isn't.">Timber</a>. Its main goal is to port Twig templating engine to Wordpress by using a main theme as &ldquo;a Twig parser&rdquo; and a child theme as your main theme for you Wordpress based website. In fact it&rsquo;s pretty much cool as a project but no one seems to have maintained it since is from one month to four months old. So, looking at it&rsquo;s code I&rsquo;ve seen that it could be optimized and probably rewritten in a much cleaner way. That&rsquo;s why I&rsquo;ve decided to <del>fork it</del> <a href="/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/" title="TwigPress: a boilerplate Twig engine theme for WordPress">make a new one</a>.</p>
+<p>Why I&rsquo;m saying it here? Because any project couldn&rsquo;t be maintained alone, the community has so much power in it, and I would like to have all you contributes into this. I&rsquo;m currently accepting Pull Requests (if they make sense). Meanwhile which are my current targets?</p>
+<ul>
+<li><span style="line-height: 13px;">Rewrite all the code base to make it much cleaner</span></li>
+<li>Reorganize the project so we wouldn&rsquo;t need two themes in one folder, but one, probably divided by /app and /design folders but I&rsquo;ll look how much free  I could be</li>
+<li>Port as much WP api natively in Twig (the best option would be to mirror them without having to map them 1-by-1)</li>
+</ul>
+<p>So, hoping you would like this, I wish myself I can do this as much faster as I can.</p>
+<p>Finally I would like to thank you for all the visits I&rsquo;m having in this blog. It wouldn&rsquo;t have been what it is without you.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/php">php</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/template">template</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/"> &laquo; TwigPress: a boilerplate Twig engine theme for Wordpress</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/">Pushing Wordpress performance to the limits! &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

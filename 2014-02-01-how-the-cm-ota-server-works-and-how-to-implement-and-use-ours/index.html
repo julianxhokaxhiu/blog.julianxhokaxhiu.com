@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>[UPDATED] How the LineageOS OTA server works and how to implement and use ours | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[UPDATED] How the LineageOS OTA server works and how to implement and use ours"/>
+<meta name="twitter:description" content="EDIT: I took the time to develop the first release of the REST API server, you can find it on my Github as always as an OpenSource project."/>
+
+	<meta property="og:title" content="[UPDATED] How the LineageOS OTA server works and how to implement and use ours" />
+<meta property="og:description" content="EDIT: I took the time to develop the first release of the REST API server, you can find it on my Github as always as an OpenSource project." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/" />
+<meta property="article:published_time" content="2014-02-01T18:51:23+00:00" />
+<meta property="article:modified_time" content="2014-02-01T18:51:23+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=%5bUPDATED%5d%20How%20the%20LineageOS%20OTA%20server%20works%20and%20how%20to%20implement%20and%20use%20ours&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f&title=%5bUPDATED%5d%20How%20the%20LineageOS%20OTA%20server%20works%20and%20how%20to%20implement%20and%20use%20ours"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f&t=%5bUPDATED%5d%20How%20the%20LineageOS%20OTA%20server%20works%20and%20how%20to%20implement%20and%20use%20ours"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours%2f&title=%5bUPDATED%5d%20How%20the%20LineageOS%20OTA%20server%20works%20and%20how%20to%20implement%20and%20use%20ours"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Feb 1, 2014
+                                    <i class="far fa-clock clock"></i>
+                                    3 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">[UPDATED] How the LineageOS OTA server works and how to implement and use ours</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p><strong>EDIT:</strong> I took the time to develop the first release of the REST API server, you can find it <a href="https://github.com/julianxhokaxhiu/LineageOTA">on my Github</a> as always as an OpenSource project.</p>
+<hr>
+<p>Hello everybody,</p>
+<p>first of all Happy New Year since it&rsquo;s the first post of 2014 :) Next, you probably may be curious to know what I was doing all these days. Well, since I&rsquo;m using a custom ROM on my own Galaxy S2 (<a href="http://forum.xda-developers.com/showthread.php?t=2535369">CM11 compiled by iNFECTED</a>) I was asking myself &ldquo;why cannot custom roms use the already built-in OTA by CM with our custom server?</p>
+<p>Well, today I&rsquo;m here to explain how to it, since I&rsquo;m really astonished why a bigger community like <a href="http://lineageos.org/">LineageOS</a> which loves Open Source does not document or release their public server interface that talks with their ROMs. But hey, we love to hack, right? Let&rsquo;s get back to business!</p>
+<p>First of all <a href="https://github.com/julianxhokaxhiu/LineageOTAUnitTest">clone the Unit Test example</a> on how to call <a href="http://download.cyanogenmod.org">the ACTUAL server of LineageOS</a>. You can run this script using <a href="http://nodejs.org/">NodeJS</a>. These are the simple steps you have to do to run it and debug it by yourself</p>
+<pre><code>cd /path/to/LineageOtaTest
+npm install
+node index.js
+</code></pre><p>If all went well, you will see a  <code>console.log</code> of the server answer, which will be like this one (I&rsquo;m using a piece of that from the i9300 channel):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+    <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+    <span style="color:#e6db74">&#34;result&#34;</span><span style="color:#f92672">:</span> [
+        {
+            <span style="color:#e6db74">&#34;incremental&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;7f96568932&#34;</span>,
+            <span style="color:#e6db74">&#34;api_level&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">19</span>,
+            <span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http: //get.cm/get/jenkins/57124/cm-11-20140130-NIGHTLY-i9300.zip&#34;</span>,
+            <span style="color:#e6db74">&#34;timestamp&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1391086037&#34;</span>,
+            <span style="color:#e6db74">&#34;md5sum&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;4e0a335b378035d12cb6626b6623072b&#34;</span>,
+            <span style="color:#e6db74">&#34;changes&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http: //get.cm/get/jenkins/57124/CHANGES.txt&#34;</span>,
+            <span style="color:#e6db74">&#34;channel&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;nightly&#34;</span>,
+            <span style="color:#e6db74">&#34;filename&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cm-11-20140130-NIGHTLY-i9300.zip&#34;</span>
+        }
+    ],
+    <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>
+}
+</code></pre></div><p>As we may see, the answer is pretty much a simple JSON object with some metadata inside. To replicate by yourself you just have to implement a simple REST API that works on POST requests.</p>
+<p>For generic lists the ROM is using  <code>http://download.cyanogenmod.org/api</code> while for DELTA updates is using <code>http://download.cyanogenmod.org/api/v1/build/get_delta</code> .</p>
+<p>If you would like to point to your own server you have two ways doing so:</p>
+<ul>
+<li>Declare <a href="https://github.com/LineageOS/android_packages_apps_CMUpdater/blob/cm-14.1/src/com/cyanogenmod/updater/service/UpdateCheckService.java#L203"><code>cm.updater.uri</code></a> on your own <code>build.prop</code> file with the value of you own server URL where you have deployed it</li>
+<li>Replace the string <code>conf_update_server_url_def</code> value inside <code>values.xml</code> of the <a href="https://github.com/lineageos/android_packages_apps_CMUpdater/blob/cm-14.1/res/values/config.xml">OTA source code</a></li>
+</ul>
+<p>And that&rsquo;s it! Possible good points on using your own server would be to provide an OTA update also to all the custom builds based on CM without having to hassle users on going everyday into the topic and reading if it was released something. Also, you can use it to centralize updates on your own Corp if people are using massively LineageOS as their ROMs on their phones.</p>
+<p>As always, thanks for reading and I hope to provide a simple REST server for this on my GitHub so stay tuned :)</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/modding">modding</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/rest">rest</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2014-05-21-grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/"> &laquo; Grooveshark and Deezer MediaKeys Extensions got a bigger update!</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2013-12-21-extract-your-spotify-playlist-from-google-chrome/">Extract your Spotify Playlist from Google Chrome &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

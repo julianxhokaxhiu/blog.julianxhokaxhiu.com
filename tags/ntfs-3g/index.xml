@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ntfs-3g on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/ntfs-3g/</link>
+    <description>Recent content in ntfs-3g on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Nov 2012 18:27:18 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/ntfs-3g/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix NTFS-3G boot message warning on OS X Lion/Mountain Lion</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-11-28-fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/</link>
+      <pubDate>Wed, 28 Nov 2012 18:27:18 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-11-28-fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/</guid>
+      <description>Hi,
+today i&amp;rsquo;m sharing with you a little know-how i got by myself regarding an annoying error that maybe you faced yourself when you tryed to install NTFS-3G over Mac OS X Lion 10.</description>
+    </item>
+    
+  </channel>
+</rss>

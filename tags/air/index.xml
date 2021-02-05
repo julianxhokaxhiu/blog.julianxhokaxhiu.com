@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>air on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/air/</link>
+    <description>Recent content in air on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Dec 2012 19:20:15 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/air/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ContactEditor ANE patch for iOS6, XCode 4.5 and Adobe AIR 3.5 SDK</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-12-01-contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/</link>
+      <pubDate>Sat, 01 Dec 2012 19:20:15 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-01-contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/</guid>
+      <description>Hi guys,
+today i would like to share with you a little patch i&amp;rsquo;ve worked yesterday helping a friend having the work done :) I&amp;rsquo;m talking about a little ANE extension for Adobe Flash Builder (aka Adobe AIR SDK 3.</description>
+    </item>
+    
+  </channel>
+</rss>

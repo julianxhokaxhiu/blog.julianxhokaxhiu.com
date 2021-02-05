@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/php/</link>
+    <description>Recent content in php on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Nov 2013 17:07:02 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install Bolt CMS on Namecheap Shared Hosting</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</link>
+      <pubDate>Sat, 23 Nov 2013 17:07:02 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</guid>
+      <description>Hi guys,
+you probably have already noticed it, but the blog had changed. Yeah, a completly new look, new functions (such as search one) and completely responsive too (try resizing your window).</description>
+    </item>
+    
+    <item>
+      <title>TwigPress: a boilerplate Twig engine theme for Wordpress</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</link>
+      <pubDate>Sat, 27 Apr 2013 01:58:46 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</guid>
+      <description>Good evening guys,
+today I would like to show you the evolution of my last discussion about Twig for Wordpres. Since I&amp;rsquo;ve studied all the source code and I found more good techniques to implement Wordpress API calls, I&amp;rsquo;ve decided to create a brand new engine rather than refactoring the old one.</description>
+    </item>
+    
+    <item>
+      <title>When Wordpress meets Twig</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/</link>
+      <pubDate>Sun, 21 Apr 2013 18:02:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/</guid>
+      <description>Good evening guys,
+what I&amp;rsquo;ve done those days? Well, today I would like to share with you something cool I&amp;rsquo;ve found.
+What happens when you love Wordpress but you don&amp;rsquo;t like its templating system?</description>
+    </item>
+    
+    <item>
+      <title>Pushing Wordpress performance to the limits!</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/</link>
+      <pubDate>Sun, 31 Mar 2013 00:21:37 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/</guid>
+      <description>Hi guys,
+first I would like to say sorry for the long time of silence i kept here, but as you may know I&amp;rsquo;m always a little busy :) This month I tried to archive so many goals which couldn&amp;rsquo;t be mentioned here, but If you follow me on Twitter you&amp;rsquo;ll be updated with all the projects I&amp;rsquo;m working on.</description>
+    </item>
+    
+    <item>
+      <title>Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/</link>
+      <pubDate>Wed, 03 Oct 2012 22:03:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/</guid>
+      <description>Are you searching for a rapid PHP script to test &amp;ldquo;Etag&amp;rdquo; or &amp;ldquo;Last-Modified&amp;rdquo; HTTP Headers in your project? Here we go, made in PHP.
+Enjoy</description>
+    </item>
+    
+  </channel>
+</rss>

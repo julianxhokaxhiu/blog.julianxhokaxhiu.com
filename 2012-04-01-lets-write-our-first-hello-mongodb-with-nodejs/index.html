@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS"/>
+<meta name="twitter:description" content="As you have seen recently, i&rsquo;m not writing so much here, because i&rsquo;m working on new technologies like NodeJS and MongoDB. Fascinated by this next-gen &ldquo;AMP&rdquo;, i&rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &ldquo;table&rdquo; (i&rsquo;ll explain you later why i&rsquo;m writing it like this)."/>
+
+	<meta property="og:title" content="Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS" />
+<meta property="og:description" content="As you have seen recently, i&rsquo;m not writing so much here, because i&rsquo;m working on new technologies like NodeJS and MongoDB. Fascinated by this next-gen &ldquo;AMP&rdquo;, i&rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &ldquo;table&rdquo; (i&rsquo;ll explain you later why i&rsquo;m writing it like this)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/" />
+<meta property="article:published_time" content="2012-04-01T20:57:55+00:00" />
+<meta property="article:modified_time" content="2012-04-01T20:57:55+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=Let%27s%20write%20our%20first%20%27Hello%20MongoDB%27%20with%20NodeJS&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f&title=Let%27s%20write%20our%20first%20%27Hello%20MongoDB%27%20with%20NodeJS"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f&t=Let%27s%20write%20our%20first%20%27Hello%20MongoDB%27%20with%20NodeJS"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs%2f&title=Let%27s%20write%20our%20first%20%27Hello%20MongoDB%27%20with%20NodeJS"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Apr 1, 2012
+                                    <i class="far fa-clock clock"></i>
+                                    5 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>As you have seen recently, i&rsquo;m not writing so much here, because i&rsquo;m working on new technologies like <a href="http://nodejs.org/" title="NodeJS">NodeJS</a> and <a href="http://www.mongodb.org/" title="MongoDB">MongoDB</a>. Fascinated by this next-gen &ldquo;AMP&rdquo;, i&rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &ldquo;table&rdquo; (i&rsquo;ll explain you later why i&rsquo;m writing it like this).</p>
+<p>First of all, i have to explain you something before we can start. MongoDB, as you may know, is a next generation NO-SQL in-mind to store data in it. But, just like SQL Databases, they do not use &ldquo;tables&rdquo; as we do not have to declare table columns or something like that. We have <strong>collections</strong> defined by <strong>models</strong>. Something like virtual &ldquo;tables&rdquo; where:</p>
+<ul>
+<li>Collection = list of &ldquo;tables&rdquo;</li>
+<li>Models =  column of the tables (with flexible data type: integers, strings, arrays or objects)</li>
+</ul>
+<p>So, when you&rsquo;ll catch this knowledge, you&rsquo;ll be ready to start this simple tutorial. What we will need to accomplish this are:</p>
+<ul>
+<li><a href="http://nwm.julianxhokaxhiu.com/" title="NWM">NWM</a> (made by me, a simple &ldquo;WAMP-like&rdquo;, ready-to-use with NodeJS and MongoDB)</li>
+<li><a href="http://www.mongovue.com/" title="MongoVUE">MongoVue</a> (to inspect the database, just like PhpMyAdmin, feel free to use the one you prefer, optional)</li>
+<li>MongoDB instance running (run your &ldquo;start MongoDB&rdquo; script inside NWM, usually located at Start -&gt; All Programs -&gt; NWM -&gt; Start MongoDB).</li>
+</ul>
+<p>Obviously, i&rsquo;m not going to explain how to install them, basically you have to download them, install and you&rsquo;re done. For MongoDB will be used the &ldquo;test&rdquo; database, automatically created for default setups.</p>
+<h2 id="prepare-our-database">Prepare our database</h2>
+<p>Open your Command Prompt (until now, it will be called CMD) and write these command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mongo <span style="color:#f92672">[</span>Enter<span style="color:#f92672">]</span>
+use test <span style="color:#f92672">[</span>Enter<span style="color:#f92672">]</span>
+&gt; db.addUser<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test&#34;</span>,<span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">)</span>; <span style="color:#f92672">[</span>Enter<span style="color:#f92672">]</span>
+exit <span style="color:#f92672">[</span>Enter<span style="color:#f92672">]</span>
+</code></pre></div><p>what we have done here, was adding a user for the connection (actually not really required, as we&rsquo;re in a testing environment) and initializing the database.</p>
+<h2 id="install-mongoose-for-nodejs">Install &ldquo;mongoose&rdquo; for NodeJS</h2>
+<p>Just like PHP, also NodeJS (let&rsquo;s think about it, like an Apache+PHP) does not have a native library to connect to MongoDB, so we have to install it by ourself. So open your CMD and type this command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install mongoose
+</code></pre></div><p>and wait until it finishes.</p>
+<h2 id="run-our-script">Run our script</h2>
+<p>Yes, it&rsquo;s not just like Apache that you have a &ldquo;www&rdquo; directory where you put your scripts and then point to your &ldquo;localhost&rdquo; and you can see them. In NodeJS you have to run your script by typing this in your CMD</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node your_script.js
+</code></pre></div><p>So what what we have to do now is copying this script</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Author: Julian Xhokaxhiu
+</span><span style="color:#75715e">Version: Do you really think it is necessary?
+</span><span style="color:#75715e">Description: This is a simple &#34;Hello MongoDB&#34; to set and get data, to/from database.
+</span><span style="color:#75715e">*/</span>
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">@http: Our HTTP library so we can output a response to the browser
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">@mongoose: Our DB library, so we can get/set our data from/to database
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mongoose</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;mongoose&#39;</span>);
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">@Schema: basic schema to store data into the database.
+</span><span style="color:#75715e">@Mixed: object datatype to store our simple object in the database
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Schema</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">Schema</span>, <span style="color:#a6e22e">Mixed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Schema</span>.<span style="color:#a6e22e">Types</span>.<span style="color:#a6e22e">Mixed</span>;
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">@RequestObject: this will be our &#34;template&#34; to store the data into our collection
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">RequestObject</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Schema</span>({
+<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> Number, <span style="color:#75715e">//int
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">req</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Mixed</span> <span style="color:#75715e">//object
+</span><span style="color:#75715e"></span>});
+<span style="color:#75715e">// let&#39;s connect to the database...
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#e6db74">&#39;mongodb://localhost/test&#39;</span>);
+<span style="color:#75715e">// tell mongoose that this is our template so we can request it later
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">model</span>(<span style="color:#e6db74">&#39;RequestObject&#39;</span>,<span style="color:#a6e22e">RequestObject</span>);
+<span style="color:#75715e">// @i: simple counter
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#75715e">// create our server listener @ &#34;http://localhost:80&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>,<span style="color:#a6e22e">res</span>){
+<span style="color:#75715e">// tell the browser that this we will output JSON
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>,{<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;application/json&#39;</span>});
+<span style="color:#75715e">// get the template so we can build an object to store, or retrive data later
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ro</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">model</span>(<span style="color:#e6db74">&#39;RequestObject&#39;</span>);
+<span style="color:#75715e">// create an object store
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tmp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ro</span>();
+<span style="color:#75715e">// setting values into it...
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">tmp</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+<span style="color:#a6e22e">tmp</span>.<span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> {
+<span style="color:#e6db74">&#39;headers&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">headers</span>,
+<span style="color:#e6db74">&#39;httpVersion&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">httpVersion</span>,
+<span style="color:#e6db74">&#39;method&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span>,
+<span style="color:#e6db74">&#39;trailers&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">trailers</span>,
+<span style="color:#e6db74">&#39;url&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>
+};
+<span style="color:#75715e">// ...and saving into the database
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">tmp</span>.<span style="color:#a6e22e">save</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+<span style="color:#75715e">// if something bad happens, tell the error
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">err</span>)<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;{&#34;Save Error&#34;:&#34;&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">err</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;&#34;}&#39;</span>);
+});
+<span style="color:#a6e22e">ro</span>.<span style="color:#a6e22e">find</span>({},<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>,<span style="color:#a6e22e">objs</span>){
+<span style="color:#75715e">// if something bad happens, tell the error
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">err</span>)<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;{&#34;Find Error&#34;:&#34;&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">err</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;&#34;}&#39;</span>);
+<span style="color:#66d9ef">else</span>{
+<span style="color:#75715e">// Get our data from the collection store
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">objs</span>));
+<span style="color:#75715e">// Finally, close the HTTP response, we&#39;re done.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>();
+}
+});
+<span style="color:#75715e">// increase our simple counter...
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
+}).<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">80</span>,<span style="color:#e6db74">&#39;127.0.0.1&#39;</span>);
+<span style="color:#75715e">// Just tell the console that we&#39;re running at this address, purely informative
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Server running at http://127.0.0.1:80/&#39;</span>);
+</code></pre></div><p>and save it to our preferred location (the Desktop will be fine) and call it &ldquo;<em>test.js</em>&rdquo;. Then finally, to test it, just type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd Desktop
+node test.js
+</code></pre></div><p>and point your browser at <a href="http://localhost/">http://localhost/</a> so you can view your data.</p>
+<h2 id="congratulations">Congratulations!</h2>
+<p>You made it! You&rsquo;re runnig the &ldquo;Hello MongoDB&rdquo; script and you&rsquo;re pushing data into the database. After this, you&rsquo;re getting ALL the data inside the database.</p>
+<p>So, what will MongoVUE will be need for? Well, if you&rsquo;re curious to know how the data is inside (let&rsquo;s think about PHPMyAdmin ) and you want to view/edit/delete data into, you can do that. I&rsquo;m NOT going to explain how to use it, think about this as a reference. You can find more Admin UIs for MongoDB at <a href="http://www.mongodb.org/display/DOCS/Admin+UIs">http://www.mongodb.org/display/DOCS/Admin+UIs</a></p>
+<p>Comment below if you find any mistake or you have any suggestion regarding this article.
+So, thanks for reading, i hope you&rsquo;ll enjoy this.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/javascript">javascript</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/mongodb">mongodb</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/nodejs">nodejs</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/"> &laquo; Samsung Galaxy S II: Which is the best ROM?</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/">[UPDATED] JonDesign&#39;s SmoothGallery Shadowbox plugin &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

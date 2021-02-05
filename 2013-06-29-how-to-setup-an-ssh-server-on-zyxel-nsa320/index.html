@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>How to setup an SSH server on ZyXEL NSA320 | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to setup an SSH server on ZyXEL NSA320"/>
+<meta name="twitter:description" content="Hi there,
+some days ago I bought a very kind NAS for myself after the (terrible) adventure with WD My Book World Edition II. Not that it was so bad but&hellip;after three years it was very old (Kernel 2."/>
+
+	<meta property="og:title" content="How to setup an SSH server on ZyXEL NSA320" />
+<meta property="og:description" content="Hi there,
+some days ago I bought a very kind NAS for myself after the (terrible) adventure with WD My Book World Edition II. Not that it was so bad but&hellip;after three years it was very old (Kernel 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/" />
+<meta property="article:published_time" content="2013-06-29T16:45:03+00:00" />
+<meta property="article:modified_time" content="2013-06-29T16:45:03+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=How%20to%20setup%20an%20SSH%20server%20on%20ZyXEL%20NSA320&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f&title=How%20to%20setup%20an%20SSH%20server%20on%20ZyXEL%20NSA320"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f&t=How%20to%20setup%20an%20SSH%20server%20on%20ZyXEL%20NSA320"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320%2f&title=How%20to%20setup%20an%20SSH%20server%20on%20ZyXEL%20NSA320"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Jun 29, 2013
+                                    <i class="far fa-clock clock"></i>
+                                    2 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">How to setup an SSH server on ZyXEL NSA320</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>Hi there,</p>
+<p>some days ago I bought a very kind NAS for myself after the (terrible) adventure with WD My Book World Edition II. Not that it was so bad but&hellip;after three years it was very old (Kernel 2.6.24) and not so much apps were supported nowadays. So, I thought to get a new one which is <a href="http://archlinuxarm.org/platforms/armv5/zyxel-nsa320" title="Arch Linux ARM for ZyXEL NSA320">community supported</a> (at last) but some kind hardware with a very low budget, and then I found this one: <a href="http://www.zyxel.com/products_services/nsa320.shtml?t=p" title="ZyXEL NSA320">ZyXEL NSA320</a>.</p>
+<p>This is a VERY GOOD NAS, best choice out there (imho) and has a lot of things built-in and already configured for the low-end users. But, as you may know already, I&rsquo;m not satisfied until I&rsquo;m the root of anything I own so, I asked myself: how to get SSH on this box? (unfortunatelly it isn&rsquo;t already built-in).</p>
+<p>After some search on Google <a href="http://zyxel.nas-central.org/wiki/FFP-stick" title="FFP-stick for ZyXEL NSA320">I found that there&rsquo;s something called FFP</a>, a custom USB with a very-small OS made up already to boot a <a href="http://en.wikipedia.org/wiki/Telnet" title="Telnet Interface">Telnet</a> interface, and after that an SSH one. So I used this guide to accomplish this but&hellip;I didn&rsquo;t work. I have to admit I&rsquo;m on the latest firmware (until today, 4.60) so probably It wasn&rsquo;t tested already there but I didn&rsquo;t lose the hope to have the SSHd.</p>
+<p>So, searching again in the deep, <a href="http://forum.nas-central.org/viewtopic.php?f=249&amp;t=6315#p27531" title="FFP as a Package into ZyXEL NSA320">I found this topic which talked about FFP that could be installed as a Package</a> with the built-it package manager inside of NSA320. So, to keep it simple, to get your SSH running within a minute you have to do this:</p>
+<ol>
+<li>With any PC (Windows/Mac/Linux) point to this directory (I&rsquo;ll write it down in Windows notation): <code>\\YOUR_NAS_IP\\admin\zy-pkgs</code></li>
+<li>Create a file called <code>web_prefix</code></li>
+<li>Write inside of that file <code>ftp://ftp.zyxel-tech.de/2.new_mirror/</code> and save it</li>
+<li>Login into the Web Admin interface (through a Web Browser), go into the Package Manager and choose <code>ffp</code>, click over it and after the big green plus called <code>Install/Update</code></li>
+<li>Wait for it to install and enjoy!</li>
+</ol>
+<p>Now you can login with <code>root</code> and your <code>admin</code> account password you&rsquo;re actually using. That&rsquo;s it.</p>
+<p>I hope you&rsquo;ll find this useful. See you next time!</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/modding">modding</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/"> &laquo; How to install Debian Wheezy over ZyXEL NSA320</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/">DAAPjs - DAAP Resolver for Tomahawk Player &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

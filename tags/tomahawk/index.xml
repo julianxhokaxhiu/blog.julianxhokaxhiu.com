@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tomahawk on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/tomahawk/</link>
+    <description>Recent content in tomahawk on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jun 2013 23:12:26 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/tomahawk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DAAPjs - DAAP Resolver for Tomahawk Player</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/</link>
+      <pubDate>Sat, 22 Jun 2013 23:12:26 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/</guid>
+      <description>Hi guys,
+it has passed a lot until the last time I wrote here huh? In fact as you may already think I was not drinking some Cocktail somewhere at the Caraibi Beach or something similar :P I was busy learning cool new things as always but today I wouldn&amp;rsquo;t want to talk about this but about my latest project I was busy in particulary these last days which is called DAAPjs.</description>
+    </item>
+    
+  </channel>
+</rss>

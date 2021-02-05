@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>twig on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/twig/</link>
+    <description>Recent content in twig on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Nov 2013 17:07:02 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/twig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install Bolt CMS on Namecheap Shared Hosting</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</link>
+      <pubDate>Sat, 23 Nov 2013 17:07:02 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</guid>
+      <description>Hi guys,
+you probably have already noticed it, but the blog had changed. Yeah, a completly new look, new functions (such as search one) and completely responsive too (try resizing your window).</description>
+    </item>
+    
+    <item>
+      <title>TwigPress: a boilerplate Twig engine theme for Wordpress</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</link>
+      <pubDate>Sat, 27 Apr 2013 01:58:46 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</guid>
+      <description>Good evening guys,
+today I would like to show you the evolution of my last discussion about Twig for Wordpres. Since I&amp;rsquo;ve studied all the source code and I found more good techniques to implement Wordpress API calls, I&amp;rsquo;ve decided to create a brand new engine rather than refactoring the old one.</description>
+    </item>
+    
+  </channel>
+</rss>

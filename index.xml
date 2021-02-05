@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/</link>
+    <description>Recent content on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 May 2014 20:39:37 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.julianxhokaxhiu.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+<title>Final Fantasy VIII running on Vulkan, Steam compatibility and much more!</title>
+<link>https://blog.julianxhokaxhiu.com/2020-03-06-final-fantasy-viii-running-on-vulkan/</link>
+<pubDate>Fri, 06 Mar 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2020-03-06-final-fantasy-viii-running-on-vulkan/</guid>
+<description>FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VIII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan.</description>
+</item>
+    
+    <item>
+<title>Final Fantasy VII running on Vulkan</title>
+<link>https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/</link>
+<pubDate>Wed, 19 Feb 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/</guid>
+<description>FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan.</description>
+</item>
+    
+    <item>
+<title>Frontend Development on Steroids: From localhost to environment, without a deploy!</title>
+<link>https://blog.julianxhokaxhiu.com/2016-10-13-frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy/</link>
+<pubDate>Thu, 13 Oct 2016 19:18:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2016-10-13-frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy/</guid>
+<description>Everybody knows that tackling hot-patch fixes on Production environments is not an easy task. Especially when multiple teams are working on it, and you&amp;rsquo;re not the only one.</description>
+</item>
+    
+    <item>
+<title>Grooveshark and Deezer MediaKeys Extensions got a bigger update!</title>
+<link>https://blog.julianxhokaxhiu.com/2014-05-21-grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/</link>
+<pubDate>Wed, 21 May 2014 20:39:37 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2014-05-21-grooveshark-and-deezer-mediakeys-extensions-got-a-bigger-update/</guid>
+<description>Hi guys,
+do you remember the Deezer MediaKeys Reloaded extension for Chrome and Grooveshark MediaKeys Reloaded?
+Well, today I&amp;rsquo;ve made a little (but big!) update to the extensions making them less permissions hungry, with a cleaner code and, surprise, the mediakeys now are working also &amp;ldquo;in the background&amp;rdquo;.</description>
+</item>
+    
+    <item>
+<title>[UPDATED] How the LineageOS OTA server works and how to implement and use ours</title>
+<link>https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/</link>
+<pubDate>Sat, 01 Feb 2014 18:51:23 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/</guid>
+<description>EDIT: I took the time to develop the first release of the REST API server, you can find it on my Github as always as an OpenSource project.</description>
+</item>
+    
+    <item>
+<title>Extract your Spotify Playlist from Google Chrome</title>
+<link>https://blog.julianxhokaxhiu.com/2013-12-21-extract-your-spotify-playlist-from-google-chrome/</link>
+<pubDate>Sat, 21 Dec 2013 19:34:51 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-12-21-extract-your-spotify-playlist-from-google-chrome/</guid>
+<description>Hi guys,
+finally it&amp;rsquo;s time for me for some rest, Christmas is coming and all we&amp;rsquo;re happy to pass some time with our parents, friends and the people who we love :)</description>
+</item>
+    
+    <item>
+<title>How to install SuperSu on Hamlet Zelig Pad 210/210G</title>
+<link>https://blog.julianxhokaxhiu.com/2013-12-07-how-to-install-supersu-on-hamlet-zelig-pad-210g/</link>
+<pubDate>Sat, 07 Dec 2013 14:53:14 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-12-07-how-to-install-supersu-on-hamlet-zelig-pad-210g/</guid>
+<description>Hi there,
+today I would like to share with you this simple package that will help you getting SuperSu (so, Apps that require root access) on your Hamlet Zelig Pad 210/210G (probably this method would work also on other Hamlet tablets but I&amp;rsquo;m not sure, you have to try it yourself).</description>
+</item>
+    
+    <item>
+<title>How to install Bolt CMS on Namecheap Shared Hosting</title>
+<link>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</link>
+<pubDate>Sat, 23 Nov 2013 17:07:02 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-11-23-how-to-install-bolt-cms-on-namecheap-shared-hosting/</guid>
+<description>Hi guys,
+you probably have already noticed it, but the blog had changed. Yeah, a completly new look, new functions (such as search one) and completely responsive too (try resizing your window).</description>
+</item>
+    
+    <item>
+<title>How to install Debian Wheezy over ZyXEL NSA320</title>
+<link>https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/</link>
+<pubDate>Sat, 05 Oct 2013 23:18:00 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/</guid>
+<description>Hi guys,
+sorry for the silence of all these days but I was busy with my real life, work stuff and something else. But hey, I didn&amp;rsquo;t lost my passion to write about things I do and things that I think may be useful to you.</description>
+</item>
+    
+    <item>
+<title>How to setup an SSH server on ZyXEL NSA320</title>
+<link>https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/</link>
+<pubDate>Sat, 29 Jun 2013 16:45:03 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/</guid>
+<description>Hi there,
+some days ago I bought a very kind NAS for myself after the (terrible) adventure with WD My Book World Edition II. Not that it was so bad but&amp;hellip;after three years it was very old (Kernel 2.</description>
+</item>
+    
+    <item>
+<title>DAAPjs - DAAP Resolver for Tomahawk Player</title>
+<link>https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/</link>
+<pubDate>Sat, 22 Jun 2013 23:12:26 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-06-22-daapjs-daap-resolver-for-tomahawk-player/</guid>
+<description>Hi guys,
+it has passed a lot until the last time I wrote here huh? In fact as you may already think I was not drinking some Cocktail somewhere at the Caraibi Beach or something similar :P I was busy learning cool new things as always but today I wouldn&amp;rsquo;t want to talk about this but about my latest project I was busy in particulary these last days which is called DAAPjs.</description>
+</item>
+    
+    <item>
+<title>Expand your Storage on CyanogenMod with Mounts2SD</title>
+<link>https://blog.julianxhokaxhiu.com/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/</link>
+<pubDate>Sun, 12 May 2013 20:46:11 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/</guid>
+<description>Hello again,
+based on my last article about Simple2Ext I&amp;rsquo;ve decided to write another one about Mounts2SD.
+Why I discovered this one those days because of Android 4.</description>
+</item>
+    
+    <item>
+<title>TwigPress: a boilerplate Twig engine theme for Wordpress</title>
+<link>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</link>
+<pubDate>Sat, 27 Apr 2013 01:58:46 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-04-27-twigpress-a-boilerplate-twig-engine-theme-for-wordpress/</guid>
+<description>Good evening guys,
+today I would like to show you the evolution of my last discussion about Twig for Wordpres. Since I&amp;rsquo;ve studied all the source code and I found more good techniques to implement Wordpress API calls, I&amp;rsquo;ve decided to create a brand new engine rather than refactoring the old one.</description>
+</item>
+    
+    <item>
+<title>When Wordpress meets Twig</title>
+<link>https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/</link>
+<pubDate>Sun, 21 Apr 2013 18:02:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/</guid>
+<description>Good evening guys,
+what I&amp;rsquo;ve done those days? Well, today I would like to share with you something cool I&amp;rsquo;ve found.
+What happens when you love Wordpress but you don&amp;rsquo;t like its templating system?</description>
+</item>
+    
+    <item>
+<title>Pushing Wordpress performance to the limits!</title>
+<link>https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/</link>
+<pubDate>Sun, 31 Mar 2013 00:21:37 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/</guid>
+<description>Hi guys,
+first I would like to say sorry for the long time of silence i kept here, but as you may know I&amp;rsquo;m always a little busy :) This month I tried to archive so many goals which couldn&amp;rsquo;t be mentioned here, but If you follow me on Twitter you&amp;rsquo;ll be updated with all the projects I&amp;rsquo;m working on.</description>
+</item>
+    
+    <item>
+<title>ProjectTreeTemplater: a new Sublime Text 2 plugin to manage your Project tree</title>
+<link>https://blog.julianxhokaxhiu.com/2013-01-19-projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/</link>
+<pubDate>Sat, 19 Jan 2013 18:57:57 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-01-19-projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/</guid>
+<description>Hi there,
+this is another post update and this I would like to talk to you regarding my new little Python project I&amp;rsquo;ve made those days which is called ProjectTreeTemplater.</description>
+</item>
+    
+    <item>
+<title>Best Setup for Samsung Galaxy S2</title>
+<link>https://blog.julianxhokaxhiu.com/2013-01-05-best-setup-for-samsung-galaxy-s2/</link>
+<pubDate>Sat, 05 Jan 2013 18:05:40 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-01-05-best-setup-for-samsung-galaxy-s2/</guid>
+<description>Hi again,
+since the last post I&amp;rsquo;ve made got some movement in the blog and some people refer to it as a &amp;ldquo;reference&amp;rdquo; post I thought it would be right to update this argument (like a &amp;ldquo;what&amp;rsquo;s app regarding the scene of S2&amp;rdquo;) with what happened recently.</description>
+</item>
+    
+    <item>
+<title>How to Run WhatsApp on your PC/Mac using BlueStacks</title>
+<link>https://blog.julianxhokaxhiu.com/2012-12-26-how-to-run-whatsapp-on-your-pcmac-using-bluestacks/</link>
+<pubDate>Wed, 26 Dec 2012 02:04:32 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-26-how-to-run-whatsapp-on-your-pcmac-using-bluestacks/</guid>
+<description>Hi again,
+as always I&amp;rsquo;m very busy testing things, such as this one I&amp;rsquo;m going to talk about with you. What my mission was these day was: how to get a fully running WhatsApp on your PC/Mac?</description>
+</item>
+    
+    <item>
+<title>Center the new Youtube layout with YT Native Center Layout</title>
+<link>https://blog.julianxhokaxhiu.com/2012-12-09-center-the-new-youtube-layout-with-yt-native-center-layout/</link>
+<pubDate>Sun, 09 Dec 2012 23:17:43 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-09-center-the-new-youtube-layout-with-yt-native-center-layout/</guid>
+<description>Hi guys,
+today i would like to share with you this little extension for Google Chrome, that is called YT Native Center Layout.
+What is it?</description>
+</item>
+    
+    <item>
+<title>Expand your Storage on CyanogenMod with Simple2Ext</title>
+<link>https://blog.julianxhokaxhiu.com/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/</link>
+<pubDate>Fri, 07 Dec 2012 22:52:19 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/</guid>
+<description>UPDATE: See this one, if you&amp;rsquo;re using Android 4.2 (CM10.x) :)
+Hi there,
+today I would like to share with you this little Know-How i learnt working all day on this.</description>
+</item>
+    
+    <item>
+<title>jQuery iTunes Store Search</title>
+<link>https://blog.julianxhokaxhiu.com/2012-12-02-jquery-itunes-store-search/</link>
+<pubDate>Sun, 02 Dec 2012 18:59:07 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-02-jquery-itunes-store-search/</guid>
+<description>Hi,
+today i would like you to present this little plugin i&amp;rsquo;ve made for you, and I&amp;rsquo;m of course talking about jQuery iTunes Store Search Plugin.</description>
+</item>
+    
+    <item>
+<title>ContactEditor ANE patch for iOS6, XCode 4.5 and Adobe AIR 3.5 SDK</title>
+<link>https://blog.julianxhokaxhiu.com/2012-12-01-contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/</link>
+<pubDate>Sat, 01 Dec 2012 19:20:15 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-01-contacteditor-ane-patch-for-ios6-xcode-4-5-and-adobe-air-3-5-sdk/</guid>
+<description>Hi guys,
+today i would like to share with you a little patch i&amp;rsquo;ve worked yesterday helping a friend having the work done :) I&amp;rsquo;m talking about a little ANE extension for Adobe Flash Builder (aka Adobe AIR SDK 3.</description>
+</item>
+    
+    <item>
+<title>Fix NTFS-3G boot message warning on OS X Lion/Mountain Lion</title>
+<link>https://blog.julianxhokaxhiu.com/2012-11-28-fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/</link>
+<pubDate>Wed, 28 Nov 2012 18:27:18 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-11-28-fix-ntfs-3g-boot-message-warning-on-os-x-lionmountain-lion/</guid>
+<description>Hi,
+today i&amp;rsquo;m sharing with you a little know-how i got by myself regarding an annoying error that maybe you faced yourself when you tryed to install NTFS-3G over Mac OS X Lion 10.</description>
+</item>
+    
+    <item>
+<title>Install Ajenti over WD MyBook World Edition II with Debian Squeeze</title>
+<link>https://blog.julianxhokaxhiu.com/2012-11-15-install-ajenti-over-wd-mybook-world-edition-ii-with-debian/</link>
+<pubDate>Thu, 15 Nov 2012 17:18:37 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-11-15-install-ajenti-over-wd-mybook-world-edition-ii-with-debian/</guid>
+<description>Hi guys,
+sorry if i&amp;rsquo;m not writing very much frequently here but I was busy hacking my own NAS. Yes, bored of how these corporations treat us (customers) with their update logic, i decided to overwrite my existing firmware with an open one that you will surely know: Debian Squeeze.</description>
+</item>
+    
+    <item>
+<title>jQuery Youtube Live Feed</title>
+<link>https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/</link>
+<pubDate>Sat, 06 Oct 2012 01:11:05 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/</guid>
+<description>Hi all again,
+those days are pretty much active for me. I&amp;rsquo;ve got really no time of doing nothing, but today i&amp;rsquo;ve got a special gift for you :) I&amp;rsquo;m proud of this and i&amp;rsquo;m talking about Youtube Live Feed jQuery Plugin!</description>
+</item>
+    
+    <item>
+<title>Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers</title>
+<link>https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/</link>
+<pubDate>Wed, 03 Oct 2012 22:03:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/</guid>
+<description>Are you searching for a rapid PHP script to test &amp;ldquo;Etag&amp;rdquo; or &amp;ldquo;Last-Modified&amp;rdquo; HTTP Headers in your project? Here we go, made in PHP.
+Enjoy</description>
+</item>
+    
+    <item>
+<title>Best Kernel for Samsung Galaxy S2</title>
+<link>https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/</link>
+<pubDate>Sat, 22 Sep 2012 18:43:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/</guid>
+<description>Update: Since this article is months old, I&amp;rsquo;ve made a new one you would probably find more interesting :)
+Do you remember that i wrote a post regarding the modding of Samsung&amp;rsquo;s Galaxy S2?</description>
+</item>
+    
+    <item>
+<title>Back/Forward Mouse Button for Logitech LS1 on Ubuntu 12.04</title>
+<link>https://blog.julianxhokaxhiu.com/2012-09-22-backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04/</link>
+<pubDate>Sat, 22 Sep 2012 18:10:51 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-09-22-backforward-mouse-button-for-logitech-ls1-on-ubuntu-12-04/</guid>
+<description>Have you ever wondered how to make it work? Well, follow these simple steps and you&amp;rsquo;re done :)
+ Install xbindkeys and xautomation  sudo apt-get install xautomation xbindkeys [ENTER] Create a the file .</description>
+</item>
+    
+    <item>
+<title>Samsung Galaxy S II: Which is the best ROM?</title>
+<link>https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/</link>
+<pubDate>Mon, 23 Jul 2012 01:13:18 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/</guid>
+<description>Hi all,
+today i would like to share with you my experience with this wonderful Smartphone i&amp;rsquo;ve bought so early (exactly 5 days ago) and I&amp;rsquo;m talking abivously, as title suggests, about Samsung Galaxy S II.</description>
+</item>
+    
+    <item>
+<title>Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS</title>
+<link>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</link>
+<pubDate>Sun, 01 Apr 2012 20:57:55 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</guid>
+<description>As you have seen recently, i&amp;rsquo;m not writing so much here, because i&amp;rsquo;m working on new technologies like NodeJS and MongoDB. Fascinated by this next-gen &amp;ldquo;AMP&amp;rdquo;, i&amp;rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &amp;ldquo;table&amp;rdquo; (i&amp;rsquo;ll explain you later why i&amp;rsquo;m writing it like this).</description>
+</item>
+    
+    <item>
+<title>[UPDATED] JonDesign&#39;s SmoothGallery Shadowbox plugin</title>
+<link>https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/</link>
+<pubDate>Fri, 03 Feb 2012 16:39:12 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-02-03-jondesigns-smoothgallery-shadowbox-plugin/</guid>
+<description>Hi there,
+very little and fast post about this plugin. Today i had to make SmoothGallery to work with Shadowbox plugin (rather than Lightbox) and within an extreme surprise i didn&amp;rsquo;t found nothing on the web.</description>
+</item>
+    
+    <item>
+<title>[UPDATED] How to fix npm PATH of NWM</title>
+<link>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</link>
+<pubDate>Mon, 02 Jan 2012 22:36:10 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</guid>
+<description>Hello everyone again,
+just in a hurry, i&amp;rsquo;m here to tell how to fix npm PATH of NWM 0.1b, i knew that something was missing (didn&amp;rsquo;t notice why that final b?</description>
+</item>
+    
+    <item>
+<title>Little christmas surprise for you: NWM!</title>
+<link>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</link>
+<pubDate>Thu, 22 Dec 2011 19:01:31 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</guid>
+<description>Long time no see duh? Well, i didn&amp;rsquo;t forget you, neither i didn&amp;rsquo;t stop developing cool new things. In fact you can notice that right of this post, you can find some new links about me, followed by my new GitHub channel.</description>
+</item>
+    
+    <item>
+<title>Grooveshark Mediakeys Reloaded</title>
+<link>https://blog.julianxhokaxhiu.com/2011-03-11-grooveshark-mediakeys-reloaded/</link>
+<pubDate>Fri, 11 Mar 2011 01:54:43 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-03-11-grooveshark-mediakeys-reloaded/</guid>
+<description>Hi there,
+just want to share with you my new work that i have made. I&amp;rsquo;m talking about a Google Chrome extensions that is called Grooveshark Mediakeys Reloaded.</description>
+</item>
+    
+    <item>
+<title>ContentFlow Shadowbox plugin</title>
+<link>https://blog.julianxhokaxhiu.com/2011-01-12-contentflow-shadowbox-plugin/</link>
+<pubDate>Wed, 12 Jan 2011 22:30:30 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-01-12-contentflow-shadowbox-plugin/</guid>
+<description>Hi there,
+for all you guys who knows already what ContentFlow is and what ShadowBox is, this is for you! (but this is also for you, if you don&amp;rsquo;t know what they are, just visit their respective websites).</description>
+</item>
+    
+    <item>
+<title>jQuery Storyline</title>
+<link>https://blog.julianxhokaxhiu.com/2011-01-09-jquery-storyline/</link>
+<pubDate>Sun, 09 Jan 2011 01:33:40 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-01-09-jquery-storyline/</guid>
+<description>Hi all, once again :)
+No much time has passed duh? Well in fact i was working on a nice plugin there (once again) which i would like to share with you, which is called jQuery Storyline.</description>
+</item>
+    
+    <item>
+<title>AutoComplete Extended</title>
+<link>https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/</link>
+<pubDate>Thu, 30 Dec 2010 02:44:09 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/</guid>
+<description>Hi there,
+so much time have been passed since the last time, didn&amp;rsquo;t it? Well, you may think that this blog is already dead and nothing is going on, but in fact i&amp;rsquo;ve been so much busy in this time that you cannot mind it :) But this isn&amp;rsquo;t the topic of this post so maybe, i&amp;rsquo;ll talk about this the next one (maybe, i want to focus only on ready-to-use scripts).</description>
+</item>
+    
+    <item>
+<title>How to fix baloon height with images in Google Maps API v2</title>
+<link>https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/</link>
+<pubDate>Sat, 10 Jul 2010 11:24:41 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/</guid>
+<description>Hi,
+today i&amp;rsquo;m going to talk about how to fix the (annoying?) baloon height when it has images in itself, on Google Maps API v2. Of course, i&amp;rsquo;ve had so much headache with this problem, i&amp;rsquo;ve searched all around the web to find how to fix it and of course i found two ways that tell&amp;rsquo;s how to fix it.</description>
+</item>
+    
+    <item>
+<title>Let’s make Google Chrome Live! – Part 2</title>
+<link>https://blog.julianxhokaxhiu.com/2010-07-03-lets-make-google-chrome-live-part-2/</link>
+<pubDate>Sat, 03 Jul 2010 12:09:49 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-07-03-lets-make-google-chrome-live-part-2/</guid>
+<description>Hello again,
+sorry for this late post that i&amp;rsquo;ve promised a month ago. But who cares, the important thing is that we&amp;rsquo;re here alive and kicking again or not?</description>
+</item>
+    
+    <item>
+<title>Let’s make Google Chrome Live!</title>
+<link>https://blog.julianxhokaxhiu.com/2010-06-05-lets-make-google-chrome-live/</link>
+<pubDate>Sat, 05 Jun 2010 00:07:06 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-06-05-lets-make-google-chrome-live/</guid>
+<description>Hi there,
+Today (or maybe tonight here&amp;hellip;) i would like to share with you a personal success: i&amp;rsquo;ve made a portable Google Chrome Live to run from CD with a site preloaded as an application, to start when insert a CD inside your tray (sorry Windows only, Linux and Mac OS X does not support autorun!</description>
+</item>
+    
+    <item>
+<title>Welcome</title>
+<link>https://blog.julianxhokaxhiu.com/2010-05-30-welcome/</link>
+<pubDate>Sun, 30 May 2010 13:46:11 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2010-05-30-welcome/</guid>
+<description>Welcome into my new blog. Maybe you&amp;rsquo;re thinking what about is this blog but, hey no problem, i&amp;rsquo;m here to explain to you :)
+Because i&amp;rsquo;m a Developer (maybe like you) i like to share my knowledge with you, by sharing code snippets i find or i create.</description>
+</item>
+    
+  </channel>
+</rss>

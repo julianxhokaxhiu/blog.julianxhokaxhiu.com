@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>Pushing Wordpress performance to the limits! | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pushing Wordpress performance to the limits!"/>
+<meta name="twitter:description" content="Hi guys,
+first I would like to say sorry for the long time of silence i kept here, but as you may know I&rsquo;m always a little busy :) This month I tried to archive so many goals which couldn&rsquo;t be mentioned here, but If you follow me on Twitter you&rsquo;ll be updated with all the projects I&rsquo;m working on."/>
+
+	<meta property="og:title" content="Pushing Wordpress performance to the limits!" />
+<meta property="og:description" content="Hi guys,
+first I would like to say sorry for the long time of silence i kept here, but as you may know I&rsquo;m always a little busy :) This month I tried to archive so many goals which couldn&rsquo;t be mentioned here, but If you follow me on Twitter you&rsquo;ll be updated with all the projects I&rsquo;m working on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2013-03-31-pushing-wordpress-performance-to-the-limits/" />
+<meta property="article:published_time" content="2013-03-31T00:21:37+00:00" />
+<meta property="article:modified_time" content="2013-03-31T00:21:37+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=Pushing%20Wordpress%20performance%20to%20the%20limits%21&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f&title=Pushing%20Wordpress%20performance%20to%20the%20limits%21"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f&t=Pushing%20Wordpress%20performance%20to%20the%20limits%21"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2013-03-31-pushing-wordpress-performance-to-the-limits%2f&title=Pushing%20Wordpress%20performance%20to%20the%20limits%21"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Mar 31, 2013
+                                    <i class="far fa-clock clock"></i>
+                                    3 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Pushing Wordpress performance to the limits!</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>Hi guys,</p>
+<p>first I would like to say sorry for the long time of silence i kept here, but as you may know I&rsquo;m always a little busy :) This month I tried to archive so many goals which couldn&rsquo;t be mentioned here, but If you <a href="https://twitter.com/JulianXhokaxhiu" title="Julian Xhokaxhiu (JulianXhokaxhiu) on Twitter">follow me on Twitter</a> you&rsquo;ll be updated with all the projects I&rsquo;m working on.</p>
+<p>By the way, today I would like to share with you some important, small and cool things regarding Wordpress itself, since I&rsquo;m studying hardly those days and I&rsquo;m trying to find the ways to push it over its limits to keep good performance and speed on my Blog too (yeah, this website). So what did I found that needs a Blog post over here? Obviously I would like to share to you a very good plugin of Caching system called <a href="http://wordpress.org/extend/plugins/w3-total-cache/" title="Easy Web Performance Optimization (WPO) using caching for Wordpress">W3 Total Cache</a>.</p>
+<p>That plugin will do so much things that you&rsquo;ll never image it. Probably you may already know <a href="http://wordpress.org/extend/plugins/wp-super-cache/" title="A very fast caching engine for WordPress that produces static html files.">WP Super Cache</a> and it&rsquo;s beautiful way to cache pages over HTML files on your disk webspace. But in fact this is not sufficient. As you may know Wordpress is made of many more complex things like DB, Po files, plugins, themes and so on, and as long as you add them, the more your HTML will be filled by scripts or css in the HEAD part of you page, or also as inline scripts. So, how can we optimize all of this things? Of course with another plugin that will compact all the other ones!</p>
+<p>W3 Total Cache will minify and compress all the HTML, CSS and JS files or inline piece of code that will be embedded on all your website. But it doesn&rsquo;t stop there, it will cache DB queries, output-ed results, static pages and so on. Bringing this to a full blaze of speed to the user that will surf your website. And in fact this is pretty cool because you never have to worry about plugins that will embed scripts here and there. You can forget forever and ever about them, W3 Total Cache will do all the dirty work for you.</p>
+<p>But as you may already know, we can optimize as much as we want our website, but our Server bandwidth isn&rsquo;t always free and dedicated to us. That&rsquo;s why I may suggest to you using a <a href="https://www.cloudflare.com/" title="Cloudflare CDN">Cloudflare CDN</a> free account linked to your Wordpress website. How? Simply, with W3 Total Cache! You can find the option to that in the &ldquo;General Settings&rdquo; tab of this plugin.</p>
+<p>So, you may now think &ldquo;how much could this speed up things?&rdquo; well, you&rsquo;re watching it with your eyes already. This website is powered by W3 Total Cache and Cloudflare mixed together :)</p>
+<p>Hoping you&rsquo;ll find this article useful, I thank you, and don&rsquo;t forget to share your own experience here after the break :)</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/php">php</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2013-04-21-when-wordpress-meets-twig/"> &laquo; When Wordpress meets Twig</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2013-01-19-projecttreetemplater-a-new-sublime-text-2-plugin-to-manage-your/">ProjectTreeTemplater: a new Sublime Text 2 plugin to manage your Project tree &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

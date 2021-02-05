@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modding on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/modding/</link>
+    <description>Recent content in modding on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2014 18:51:23 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/modding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[UPDATED] How the LineageOS OTA server works and how to implement and use ours</title>
+      <link>https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/</link>
+      <pubDate>Sat, 01 Feb 2014 18:51:23 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2014-02-01-how-the-cm-ota-server-works-and-how-to-implement-and-use-ours/</guid>
+      <description>EDIT: I took the time to develop the first release of the REST API server, you can find it on my Github as always as an OpenSource project.</description>
+    </item>
+    
+    <item>
+      <title>How to install SuperSu on Hamlet Zelig Pad 210/210G</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-12-07-how-to-install-supersu-on-hamlet-zelig-pad-210g/</link>
+      <pubDate>Sat, 07 Dec 2013 14:53:14 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-12-07-how-to-install-supersu-on-hamlet-zelig-pad-210g/</guid>
+      <description>Hi there,
+today I would like to share with you this simple package that will help you getting SuperSu (so, Apps that require root access) on your Hamlet Zelig Pad 210/210G (probably this method would work also on other Hamlet tablets but I&amp;rsquo;m not sure, you have to try it yourself).</description>
+    </item>
+    
+    <item>
+      <title>How to install Debian Wheezy over ZyXEL NSA320</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/</link>
+      <pubDate>Sat, 05 Oct 2013 23:18:00 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-10-05-install-debian-wheezy-zyxel-nsa320/</guid>
+      <description>Hi guys,
+sorry for the silence of all these days but I was busy with my real life, work stuff and something else. But hey, I didn&amp;rsquo;t lost my passion to write about things I do and things that I think may be useful to you.</description>
+    </item>
+    
+    <item>
+      <title>How to setup an SSH server on ZyXEL NSA320</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/</link>
+      <pubDate>Sat, 29 Jun 2013 16:45:03 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-06-29-how-to-setup-an-ssh-server-on-zyxel-nsa320/</guid>
+      <description>Hi there,
+some days ago I bought a very kind NAS for myself after the (terrible) adventure with WD My Book World Edition II. Not that it was so bad but&amp;hellip;after three years it was very old (Kernel 2.</description>
+    </item>
+    
+    <item>
+      <title>Expand your Storage on CyanogenMod with Mounts2SD</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/</link>
+      <pubDate>Sun, 12 May 2013 20:46:11 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-05-12-expand-your-storage-on-cyanogenmod-with-mounts2sd/</guid>
+      <description>Hello again,
+based on my last article about Simple2Ext I&amp;rsquo;ve decided to write another one about Mounts2SD.
+Why I discovered this one those days because of Android 4.</description>
+    </item>
+    
+    <item>
+      <title>Best Setup for Samsung Galaxy S2</title>
+      <link>https://blog.julianxhokaxhiu.com/2013-01-05-best-setup-for-samsung-galaxy-s2/</link>
+      <pubDate>Sat, 05 Jan 2013 18:05:40 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2013-01-05-best-setup-for-samsung-galaxy-s2/</guid>
+      <description>Hi again,
+since the last post I&amp;rsquo;ve made got some movement in the blog and some people refer to it as a &amp;ldquo;reference&amp;rdquo; post I thought it would be right to update this argument (like a &amp;ldquo;what&amp;rsquo;s app regarding the scene of S2&amp;rdquo;) with what happened recently.</description>
+    </item>
+    
+    <item>
+      <title>How to Run WhatsApp on your PC/Mac using BlueStacks</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-12-26-how-to-run-whatsapp-on-your-pcmac-using-bluestacks/</link>
+      <pubDate>Wed, 26 Dec 2012 02:04:32 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-26-how-to-run-whatsapp-on-your-pcmac-using-bluestacks/</guid>
+      <description>Hi again,
+as always I&amp;rsquo;m very busy testing things, such as this one I&amp;rsquo;m going to talk about with you. What my mission was these day was: how to get a fully running WhatsApp on your PC/Mac?</description>
+    </item>
+    
+    <item>
+      <title>Expand your Storage on CyanogenMod with Simple2Ext</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/</link>
+      <pubDate>Fri, 07 Dec 2012 22:52:19 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-12-07-expand-your-storage-on-cyanogenmod-with-simple2ext/</guid>
+      <description>UPDATE: See this one, if you&amp;rsquo;re using Android 4.2 (CM10.x) :)
+Hi there,
+today I would like to share with you this little Know-How i learnt working all day on this.</description>
+    </item>
+    
+    <item>
+      <title>Best Kernel for Samsung Galaxy S2</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/</link>
+      <pubDate>Sat, 22 Sep 2012 18:43:50 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/</guid>
+      <description>Update: Since this article is months old, I&amp;rsquo;ve made a new one you would probably find more interesting :)
+Do you remember that i wrote a post regarding the modding of Samsung&amp;rsquo;s Galaxy S2?</description>
+    </item>
+    
+    <item>
+      <title>Samsung Galaxy S II: Which is the best ROM?</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/</link>
+      <pubDate>Mon, 23 Jul 2012 01:13:18 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-07-23-samsung-galaxy-s-ii-which-is-the-best-rom/</guid>
+      <description>Hi all,
+today i would like to share with you my experience with this wonderful Smartphone i&amp;rsquo;ve bought so early (exactly 5 days ago) and I&amp;rsquo;m talking abivously, as title suggests, about Samsung Galaxy S II.</description>
+    </item>
+    
+  </channel>
+</rss>

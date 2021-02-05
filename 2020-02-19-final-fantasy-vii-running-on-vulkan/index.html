@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>Final Fantasy VII running on Vulkan | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Final Fantasy VII running on Vulkan"/>
+<meta name="twitter:description" content="FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan."/>
+
+	<meta property="og:title" content="Final Fantasy VII running on Vulkan" />
+<meta property="og:description" content="FFNx on Vulkan - New Game screen    TL-DR: This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2020-02-19-final-fantasy-vii-running-on-vulkan/" />
+<meta property="article:published_time" content="2020-02-19T10:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-19T10:00:00+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=Final%20Fantasy%20VII%20running%20on%20Vulkan&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f&title=Final%20Fantasy%20VII%20running%20on%20Vulkan"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f&t=Final%20Fantasy%20VII%20running%20on%20Vulkan"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2020-02-19-final-fantasy-vii-running-on-vulkan%2f&title=Final%20Fantasy%20VII%20running%20on%20Vulkan"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Feb 19, 2020
+                                    <i class="far fa-clock clock"></i>
+                                    21 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Final Fantasy VII running on Vulkan</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <figure>
+  <a href="/images/posts/FF7-New-Game.png">
+    <img src="/images/posts/FF7-New-Game.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - New Game screen</small>
+  </figcaption>
+  
+</figure>
+
+<blockquote>
+<p><strong>TL-DR:</strong> This is the story about a new driver for Final Fantasy VII that will allow you to play the game through new rendering backends, like DirectX 11 and Vulkan. If you&rsquo;re eager to try it yourself, feel free to follow installation instructions on the <a href="https://github.com/julianxhokaxhiu/FFNx">official repository</a>.</p>
+</blockquote>
+<p>When Final Fantasy VII Remake <a href="https://www.gamespot.com/articles/final-fantasy-7-remake-announced-by-sony-at-e3-201/1100-6428174/">was announced</a> unlike most of the fans my first idea was to re-play again the game. The last time I finished the game was long time ago, and I don&rsquo;t honestly remember every bit of the story anymore.</p>
+<p>My first attempt was to do it using some Playstation 1 emulators like <a href="https://www.retroarch.com/">Retroarch</a>, although aside the great evolution the emulator is doing, the game has its own limits and it does not look so great today.</p>
+<p>So, googling about how to enhance in-game textures, I came across this interesting post: <a href="https://captrobau.blogspot.com/2019/05/remako-mod-version-10-released.html">Remako Mod Version 1.0 Released!</a> an HD Graphics Mod which would allow me to play the PC version, with upscaled textures. Great!</p>
+<p>Attempting to install it, I figured out it was not so immediate and I had to follow some tutorials online. But all my attempted failed, until I came across this very well done forum thread: <a href="http://forums.qhimm.com/index.php?topic=15520.0">Tifa&rsquo;s Final Heaven - 7th Heaven Modding Tutorial</a>. Thank you EQ2Alyza!</p>
+<p>This tutorial became the beginning of my journey, which would lead me from just &ldquo;trying to play the game in HD&rdquo; to actually developing my own driver (and yet didn&rsquo;t manage to find some time to actually play it&hellip;).</p>
+<blockquote>
+<p><strong>WARNING:</strong> This is going to be a VERY long post, with a LOT of technical details so I hope to be as clear as possible.</p>
+<p>Make sure to have some time to read this + a cup of tea and some bisquits. You will definitely need them down the road :)</p>
+</blockquote>
+<p>Ready? Let&rsquo;s go!</p>
+<h2 id="introduction">Introduction</h2>
+<p>It is no secret that Final Fantasy VII was one of the most known chapter of the whole series. A lot of people did buy and play the game not only on Playstation 1, but also on PC. Although time goes by, and the game unfortunately didn&rsquo;t survive the technology evolution.</p>
+<p>Although on Playstation 1 you can use emulators nowadays, which are powered by various rendering engines like OpenGL, DirectX and most recently Vulkan, on PC unfortunately there is no &ldquo;upgrade&rdquo; option unless the OS provides some kind of retrocompatibility layer.</p>
+<p>What happened in time, in order to allow the game run &ldquo;just fine&rdquo; on modern Windows releases, Square Enix did repack the game using an internal upgrade of the rendering engine ( from DirectX 5 to DirectX 9 ), added some support for new video codecs and better audio in-game music ( from MIDI to Ogg ). This version is what is known as Steam release in the community.</p>
+<p>One question though stick in my mind: how did Square-Enix manage to actually provide an upgrade <a href="https://gamefaqs.gamespot.com/boards/197343-final-fantasy-viii/76999367">without having the official game source code</a><sup>1</sup>?</p>
+<h2 id="ff7_opengl-by-aali">ff7_opengl by Aali</h2>
+<p>Before doing a full analysis of the FF7 Steam Release, you may want to know that actually Final Fantasy VII <a href="http://forums.qhimm.com/index.php?topic=8306.0">was already modded</a> by one person which we know only via its nickname Aali, <strong>since 2009</strong>. Remember this year as we&rsquo;re going to do some reference later.</p>
+<p>This driver made use of an undocumented feature which was discovered inside the <code>ff7.exe</code> binary file, once reversed engineer, that allows you to use a special video mode which will allow the game to load a custom driver to renderer on the screen. The path to this driver ( a DLL file ) is given via the Windows Registry, which is then loaded by the game, calling the one and only required exported function: <code>new_dll_graphics_driver</code> ( option number 3 ).</p>
+<figure>
+  <a href="/images/posts/FF7-Driver-Options.png">
+    <img src="/images/posts/FF7-Driver-Options.png" />
+  </a>
+  
+  <figcaption>
+    <small>Final Fantasy VII 1.02 - Driver Options parsing</small>
+  </figcaption>
+  
+</figure>
+
+<blockquote>
+<p>Internally the game has three possible options:</p>
+<ol start="0">
+<li>Software Rendering</li>
+<li>DirectX ( the only one used on Windows )</li>
+<li>OpenGL ( yes, the game has an OpenGL implementation, which actually works only on Intel today. <a href="https://gist.github.com/julianxhokaxhiu/b093daa81871a535efc62563e8abdf16">Feel free to try it</a>)</li>
+<li>External driver ( load an external DLL with an entry point called <code>new_dll_graphics_driver</code> )</li>
+</ol>
+</blockquote>
+<p>After that point though, which parameters were given and how they did look like was unknown, and all you get today was reverse engineered and understood through trial and error, until it was figured out what did the flag do and how it worked. Yet, with some good knowledge and A LOT of time, Aali managed to get most of the driver logic and implemented what the community got to know as <code>ff7_opengl</code> driver.</p>
+<p>The only existing driver which allowed the game to be rendered even in 4K, using OpenGL: a Graphical API that works <del>just fine</del> even today. Was there any limit in this driver though? Unfortunately yes, it uses OpenGL 2.1 profile, which on new drivers runs through <a href="https://www.khronos.org/opengl/wiki/OpenGL_Context#OpenGL_3.1_and_ARB_compatibility">a compatibility profile</a> ( no GPU driver as of today supports this layer natively ).</p>
+<p>Albeit the fact that OpenGL is a good rendering engine, it is known to be not the best choice on Windows. Performance doesn&rsquo;t always match DirectX, and on <a href="https://www.reddit.com/r/Amd/comments/ce5uj2/call_to_amd_to_please_fix_their_opengl_windows/">AMD it causes a lot of issues</a>. Intel as well is trying to keep up the rendering with its competitors but is not a secret that it has still a lot of room to improve. This means that of all the competitors the only one which is left with good performance is Nvidia.</p>
+<p>Another interesting fact, is that unfortunately the driver author did stop developing it, with no further explaination, and as a last gift to the community it decided to release the <a href="https://github.com/Aali132/ff7_opengl">driver source code</a>, but no instructions on how to compile it. No documentation, no build system, no batch file, no Visual Studio solution. If you were interested in continuing it, you would have to figure it out yourself, or enjoy its last release <a href="http://forums.qhimm.com/index.php?topic=14922.0">0.8.1b</a>.</p>
+<h2 id="ff7-steam-release">FF7 Steam release</h2>
+<p>Meanwhile <code>ff7_opengl</code> was getting more and more mature, out of nowhere Square Enix announced a new digital edition of FF7 which had been released on <a href="https://web.archive.org/web/20170602072630/http://na.square-enix.com/en/blog/final-fantasy-vii-pc-out-now">August 14, 2012</a>, which introduces archivements, new &ldquo;upgraded&rdquo; movies, new &ldquo;upgraded&rdquo; music ( from MIDI to Ogg ), Boosters and&hellip;guess what? A new rendering system: DirectX 9. This port is known to be done by <a href="https://en.wikipedia.org/wiki/Dotemu">Dotemu SAS</a>.</p>
+<p>Knowing how the very first release of the game works, I was curious to investigate how Dotemu implemented its own driver. What I did discover along the road left me really surprised.</p>
+<p>So let&rsquo;s start by actually checking which DLL files does the game imports.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"># C:\Program Files (x86)\Steam\steamapps\common\FINAL FANTASY VII&gt;dumpbin /imports ff7_en.exe
+Microsoft (R) COFF/PE Dumper Version 14.24.28316.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Dump of file ff7_en.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following imports:
+    [...]
+
+    AF3DN.P
+      F6E0E8 Import Address Table
+      F6E0E8 Import Name Table
+            0 time date stamp
+            0 Index of first forwarder reference
+
+          0 dotemuRegCloseKey
+          0 dotemuRegDeleteValueA
+          0 dotemuRegOpenKeyExA
+          0 dotemuRegQueryValueExA
+          0 dotemuRegSetValueExA
+          0 new_dll_graphics_driver
+  Summary
+
+       66000 .bind
+      797000 .data
+        1000 .dotemu
+        4000 .rdata
+       1D000 .rsrc
+      3B5000 .text
+</code></pre></div><p>I did cut most of the output but I kept the only entry we are interested in. We can clearly see that the game imports from <code>AF3DN.P</code> the <code>new_dll_graphics_driver</code> exported function. The entrypoint for the driver to be started. Bingo!</p>
+<p>But is this actually a DLL file? Let&rsquo;s double check.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"># C:\Program Files (x86)\Steam\steamapps\common\FINAL FANTASY VII&gt;dumpbin /headers AF3DN.P
+Microsoft (R) COFF/PE Dumper Version 14.24.28316.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Dump of file AF3DN.P
+
+PE signature found
+
+File Type: DLL
+
+FILE HEADER VALUES
+             14C machine (x86)
+               5 number of sections
+        51D4549D time date stamp Wed Jul  3 18:43:09 2013
+               0 file pointer to symbol table
+               0 number of symbols
+              E0 size of optional header
+            2102 characteristics
+                   Executable
+                   32 bit word machine
+                   DLL
+
+OPTIONAL HEADER VALUES
+             10B magic # (PE32)
+            9.00 linker version
+           21200 size of code
+            C600 size of initialized data
+               0 size of uninitialized data
+           1F675 entry point (1001F675)
+            1000 base of code
+           23000 base of data
+        10000000 image base (10000000 to 10036FFF)
+            1000 section alignment
+             200 file alignment
+            5.00 operating system version
+            0.00 image version
+            5.00 subsystem version
+               0 Win32 version
+           37000 size of image
+             400 size of headers
+           345DC checksum
+               2 subsystem (Windows GUI)
+             140 DLL characteristics
+                   Dynamic base
+                   NX compatible
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+           28900 [     198] RVA [size] of Export Directory
+           26F94 [     154] RVA [size] of Import Directory
+           31000 [     2B0] RVA [size] of Resource Directory
+               0 [       0] RVA [size] of Exception Directory
+           2DC00 [    20A8] RVA [size] of Certificates Directory
+           32000 [    3470] RVA [size] of Base Relocation Directory
+           233C0 [      1C] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+               0 [       0] RVA [size] of Thread Storage Directory
+           242E0 [      40] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+           23000 [     354] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+  [...]
+
+  SECTION HEADER #2
+  .rdata name
+    5A98 virtual size
+   23000 virtual address (10023000 to 10028A97)
+    5C00 size of raw data
+   21600 file pointer to raw data (00021600 to 000271FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        <span style="color:#66d9ef">Time</span> Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    51D4549D cv            5E 00024328    22928    Format: RSDS, {78FEF29B-7AE1-4693-9EF7-2383992D14E4}, 1, D:\Desktop\FF7\FF7_Project_svn\Driver\ff7_d3d\Steam Release\AF3DN.pdb
+</code></pre></div><p>So yes, it is a DLL file, but it&rsquo;s not the only detail we can grasp. It seems the driver contains a reference to a PDB file ( debug symbols created by MSVC when building using the Debug profile ) named <code>AF3DN.pdb</code>. Looking at the path where it is living we can clearly see <code>D:\Desktop\FF7\FF7_Project_svn\Driver\ff7_d3d\Steam Release\</code> which allows also to guess that this may be either just another driver, or THE driver.</p>
+<blockquote>
+<p>The path also makes me think that they do have actually some source code of the game. I would be happy to know more if you do :)</p>
+</blockquote>
+<p>Either way, let&rsquo;s check what is being used by this driver to actually do what is supposed to do ( render on screen, allow new movies to be renderer and play the new Ogg music files ). In order to check this, I&rsquo;ll use <a href="https://cutter.re/">Cutter</a>.</p>
+<figure>
+  <a href="/images/posts/FF7-Cutter-Steam-Driver-Release.png">
+    <img src="/images/posts/FF7-Cutter-Steam-Driver-Release.png" />
+  </a>
+  
+  <figcaption>
+    <small>Final Fantasy VII Steam Driver - Decompile through Cutter</small>
+  </figcaption>
+  
+</figure>
+
+<p>Looking on the left column we can see some of the imports they used to actually do some stuff in-game:</p>
+<ul>
+<li>We can clearly see <code>d3dx9</code> imported symbols. This confirms they do use DirectX 9 APIs to render.</li>
+<li>They are using <code>libvgmstream</code> to reproduce music.</li>
+<li>They are using <code>avcodec</code> and <code>avformat</code> to reprdouce movies. These are two layers provided by the <a href="https://www.ffmpeg.org/">FFMpeg</a> project.</li>
+</ul>
+<p>Two dependencies on three analyzed, brought though some similarities with Aali released driver <code>ff7_opengl</code>. Remember when I said it started in 2009? The Steam release was brought up on 2012. Three years later.</p>
+<p>This may be totally a coincidence, but this made me even more curious to double check if there was something unique inside of it, which would either confirm or deny a theory. Aali in his driver introduced a functionality to load external textures, replacing visually the default game ones, allowing you to upgrade texture to something much more appealing.</p>
+<figure>
+  <a href="/images/posts/FF7-Chocobo-Farm-Modded.png">
+    <img src="/images/posts/FF7-Chocobo-Farm-Modded.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on OpenGL - Chocobo Farm with HD Textures</small>
+  </figcaption>
+  
+</figure>
+
+<p>In order to provide this capability, Aali driver did search for specific texture names under one path known as <code>direct</code>. If this folder was present next to your <code>ff7.exe</code> game file, and it had the texture inside of it, it would have been shown. Otherwise the internal texture would have been shown. So, let&rsquo;s search for this specific string inside of Cutter.</p>
+<figure>
+  <a href="/images/posts/FF7-Cutter-Steam-Driver-Release-Strings.png">
+    <img src="/images/posts/FF7-Cutter-Steam-Driver-Release-Strings.png" />
+  </a>
+  
+  <figcaption>
+    <small>Final Fantasy VII Steam Driver - Existing strings within the driver</small>
+  </figcaption>
+  
+</figure>
+
+<p>So, what did the search return? Two interesting entries:</p>
+<ul>
+<li><code>%s/direct/%s/%s%s</code></li>
+<li><code>%s/direct/%s/%s/%s%s</code></li>
+</ul>
+<p>Where did I saw these entries before? Ah yes, <a href="https://github.com/Aali132/ff7_opengl/blob/master/ff7/file.c#L211">right here</a> and <a href="https://github.com/Aali132/ff7_opengl/blob/master/ff7/file.c#L216">there</a>.</p>
+<p>Up to this point, I can actually confirm my theory of what happened around this Steam driver: either Aali got hired by Dotemu ( and this explains why the driver stopped in being developed, and is so similar ) or they did use Aali source code to sell you just another repack, using DirectX 9 APIs instead of OpenGL. Smart move :)</p>
+<p>Either way, this gave me a good input: if they did manage to re-use that code, or create a new one, it also means I should be able to do it too.</p>
+<p>This is how my next seven months would have been used from improving Aali source code, to actually come up with a totally new named FFNx. A next generation driver which allows you to use DirectX 9/11/12, OpenGL and Vulkan!</p>
+<h2 id="ff7_opengl-reloaded">FF7_OpenGL Reloaded</h2>
+<p>To my surprise someone else already did start <a href="https://github.com/FFT-Hackers/FF7_OpenGL">a fork of Aali source code</a>, and attempted to build it via CMake. Those people are <a href="https://github.com/quantumpencil">Blake Wilkey</a> and <a href="https://github.com/Nax">Maxime Bacoux</a>. Two great guys which I had the honor to work with, and which together are cooking something which will definitely revolutionize Final Fantasy VII modding scene. But until then, you will have to wait. Sorry :)</p>
+<p>Until that very moment I used CMake just to build some Arch Linux AUR packages, although developing on top of it was a new adventure. But I like new challanges so I started to read the <a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">official documentation</a> and in little to no time I was already able to hack it and get my very <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/3d448a9b30cc9dba31dc1f82a54bbac5aa6ecdd0">first</a> <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/12e0ce8f41d0935209d46992cef836b4061ec8da">build</a> <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/166db9e8e71f8b1fd7153fc89c1a7e0aca1bc81b">results</a>.</p>
+<p>As a Solution Architect, and DevOps Engineer, I usually like to have a Continous Integration environment to know how the project quality moves on, commit by commit. My first idea was to use Travis CI, although after some quick tests it came up that Windows build environments were in beta and not really up to the cause. So the choice went to <a href="https://www.appveyor.com/">AppVeyor</a>.</p>
+<blockquote>
+<p>AppVeyor provides Windows build images, which provides not only the common utilities you may need ( like Bash commands, unzipping tools like 7-Zip and so on ), it provides Visual Studio build environments starting from 2010 until 2019! It&rsquo;s also free to use for Open Source projects. Thank you!</p>
+</blockquote>
+<p>This was great news, as the new FF7_OpenGL fork would exactly make use of MSVC from 2019. And so the <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/424f3ad72d303071e893c3d330ab6d6bed803683">adventure begun</a>.</p>
+<p>The CMake goals were now able to build the main driver code just fine, but what about the plugins? Aali used to zip its release as its main driver <code>ff7_opengl.fgd</code> and a <code>plugins</code> directory, which contained the VGMStream plugin to load OGG music files, and the FFMpeg plugin to load movies on new systems. Knowing that, in order to mimic the official Aali release, a new <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/ebf5ade4ab80332722cee0fa8553c8a7951d386f">CMake goal</a> was added to build also those layers.</p>
+<p>Another thing that was missing in mimicking the release, was that files were build statically. No external DLLs were provided. In order to do the same thing under MSVC, shipped with Visual Studio 2019, we had to build the code <a href="https://github.com/FFT-Hackers/FF7_OpenGL/commit/132a052c70ed1eb06f85cf01d96d10eae07d0cab">using Microsoft`s Universal CRT</a>.</p>
+<p>With this set, we were now able to have at least Aali source code shipped as people were used to. Was this time to settle? No way. The driver had to be improved as various bugs were left. Down the road, the more I was improving it based on awesome people which helped me test it ( thank you <a href="https://forums.qhimm.com/index.php?action=profile;u=28301">LordUrQuan </a> and <a href="https://github.com/unab0mb">unab0mb</a>! ), commit after commit, the more I was gaining knowledge inside of the code.</p>
+<p>And the more I was gaining knowledge inside of it, the more in my head one crazy idea was borning. Can we make Final Fantasy VII run on Vulkan?</p>
+<figure>
+  <a href="/images/posts/FF15-You-Want-Truth.jpg">
+    <img src="/images/posts/FF15-You-Want-Truth.jpg" />
+  </a>
+  
+</figure>
+
+<h2 id="ffnx">FFNx</h2>
+<p>FFNx is the next step evolution of what you were used to know as <code>ff7_opengl</code>, which inherits all the good of it ( texture modding, audio using VGMStream and video playback using FFMpeg ), and on top it provides new rendering backends, including Vulkan!</p>
+<p>I started by googling around which were the best libraries to use to accomplish this goal. My very first touchpoint happened to be <a href="https://github.com/vinjn/awesome-vulkan">awesome-vulkan</a>, a great repository which provides a LOT of resources around Vulkan. A great start.</p>
+<p>Within that list, I discovered that not only Vulkan wrappers were available, but also some multi-API rendering engines were existing, which would allow me to write the code once, and run it on multiple Graphics APIs. Sweet!</p>
+<p>Upon looking at the documentation and some examples of those frameworks, I actually figured out one thing: although they were made with C++, I missed a deep knowledge about Computer Graphics. There was no option, than actually learning at least one of them. I decided to go for OpenGL, as I had already worked on <code>ff7_opengl</code>, which I could also use as a basis for hacking. A perfect candidate.</p>
+<p>So first thing first, I started to read <a href="https://learnopengl.com/Getting-started/OpenGL">a getting started with OpenGL</a>, what <a href="https://learnopengl.com/Getting-started/Shaders">a Vertex shader was</a>, and why did we even need a Fragment shader. Even how to simply draw a triangle passing <a href="https://learnopengl.com/Getting-started/Hello-Triangle">Vertex data</a>, with and without Indices.</p>
+<blockquote>
+<p>By the way, if you are questioning what is a Shader, it is literally a binary running in your GPU. It is written in C code and compiled by the Graphics API. A shader can pilot your GPU to do some calculations and either return the data to the CPU or &ldquo;print&rdquo; something visually based on criterias. This is the basis how OpenCL started.</p>
+</blockquote>
+<p>So, once I figured out that, I discovered it was not enough, yet. I had to learn which data types were supported in shaders (fyi, everything is a vector of 4 numbers usually in the XYZW format), <a href="https://learnopengl.com/Getting-started/Coordinate-Systems">how the rendering space works</a>, what an Ortho matrix was and what a View matrix was.</p>
+<p>Even that although was not enough. I had to learn even what does it mean <a href="https://learnopengl.com/Advanced-OpenGL/Blending">to blend two textures</a>, to discard some pixels based on some criteria called <a href="https://learnopengl.com/Advanced-OpenGL/Depth-testing">Depth Testing</a> and finally the way to optimize some rendering by drawing only what the final user will see, through <a href="https://learnopengl.com/Advanced-OpenGL/Face-culling">Face Culling</a>.</p>
+<p>Wow, a lot of knowledge for just &ldquo;a simple&rdquo; game like Final Fantasy VII. But it was worth it: after some big code cleanup, code porting from C to C++, and written some shaders from scratch, I was finally able to make use of bgfx to render the game as it was used to run. Great!</p>
+<p>Was this enough to complete the task? Not really. I forgot about one of the most used features in game development, especially used by Final Fantasy VII. Before a battle starts a battle swirl effect happens, which is using the &ldquo;last frame&rdquo; you see, it spins while it&rsquo;s zooming it, and then the battle starts.</p>
+<p>So, how to implement this technically? When working with Graphical APIs this happens to be done by rendering &ldquo;off screen&rdquo; all your draw operations, and finally showing the last frame to the user. These operation is also known as <a href="https://learnopengl.com/Advanced-OpenGL/Framebuffers">Framebuffer rendering</a>.</p>
+<p>Once that part was also understood, some more code was adapted to make use of it and the game was finally able to show the Swirl. Magic :)</p>
+<figure>
+  <video controls src="/images/posts/FF7-Battle-Swirl.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on OpenGL - Battle Swirl</small>
+  </figcaption>
+  
+</figure>
+<p>Once this whole bag of knowledge was figured out, the driver finally look more solid and the game started to render beautifully.</p>
+<h2 id="render-backend-evaluation">Render backend evaluation</h2>
+<p>Before reaching the point in actually being able to draw, by using <strong>bgfx</strong> I carefully evaluated also some other options, which I&rsquo;ll leave here for the sake of shared knowledge. In case you cross this project, be aware of why you&rsquo;ll find bgfx down the road and not something else.</p>
+<h3 id="diligent-engine">Diligent Engine</h3>
+<p><a href="https://github.com/DiligentGraphics/DiligentEngine">Diligent Engine</a> is very good Low-Level framework which provides one API across the various Graphics APIs like DirectX 11/12, OpenGL and Vulkan. Its main focus is allowing the developer to stay as close as possible to the Hardware allowing you to manage each behavior.</p>
+<p>To speed up implementation on FFNx I even developed <a href="https://github.com/julianxhokaxhiu/DiligentEngineCI">a CI job</a> to build the latest available code. Feel free to check it out!</p>
+<p>Unfortunately for me it didn&rsquo;t work out when I did my first tentative because I didn&rsquo;t had all the Computer Graphics knowledge I do have know. But I will definitely try it again as soon as I will find some time.</p>
+<p>I&rsquo;d like to give a special thank you to the <a href="https://gitter.im/DiligentGraphics">DiligentEngine team</a> for the support given!</p>
+<h3 id="bsf">bsf</h3>
+<p><a href="https://github.com/GameFoundry/bsf">bsf</a> is a full framework which allows you to develop a game. It provides one API to render on top of DirectX, OpenGL and Vulkan, but also an Audio Rendering API, Input management API and so on. Although it offers many pillars, you could also use them separately.</p>
+<p>Unfortunately for me it didn&rsquo;t work out either for one main reason: it didn&rsquo;t compile at all under x86 <a href="https://github.com/GameFoundry/bsf/issues/245">due to one issue</a> which is still unresolved today.</p>
+<h3 id="llgl">LLGL</h3>
+<p><a href="https://github.com/LukasBanana/LLGL">LLGL</a> is another very good Low-level early prototype library which allows you to abstract from the common known Graphics APIs like DirectX 11/12, Vulkan and OpenGL, on top of one single API. This looked very promising since its very first releases in December 2019.</p>
+<p>Unfortunately also this didn&rsquo;t work out as expected for two reasons:</p>
+<ul>
+<li>the library was missing some OpenGL functionalities required to render YUV movies, <a href="https://github.com/LukasBanana/LLGL/commit/89c7400b8f941fd474ca7ce94bc3ae49f9f821e0">which has now been fixed</a></li>
+<li>the library is frozen, which means the author will <a href="https://github.com/LukasBanana/LLGL/commit/1bda034b08ccdda284ed9e0d2df425d4118583b7">not work anymore on it</a></li>
+</ul>
+<p>Too bad, as I also had developed <a href="https://github.com/julianxhokaxhiu/LLGLCI">a CI job</a> for this one, to speed up development! Feel free to check it out.</p>
+<p>Finally I&rsquo;d like to give a special thank you to <a href="https://gitter.im/LukasBanana">Lukas Hermanns</a> for having me helped while I was writing a tenative implementation using LLGL!</p>
+<h3 id="bgfx">bgfx</h3>
+<p><a href="https://github.com/bkaradzic/bgfx">bgfx</a> is a high level rendering engine which works on top of DirectX 9/11/12, Vulkan and OpenGL. It&rsquo;s not very easy to use at first, although the author is fully supportive, it has <a href="https://bkaradzic.github.io/bgfx/examples.html">a lot of examples</a>, <a href="https://bkaradzic.github.io/bgfx/bgfx.html">good reference documentation</a> and <a href="https://gitter.im/bkaradzic/bgfx">there is a good community</a> around it to ask for help.</p>
+<p>At this very stage, bgfx helped a lot: as it was abstracting away from me some complex single Grapghics API edge cases, I could focus on just rendering the game. And in order to speed up development, I also developed <a href="https://github.com/julianxhokaxhiu/bgfxCI">a CI job</a> for this one too! Feel free to check it out.</p>
+<p>Also here a special thank you to <a href="https://gitter.im/pezcode">pezcode</a> and to <a href="https://github.com/bkaradzic">Бранимир Караџић</a> for having me helped understand some inner internals of bgfx I wasn&rsquo;t aware of. Really appreciated :)</p>
+<h2 id="the-final-choice">The final choice</h2>
+<p>bgfx is the actual rendering backend which empowers FFNx, in allowing you to play Final Fantasy VII on top of Vulkan!</p>
+<figure>
+  <video controls src="/images/posts/FF7-Party-Menu.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Party Menu</small>
+  </figcaption>
+  
+</figure>
+<figure>
+  <a href="/images/posts/FF7-Ropeway-Station.png">
+    <img src="/images/posts/FF7-Ropeway-Station.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on Vulkan - Ropeway Station</small>
+  </figcaption>
+  
+</figure>
+
+<p><strong>Hold your horses!</strong> Although the game actually works, FPS are not stable. This means there is still room for improvements. I will definitely do my best on improving this, but if you want to help, feel free to do so!</p>
+<p>Until then you can have a full play-through either using OpenGL or DirectX 11, which are working fine as expected on a stable framerate.</p>
+<figure>
+  <video controls src="/images/posts/FF7-Battle.mp4"></video>
+  
+  <figcaption>
+    <small>FFNx on DirectX 11 - Battle mode</small>
+  </figcaption>
+  
+</figure>
+<p>If you also want to explore some other rendeting backends, you can also try DirectX 9 ( which brings some artifacts during rendering, I still have to understand why ) and DirectX 12 ( like Vulkan, it shares the same architecture ).</p>
+<figure>
+  <a href="/images/posts/FF7-DirectX9.png">
+    <img src="/images/posts/FF7-DirectX9.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on DirectX 9 - Worldmap</small>
+  </figcaption>
+  
+</figure>
+
+<figure>
+  <a href="/images/posts/FF7-DirectX12.png">
+    <img src="/images/posts/FF7-DirectX12.png" />
+  </a>
+  
+  <figcaption>
+    <small>FFNx on DirectX 12 - Worldmap</small>
+  </figcaption>
+  
+</figure>
+
+<p>Finally, FFNx also inherits all the goods you were used to have with Aali ff7_opengl driver. Which means it works out-of-the-box with 7h <strong>today!</strong>. Feel free to it.</p>
+<h2 id="ffnx-is-free-and-open-source">FFNx is Free and Open Source</h2>
+<p><a href="https://github.com/julianxhokaxhiu/FFNx">FFNx</a> is fully hosted on Github, you can see its source code and you can fork it if you want. Contributions are welcome.</p>
+<p>If you want to use it, remember to check <a href="https://github.com/julianxhokaxhiu/FFNx#final-fantasy-vii">installation instructions</a> on the official repository page.</p>
+<p>In case you find an issue, feel free to let me know by creating <a href="https://github.com/julianxhokaxhiu/FFNx/issues">one here</a>.</p>
+<p>I hope you will enjoy this, as much as I did while developing it.</p>
+<h2 id="a-special-thank-you-goes-to">A Special thank you goes to&hellip;</h2>
+<p>Before closing this post, there is a list of people I&rsquo;d like to thank for their support while I was working on this, which are:</p>
+<ul>
+<li>My family, without them this project would not even exist</li>
+<li><a href="https://github.com/quantumpencil">Blake Wilkey</a> and <a href="https://github.com/Nax">Maxime Bacoux</a> in helping me Reverse Engineer <code>ff7.exe</code> and get a better picture on how to hook on program functions in memory</li>
+<li><a href="http://forums.qhimm.com/index.php?action=profile;u=6439">DLPB</a> for some code exchange between ff7_opengl/FFnx and The Reunion</li>
+<li><a href="https://forums.qhimm.com/index.php?action=profile;u=28301">LordUrQuan </a> and <a href="https://github.com/unab0mb">unab0mb</a> for continously testing the driver</li>
+<li><a href="https://github.com/Sebanisu">Robert Russell</a> for continously testing the driver and support on FF8 topics</li>
+<li><a href="https://github.com/MaKiPL">Marcin Gomulak</a> for FF8 topics support</li>
+<li><a href="http://forums.qhimm.com/index.php?action=profile;u=14276">Kaldarasha</a> for the help in testing the driver</li>
+<li><a href="http://forums.qhimm.com/index.php">Qhimm community</a> for a fantastic and enthusiastic FF7 Modding Scene and the <a href="https://github.com/julianxhokaxhiu/FFNx#join-us-on-discord">official chat room</a> creation!</li>
+</ul>
+<p>This brings us at the very end of this blog post. A huge adventure which lasted seven months for me, and half an hour to you :)</p>
+<p>If you want to get in touch with me, feel free to reach out on <a href="https://julianxhokaxhiu.com/">any social channel you prefer</a>.</p>
+<p>Last but not least, if you want to support, feel free to sponsor me on Github at this link: <a href="https://github.com/sponsors/julianxhokaxhiu">https://github.com/sponsors/julianxhokaxhiu</a></p>
+<p>See you around!</p>
+<hr>
+<p><sup>1</sup> <small>Not many people may know about this funny fact: all the Final Fantasy VII releases being done in various platforms like PS4, Switch and even Android, do actually repack the original Final Fantasy VII 1.02 exe + some emulation library that runs on the native platform ( pretty sure they are using <a href="https://www.winehq.org/">Wine</a> ) + a driver library, like FFNx. If you don&rsquo;t believe me, feel free to unpack the games on those various platforms yourself. You&rsquo;ll be as much surprised as I was :)</small></p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2020-03-06-final-fantasy-viii-running-on-vulkan/"> &laquo; Final Fantasy VIII running on Vulkan, Steam compatibility and much more!</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2016-10-13-frontend-development-on-steroids-from-localhost-to-environment-without-a-deploy/">Frontend Development on Steroids: From localhost to environment, without a deploy! &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers"/>
+<meta name="twitter:description" content="Are you searching for a rapid PHP script to test &ldquo;Etag&rdquo; or &ldquo;Last-Modified&rdquo; HTTP Headers in your project? Here we go, made in PHP.
+Enjoy"/>
+
+	<meta property="og:title" content="Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers" />
+<meta property="og:description" content="Are you searching for a rapid PHP script to test &ldquo;Etag&rdquo; or &ldquo;Last-Modified&rdquo; HTTP Headers in your project? Here we go, made in PHP.
+Enjoy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers/" />
+<meta property="article:published_time" content="2012-10-03T22:03:50+00:00" />
+<meta property="article:modified_time" content="2012-10-03T22:03:50+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=Rapid%20script%20to%20test%20%27Etag%27%20and%20%27Last-Modified%27%20HTTP%20Headers&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f&title=Rapid%20script%20to%20test%20%27Etag%27%20and%20%27Last-Modified%27%20HTTP%20Headers"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f&t=Rapid%20script%20to%20test%20%27Etag%27%20and%20%27Last-Modified%27%20HTTP%20Headers"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2012-10-03-rapid-script-to-test-etag-and-last-modified-http-headers%2f&title=Rapid%20script%20to%20test%20%27Etag%27%20and%20%27Last-Modified%27%20HTTP%20Headers"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Oct 3, 2012
+                                    <i class="far fa-clock clock"></i>
+                                    1 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Rapid script to test &#39;Etag&#39; and &#39;Last-Modified&#39; HTTP Headers</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>Are you searching for a rapid PHP script to test &ldquo;<strong>Etag</strong>&rdquo; or &ldquo;<strong>Last-Modified</strong>&rdquo; HTTP Headers in your project? Here we go, made in PHP.</p>
+<p>Enjoy</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+    <span style="color:#75715e">// Uncomment these lines to get ALWAYS an HTTP 200 Response
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//$date = &#34;&#34;;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//$etag = &#34;&#34;;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Uncomment these lines to get an HTTP 304 Response, if response is already cached, otherwise HTTP 200 Response
+</span><span style="color:#75715e"></span>    $date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tue, 31 Jul 2012 16:22:39 GMT&#34;</span>;
+    $etag <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bdfe45db3bc212446299db6f327c4ec0&#34;</span>;
+
+    <span style="color:#75715e">// Let&#39;s set the correct headers to get cache control with If-Modified-Since or If-None-Match headers
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Origin: *&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Expose-Headers: ETag&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Expose-Headers: X-Content-Length-Uncompressed&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Expose-Headers: Content-Length&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Cache-Control: public&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;ETag: </span><span style="color:#e6db74">$etag</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Last-Modified: </span><span style="color:#e6db74">$date</span><span style="color:#e6db74">&#34;</span>);
+
+    <span style="color:#75715e">// Here we create a test object for the response to be cached
+</span><span style="color:#75715e"></span>    $testobj <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+    $testobj[<span style="color:#e6db74">&#39;test&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+    <span style="color:#75715e">// Here we check if content is modified with If-Modified-Since or If-None-Match headers in request
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>((<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_SERVER[<span style="color:#e6db74">&#39;HTTP_IF_MODIFIED_SINCE&#39;</span>]) <span style="color:#f92672">&amp;&amp;</span> $_SERVER[<span style="color:#e6db74">&#39;HTTP_IF_MODIFIED_SINCE&#39;</span>] <span style="color:#f92672">==</span> $date) <span style="color:#f92672">||</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_SERVER[<span style="color:#e6db74">&#39;HTTP_IF_NONE_MATCH&#39;</span>]) <span style="color:#f92672">&amp;&amp;</span> $_SERVER[<span style="color:#e6db74">&#39;HTTP_IF_NONE_MATCH&#39;</span>] <span style="color:#f92672">==</span> $etag)){
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;HTTP/1.1 304 Not Modified&#34;</span>);
+    <span style="color:#75715e">// Nothing cached, let&#39;s give out the content
+</span><span style="color:#75715e"></span>    }<span style="color:#66d9ef">else</span>{
+        <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">json_encode</span>($testobj);
+    }
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/php">php</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2012-10-06-jquery-youtube-live-feed/"> &laquo; jQuery Youtube Live Feed</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2012-09-22-best-kernel-for-samsung-galaxy-s2/">Best Kernel for Samsung Galaxy S2 &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

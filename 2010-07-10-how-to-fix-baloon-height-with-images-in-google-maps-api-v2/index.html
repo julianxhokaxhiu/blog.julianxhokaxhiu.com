@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.80.0" />
+	
+	<title>How to fix baloon height with images in Google Maps API v2 | Julian Xhokaxhiu&#39;s Blog</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to fix baloon height with images in Google Maps API v2"/>
+<meta name="twitter:description" content="Hi,
+today i&rsquo;m going to talk about how to fix the (annoying?) baloon height when it has images in itself, on Google Maps API v2. Of course, i&rsquo;ve had so much headache with this problem, i&rsquo;ve searched all around the web to find how to fix it and of course i found two ways that tell&rsquo;s how to fix it."/>
+
+	<meta property="og:title" content="How to fix baloon height with images in Google Maps API v2" />
+<meta property="og:description" content="Hi,
+today i&rsquo;m going to talk about how to fix the (annoying?) baloon height when it has images in itself, on Google Maps API v2. Of course, i&rsquo;ve had so much headache with this problem, i&rsquo;ve searched all around the web to find how to fix it and of course i found two ways that tell&rsquo;s how to fix it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.julianxhokaxhiu.com/2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2/" />
+<meta property="article:published_time" content="2010-07-10T11:24:41+00:00" />
+<meta property="article:modified_time" content="2010-07-10T11:24:41+00:00" />
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-toolbar navbar-default" role="navigation">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target=".bs-example-toolbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+    </div>
+    
+    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="//julianxhokaxhiu.com/">Home</a></li>
+            <li class="active"><a href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+            <li><a href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a></li>
+            <li><a href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a href="//julianxhokaxhiu.com" class="navbar-brand">Julian Xhokaxhiu's Portfolio</a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="//julianxhokaxhiu.com/">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="//blog.julianxhokaxhiu.com/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="//linuxdavinci.julianxhokaxhiu.com/">LinuxDaVinci</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="//ipops.julianxhokaxhiu.com/">iPoPS</a></li>
+            </ul>
+            
+            <hr>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/en">English</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/it">Italiano</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle"><a href="https://blog.julianxhokaxhiu.com">Julian Xhokaxhiu&#39;s Blog</a></h1>
+    <p class="lead">My personal motto? &#39;Impossible Is Nothing&#39;</p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+  <p>Share</p>
+  <ul>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://facebook.com/sharer.php?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://twitter.com/intent/tweet?text=How%20to%20fix%20baloon%20height%20with%20images%20in%20Google%20Maps%20API%20v2&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f&title=How%20to%20fix%20baloon%20height%20with%20images%20in%20Google%20Maps%20API%20v2"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://www.xing.com/spi/shares/new?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f"
+        onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-xing"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f&t=How%20to%20fix%20baloon%20height%20with%20images%20in%20Google%20Maps%20API%20v2"
+        onclick="window.open(this.href, 'hacker-news-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-hacker-news"></i>
+      </a>
+    </li>
+    <li class="ml-1 mr-1">
+      <a
+        target="_blank"
+        href="http://www.reddit.com/submit?url=https%3a%2f%2fblog.julianxhokaxhiu.com%2f2010-07-10-how-to-fix-baloon-height-with-images-in-google-maps-api-v2%2f&title=How%20to%20fix%20baloon%20height%20with%20images%20in%20Google%20Maps%20API%20v2"
+        onclick="window.open(this.href, 'reddit-share', 'width=550,height=435');return false;"
+      >
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  </ul>
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Julian Xhokaxhiu">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Julian Xhokaxhiu</a><br>
+                                <span class="author-description">
+                                    Solution Architect/Engineer - Open Source Enthusiast<br>
+                                    <i class="far fa-star"></i>
+                                    Jul 10, 2010
+                                    <i class="far fa-clock clock"></i>
+                                    3 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">How to fix baloon height with images in Google Maps API v2</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>Hi,</p>
+<p>today i&rsquo;m going to talk about how to fix the (annoying?) baloon height when it has images in itself, on Google Maps API v2. Of course, i&rsquo;ve had so much headache with this problem, i&rsquo;ve searched all around the web to find how to fix it and of course i found two ways that tell&rsquo;s how to fix it.</p>
+<p>The first method implies that you have to set a fixed height for the baloon, but personaly, i was searching for a more flexible way to get it to work (let&rsquo;s say that i need to have multiple heights on the baloon because my image would be sometimes in 16:9 and sometimes in 4:3). The second method itself tells about an async load of the image in the baloon about Google Maps API itself, so if you see that the text is going outside the baloon in fact it&rsquo;s not a text fault but Google cannot found the size of the image because it wasn&rsquo;t loaded at the moment it was calculating.</p>
+<p>So, after reading this i thought &ldquo;why not mixing them both?&rdquo; and fact i did it. What i did to fix the height in the baloon, was two simple steps: cache the image before the baloon opens and (ta-da) set an height and a width in the image tag (the height and the width of the image of course). And bingo! the baloon opens quite well and without any sort of problems in any browser (that goes from IE6-8, Firefox 2.x-3.x, Safari, Chrome and Opera).</p>
+<p>So, see my snippet, as an example, to understand much more the code and how it does work. If you&rsquo;re asking yourself why did i use jQuery to do things is because of the more fast coding that it let you to do and because it&rsquo;s much better to load javascript only after the page has fully loaded (so it&rsquo;s much more compatible and fluid). Again, the document.ready is not always fired that way if you use that event (eg Internet Explorer do that in other way) so i prefer to use much more safe way that covers all the browsers that we know.</p>
+<p>I hope you will find this useful, because i didn&rsquo;t found any article that talk about this in the internet so i hope that people will have less headache than me next time we will have to do so :)</p>
+<p>We&rsquo;ll catch the next time with maybe some other cool things i&rsquo;m preparing like a more functional jQueryUI <a href="http://jqueryui.com/demos/autocomplete/">Autocomplete</a> (with multiple input texts and so on) that i&rsquo;ll explain when the time will come.</p>
+<p>Thanks again for the visit.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">imageCache</span>;
+(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">$</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cGIcon</span> <span style="color:#f92672">=</span>  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GIcon</span>(<span style="color:#a6e22e">G_DEFAULT_ICON</span>) ;
+    <span style="color:#a6e22e">marker</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GMarker</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GLatLng</span>(<span style="color:#a6e22e">dLat</span>,<span style="color:#a6e22e">dLng</span>),{<span style="color:#a6e22e">icon</span><span style="color:#f92672">:</span><span style="color:#a6e22e">cGIcon</span>});
+    <span style="color:#a6e22e">GEvent</span>.<span style="color:#a6e22e">addListener</span>(<span style="color:#a6e22e">marker</span>, <span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+        <span style="color:#75715e">// Cache the image before loading the baloon - This way is preferred because of the Garbage Collector of Firefox. If you put this on a var, firefox will think that is not usefull so will throw it away, without loading the image
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">imageCache</span>) <span style="color:#a6e22e">imageCache</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;body&#39;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;&lt;div id=&#34;img-cache&#34; style=&#34;display:none/&gt;&#39;</span>).<span style="color:#a6e22e">children</span>(<span style="color:#e6db74">&#39;#img-cache&#39;</span>); <span style="color:#75715e">//So we will create a DIV to put image cache inside it at the end of the body
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;&lt;img/&gt;&#39;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;src&#39;</span>, <span style="color:#e6db74">&#39;http://path/to/the/image.jpg&#39;</span>).<span style="color:#a6e22e">appendTo</span>(<span style="color:#a6e22e">imageCache</span>); <span style="color:#75715e">// Finally, append the image itself
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">marker</span>.<span style="color:#a6e22e">openInfoWindowHtml</span>(<span style="color:#e6db74">&#39;&lt;div class=&#34;content&#34;&gt;&lt;h1&gt;Title&lt;/h1&gt;&lt;img src=&#34;http://path/to/the/image.jpg&#34; height=&#34;100&#34; width=&#34;100&#34;&gt;&lt;p&gt;This is the text of the baloon&lt;/p&gt;&lt;/div&gt;&#39;</span>);
+    }
+    <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addOverlay</span>(<span style="color:#a6e22e">marker</span>);
+})(<span style="color:#a6e22e">jQuery</span>);
+</code></pre></div>
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/javascript">javascript</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://blog.julianxhokaxhiu.com/2010-12-30-autocomplete-extended/"> &laquo; AutoComplete Extended</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://blog.julianxhokaxhiu.com/2010-07-03-lets-make-google-chrome-live-part-2/">Let’s make Google Chrome Live! – Part 2 &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

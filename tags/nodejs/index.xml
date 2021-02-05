@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Julian Xhokaxhiu&#39;s Blog</title>
+    <link>https://blog.julianxhokaxhiu.com/tags/nodejs/</link>
+    <description>Recent content in nodejs on Julian Xhokaxhiu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Apr 2012 20:57:55 +0000</lastBuildDate><atom:link href="https://blog.julianxhokaxhiu.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s write our first &#39;Hello MongoDB&#39; with NodeJS</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</link>
+      <pubDate>Sun, 01 Apr 2012 20:57:55 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-04-01-lets-write-our-first-hello-mongodb-with-nodejs/</guid>
+      <description>As you have seen recently, i&amp;rsquo;m not writing so much here, because i&amp;rsquo;m working on new technologies like NodeJS and MongoDB. Fascinated by this next-gen &amp;ldquo;AMP&amp;rdquo;, i&amp;rsquo;m trying to write my first scripts trying to make such a basic job: get some data from somewhere, save them into the DB then next, and finally, get all the items that are in our &amp;ldquo;table&amp;rdquo; (i&amp;rsquo;ll explain you later why i&amp;rsquo;m writing it like this).</description>
+    </item>
+    
+    <item>
+      <title>[UPDATED] How to fix npm PATH of NWM</title>
+      <link>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</link>
+      <pubDate>Mon, 02 Jan 2012 22:36:10 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2012-01-02-how-to-fix-npm-path-of-nwm/</guid>
+      <description>Hello everyone again,
+just in a hurry, i&amp;rsquo;m here to tell how to fix npm PATH of NWM 0.1b, i knew that something was missing (didn&amp;rsquo;t notice why that final b?</description>
+    </item>
+    
+    <item>
+      <title>Little christmas surprise for you: NWM!</title>
+      <link>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</link>
+      <pubDate>Thu, 22 Dec 2011 19:01:31 +0000</pubDate>
+      
+      <guid>https://blog.julianxhokaxhiu.com/2011-12-22-little-christmas-surprise-for-you-nwm/</guid>
+      <description>Long time no see duh? Well, i didn&amp;rsquo;t forget you, neither i didn&amp;rsquo;t stop developing cool new things. In fact you can notice that right of this post, you can find some new links about me, followed by my new GitHub channel.</description>
+    </item>
+    
+  </channel>
+</rss>
