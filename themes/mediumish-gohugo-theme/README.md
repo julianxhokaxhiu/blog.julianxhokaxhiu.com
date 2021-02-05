@@ -27,23 +27,26 @@ Inside the folder of your Hugo site run:
     $ git clone https://github.com/lgaida/mediumish-gohugo-theme
 
 ## Preface
-Most image files should be placed somewhere within the `static` folder of your gohugo website. This allows them to be easily referenced from the config.toml or post.md files. You may structure the files and folders within `static` however you'd like, with one exception: There must be a file named `jumbotron.jpg` present under the path `static/images` as it is referenced in the .css.
+I recommend placing image files for your site config within the `static` folder of your gohugo website. This allows them to be easily referenced from the config.toml or post.md files. You may structure the files and folders within `static` however you'd like, with one exception: There must be a file named `jumbotron.jpg` present under the path `static/images` as it is referenced in the .css.
 
 
 ## Post Example
 To create a simple post use the hugo new command as usual.
+This theme makes use of page bundles / page resource (see https://gohugo.io/content-management/page-bundles/).
+Place any image next to your post's index.md file and make sure it contains the keyword "cover" inside its name.
+This image will also be used for twitter and opengraph cards.
+
 ```
-hugo new blog/my-first-post.md
+hugo new blog/my-first-post/index.md
 ```
 
-You then have a few options which i want to point out in the following.
+Creating a new post will create something like this:
 ```
 ---
 title: "My first post"
 date: 2018-10-01T15:25:19+02:00
 publishdate: 2018-10-07T11:17:14+02:00
 lastmod: 2018-10-08T18:55:29+02:00
-image: "/images/Test.jpg"
 tags: ["post", "interesting"]
 type: "post"
 comments: false
@@ -54,7 +57,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero qu
 
 `publishdate`: is displayed at the top of the single-view\
 `lastmod`: is displayed as a hint on the single-view\
-`image`: is displayed in the list- and single-view\
 `tags`: are used as usual, just add the tags you want to use. They are displayed in the jumbotron on the list-view, and on the bottom of each single-view\
 `comments`: true/false to turn on/off disqus-comments
 
@@ -89,13 +91,15 @@ googleAnalytics = "UA-1XXXXXXX1-X"
 ```toml
 [params]
   logo = "/images/icon.png"
-  description ="the clean blog!"
+  description = "the clean blog!"
   mailchimp = "you can provide a mailchimp-link here, see below"
   mailprotect = "you can provide a protector-name here, see below"
+  customCSS = ["css/tweaks.css", "css/customHeader.css"]
 ```
 `logo`: is displayed in titlebar and alertbar\
 `description`: is displayed under title\
 `mailchimp` and `mailprotect`: provide links to a mailchimp-list and a mailchimp-protector id, the following screenshot should clarify. if not specified the alertbar for mail-subscription doesn't show up.
+`customCSS`: you can add paths to your own css files here to tweak and customize the css
 
 ![mailchimp-example](https://raw.githubusercontent.com/lgaida/mediumish-gohugo-theme/master/images/mailchimp.png)
 
@@ -130,7 +134,6 @@ You can currently provide your username from `github`, `linkedin`, `xing`, `twit
   instagram = "<username>"
 ```
 ![landingpage-params](https://raw.githubusercontent.com/lgaida/mediumish-gohugo-theme/master/images/landing.png)
-
 
 ## Contributing
 

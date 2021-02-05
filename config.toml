@@ -10,34 +10,36 @@ pygmentsCodeFences = true
 DefaultContentLanguage = "en"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 [languages]
-  [languages.en]
-    contentDir = "content/en"
-    weight = 1
-  [languages.it]
-    contentDir = "content/it"
-    weight = 2
+[languages.en]
+contentDir = "content/en"
+weight = 1
+[languages.it]
+contentDir = "content/it"
+weight = 2
 
 [params]
-  description = "My personal motto? 'Impossible Is Nothing'"
+description = "My personal motto? 'Impossible Is Nothing'"
+comments = false
 
 [params.author]
-  name = "Julian Xhokaxhiu"
-  thumbnail = "/images/author.png"
-  description = "Solution Architect/Engineer - Open Source Enthusiast"
+name = "Julian Xhokaxhiu"
+thumbnail = "/images/author.png"
+description = "Solution Architect/Engineer - Open Source Enthusiast"
 
 ## Main Menu
 [[menu.main]]
-    name = "English"
-    weight = 100
-    identifier = "en"
-    url = "/en"
+name = "English"
+weight = 100
+identifier = "en"
+url = "/en"
+
 [[menu.main]]
-    name = "Italiano"
-    identifier = "it"
-    weight = 200
-    url = "/it"
+name = "Italiano"
+identifier = "it"
+weight = 200
+url = "/it"

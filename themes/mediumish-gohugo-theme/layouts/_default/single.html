@@ -10,13 +10,13 @@
         <div class="container">
             <div class="row">
                 <!-- Post Share -->
-                <div class="col-md-2 pl-0">
+                <div class="col-md-2 pl-0">      
                     {{- partial "single-partials/share.html" . -}}
                 </div>
-                <!-- Post -->
+                <!-- Post -->                
                 <div class="col-md-9 flex-first flex-md-unordered">
                     <div class="mainheading">
-                        <!-- Author Box -->
+                        <!-- Author Box -->	
                         {{if isset .Site.Params.author "name"}}
                         {{if isset .Site.Params.author "thumbnail"}}
                         {{if isset .Site.Params.author "description"}}
@@ -32,19 +32,20 @@
                                     {{ dateFormat "Jan 2, 2006" .PublishDate }}
                                     <i class="far fa-clock clock"></i>
                                     {{ .ReadingTime }} min read
-                                </span>
+                                </span>					
                             </div>
-                        </div>
+                        </div>			
+                        {{end}}	
                         {{end}}
-                        {{end}}
-                        {{end}}
+                        {{end}}                        
                         <!-- Post Title -->
-                        <h1 class="posttitle">{{ .Title }}</h1>
+                        <h1 class="posttitle">{{ .Title }}</h1> 
                     </div>
 
                     <!-- Post Featured Image -->
-                    {{with .Params.image}}
-                        <img class="featured-image img-fluid" src="{{ . | urlize | relURL }}" alt="thumbnail for this post">
+                    {{$images := .Resources.ByType "image"}}
+                    {{with $images.GetMatch "*cover*" }}
+                        <img class="featured-image img-fluid" src="{{ .Permalink }}" alt="thumbnail for this post">
                     {{end}}
                     <!-- End Featured Image -->
 
@@ -52,7 +53,7 @@
                     <div class="article-post">
                         {{ .Content}}
                     </div>
-
+                    
                     <!-- Post Categories -->
                     <div class="after-post-tags">
                         <ul class="tags">
@@ -64,14 +65,14 @@
                         </ul>
                     </div>
                     <!-- End Categories -->
-
+                    
                     <!-- Next and PrevPage inside current section -->
                     <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
                     {{with .NextInSection}}
-                        <a class="d-block col-md-6" href="{{.RelPermalink}}"> &laquo; {{.Title}}</a>
+                        <a class="d-block col-md-6" href="{{.Permalink}}"> &laquo; {{.Title}}</a>
                     {{end}}
                     {{with .PrevInSection}}
-                        <a class="d-block col-md-6 text-lg-right" href="{{.RelPermalink}}">{{.Title}} &raquo;</a>
+                        <a class="d-block col-md-6 text-lg-right" href="{{.Permalink}}">{{.Title}} &raquo;</a>
                     {{end}}
                     <div class="clearfix"></div>
                     </div>
@@ -82,7 +83,9 @@
         </div>
         <!-- End Article
         ================================================== -->
-        {{- partial "single-partials/comments.html" . -}}
+        {{ if .Params.comments }}
+            {{- partial "single-partials/comments.html" . -}}
+        {{ end }}
     </div>
     {{- partial "_shared/alertbar.html" . -}}
 {{ end }}
