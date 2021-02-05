@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-HUGO_RELEASE="0.64.1"
+HUGO_RELEASE="0.80.0"
 HUGO_PATH=".bin"
 
 if [ ! -z $1 ]; then
