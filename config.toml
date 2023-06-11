@@ -25,11 +25,12 @@ weight = 2
 [params]
 description = "My personal motto? 'Impossible Is Nothing'"
 comments = false
+images = ['images/social/cover.png']
 
 [params.author]
 name = "Julian Xhokaxhiu"
 thumbnail = "/images/author.png"
-description = "Solution Architect - Platform Engineer - Open Source Enthusiast"
+description = "DevOps Engineer - Cloud Architect - Solution Architect - Platform Engineer - Open Source Enthusiast"
 
 ## Main Menu
 [[menu.main]]
