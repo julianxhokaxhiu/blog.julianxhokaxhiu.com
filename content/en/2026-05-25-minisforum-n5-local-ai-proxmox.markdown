@@ -72,7 +72,8 @@ Next you turn off the LXC, note its number ( for eg. `100` ), then in the Proxmo
 ```conf
 dev0: /dev/dri/renderD128,gid=987 # render group
 dev1: /dev/dri/card0,gid=983 # video group
-dev2: /dev/accel/accel0,gid=987 # render group
+dev2: /dev/kfd,gid=987 # render group
+dev3: /dev/accel/accel0,gid=987 # render group
 lxc.prlimit.memlock: unlimited # required by FLM
 ```
 
