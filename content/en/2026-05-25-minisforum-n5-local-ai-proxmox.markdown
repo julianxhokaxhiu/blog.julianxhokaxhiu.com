@@ -145,6 +145,7 @@ If everything works like expected you should get this output, this confirms your
 
 ```sh
 $ lemonade backends install llamacpp:rocm
+$ lemonade config set llamacpp.backend=rocm
 $ lemonade backends
 Recipe              Backend     Status          Message/Version                               Action
 ----------------------------------------------------------------------------------------------------------------------------------------------------
